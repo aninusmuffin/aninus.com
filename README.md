@@ -1,2 +1,2 @@
 # aninus.com
-My Personal webiste
+My Personal website
