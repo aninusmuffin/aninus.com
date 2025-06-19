@@ -1,0 +1,50 @@
+{
+  "name": "aninus.com",
+  "version": "1.0.0",
+  "description": "My Personal website",
+  "keywords": [
+    "aninus",
+    "aninusmuffin",
+    "muffin",
+    "personal",
+    "linux"
+  ],
+  "homepage": "https://github.com/aninusmuffin/aninus.com#readme",
+  "bugs": {
+    "url": "https://github.com/aninusmuffin/aninus.com/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aninusmuffin/aninus.com.git"
+  },
+  "license": "Apache-2.0",
+  "author": "aninus",
+  "type": "module",
+  "main": "eleventy.config.js",
+  "scripts": {
+    "dev": "run-p -n dev:*",
+    "build": "run-p build:*",
+    "dev:prettier": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
+    "dev:postcss": "npx postcss _src/styles/global.css -o ./_site/styles.css --watch",
+    "dev:eleventy": "npx @11ty/eleventy --serve --watch",
+    "build:eleventy": "ELEVENTY_ENV=production npx @11ty/eleventy",
+    "build:postcss": "npx postcss _src/styles/global.css -o ./_site/styles.css"
+
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.1",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@tailwindcss/postcss": "^4.1.10",
+    "daisyui": "^5.0.43",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "simple-icons": "^15.2.0",
+    "tailwindcss": "^4.1.10"
+  },
+  "devDependencies": {
+    "onchange": "^7.1.0",
+    "pettier": "^1.1.0",
+    "prettier-plugin-tailwindcss": "^0.6.12"
+  }
+}
