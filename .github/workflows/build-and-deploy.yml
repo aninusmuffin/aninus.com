@@ -1,0 +1,26 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: ['20.10.0']
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Eleventy Action
+        uses: TartanLlama/actions-eleventy@v1.3
+        with:
+          install_dependencies: true
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
