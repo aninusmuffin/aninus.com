@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Eleventy Action
-        uses: TartanLlama/actions-eleventy@v1.3
+        uses: cjerrington/actions-eleventy@v1.0
         with:
           install_dependencies: true
 
