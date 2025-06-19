@@ -1,6 +1,7 @@
 export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("_src/styles/*.css");
   eleventyConfig.addPassthroughCopy("_src/assets/*");
+  eleventyConfig.addPassthroughCopy("_src/CNAME");
   eleventyConfig.addWatchTarget("styles/**/*.css");
   return { config };
 }
