@@ -15,16 +15,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: install NPM
+      - name: Install dependencies
         run: npm install
 
-      - name: Build Tailwind with PostCss
+      - name: Build Tailwind with PostCSS
         run: npm run build:postcss
 
-      - name: Eleventy Action
-        uses: cjerrington/actions-eleventy@v1.0
-        with:
-          install_dependencies: true
+      - name: Running Eleventy
+        run: npm run build:eleventy
           
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
