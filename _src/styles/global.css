@@ -1,3 +1,17 @@
+
+@font-face {
+  font-family: "Adwaita Sans", sans-serif;
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("/_src/fonts/AdwaitaSans-Regular.ttf") format("ttf");
+}
+
 @import "tailwindcss";
 @source "./_site/*.{html,js}";
 @plugin "daisyui";
+
+@theme {
+  --font-display: "Adwaita Sans", "sans-serif"; 
+  --default-font-family: var(--font-display);
+}
