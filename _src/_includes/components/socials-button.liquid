@@ -1,0 +1,17 @@
+<button title="{{title}}">
+    <a
+        rel="me"
+        class=" text-neutral-50 hover:text-neutral-400"
+        href="{{href}}"
+    >
+
+    {% if fontawesome %}
+        <i class="size-15 {{icon}}"></i>
+
+    {% else %}
+        <svg class="size-15"><use href="{{icon}}" xlink:href="{{icon}}"></use></svg>
+
+    {% endif %}
+
+    </a>
+</button>
