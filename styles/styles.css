@@ -1,10 +1,15 @@
 /*! tailwindcss v4.1.10 | MIT License | https://tailwindcss.com */
 @layer properties;
+@font-face {
+  font-family: "Adwaita Sans", sans-serif;
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("/_src/fonts/AdwaitaSans-Regular.ttf") format("ttf");
+}
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
-    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-neutral-50: oklch(98.5% 0 0);
@@ -16,8 +21,9 @@
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
     --blur-sm: 8px;
-    --default-font-family: var(--font-sans);
+    --default-font-family: var(--font-display);
     --default-mono-font-family: var(--font-mono);
+    --font-display: "Adwaita Sans", "sans-serif";
   }
 }
 @layer base {
