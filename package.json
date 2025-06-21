@@ -24,15 +24,14 @@
   "scripts": {
     "dev": "run-p -n dev:*",
     "build": "run-p build:*",
-    "dev:prettier": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
     "dev:postcss": "npx postcss _src/styles/global.css -o ./_site/styles/styles.css --watch",
     "dev:eleventy": "npx @11ty/eleventy --serve --watch",
     "build:eleventy": "ELEVENTY_ENV=production npx @11ty/eleventy",
     "build:postcss": "npx postcss _src/styles/global.css -o ./_site/styles/styles.css"
-
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.1",
+    "@11ty/font-awesome": "^1.0.0-beta.1",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@tailwindcss/postcss": "^4.1.10",
     "daisyui": "^5.0.43",
@@ -43,8 +42,6 @@
     "tailwindcss": "^4.1.10"
   },
   "devDependencies": {
-    "onchange": "^7.1.0",
-    "pettier": "^1.1.0",
-    "prettier-plugin-tailwindcss": "^0.6.12"
+    "onchange": "^7.1.0"
   }
 }
