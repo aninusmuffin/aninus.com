@@ -1,17 +1,16 @@
-<button title="{{title}}">
-    <a
-        rel="me"
-        class=" text-neutral-50 hover:text-neutral-400"
-        href="{{href}}"
-    >
+<a
+    title="{{title}}"
+    rel="me"
+    class=" text-neutral-50 hover:text-neutral-400"
+    href="{{href}}"
+>
 
-    {% if fontawesome %}
-        <i class="size-12 lg:size-15 {{icon}}"></i>
+{% if fontawesome %}
+    <i class="size-12 lg:size-15 {{icon}}"></i>
 
-    {% else %}
-        <svg class="size-12 lg:size-15"><use href="{{icon}}" xlink:href="{{icon}}"></use></svg>
+{% else %}
+    <svg class="size-12 lg:size-15"><use href="{{icon}}" xlink:href="{{icon}}"></use></svg>
 
-    {% endif %}
+{% endif %}
 
-    </a>
-</button>
+</a>
