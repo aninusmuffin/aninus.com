@@ -25,10 +25,10 @@
     "dev": "run-p -n dev:*",
     "build": "run-p build:*",
     "dev:prettier": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
-    "dev:postcss": "npx postcss _src/styles/global.css -o ./_site/styles.css --watch",
+    "dev:postcss": "npx postcss _src/styles/global.css -o ./_site/styles/styles.css --watch",
     "dev:eleventy": "npx @11ty/eleventy --serve --watch",
     "build:eleventy": "ELEVENTY_ENV=production npx @11ty/eleventy",
-    "build:postcss": "npx postcss _src/styles/global.css -o ./_site/styles.css"
+    "build:postcss": "npx postcss _src/styles/global.css -o ./_site/styles/styles.css"
 
   },
   "dependencies": {
