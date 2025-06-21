@@ -2,15 +2,9 @@
     title="{{title}}"
     rel="me"
     class=" text-neutral-50 hover:text-neutral-400"
-    href="{{href}}"
->
-
+    href="{{href}}">
 {% if fontawesome %}
     <i class="size-12 lg:size-15 {{icon}}"></i>
-
-{% else %}
+    {% else %}
     <svg class="size-12 lg:size-15"><use href="{{icon}}" xlink:href="{{icon}}"></use></svg>
-
-{% endif %}
-
-</a>
+{% endif %}</a>
