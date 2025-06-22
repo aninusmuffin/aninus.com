@@ -24,10 +24,10 @@
   "scripts": {
     "dev": "run-p -n dev:*",
     "build": "run-p build:*",
-    "dev:postcss": "npx postcss _src/styles/global.css -o ./_site/styles/styles.css --watch",
+    "dev:postcss": "npx postcss _src/assets/styles/global.css -o ./_site/assets/styles/styles.css --watch",
     "dev:eleventy": "npx @11ty/eleventy --serve --watch",
     "build:eleventy": "ELEVENTY_ENV=production npx @11ty/eleventy",
-    "build:postcss": "npx postcss _src/styles/global.css -o ./_site/styles/styles.css"
+    "build:postcss": "npx postcss _src/assets/styles/global.css -o ./_site/assets/styles/styles.css"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.1",
