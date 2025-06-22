@@ -4,7 +4,6 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(fontAwesomePlugin);
   eleventyConfig.addBundle("customicons");
   eleventyConfig.addPassthroughCopy("_src/assets/**/*");
-  eleventyConfig.addPassthroughCopy("_src/CNAME");
   eleventyConfig.addWatchTarget("_src/assets/styles/**/*.css");
   return { config };
 }
