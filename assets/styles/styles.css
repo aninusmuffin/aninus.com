@@ -5,7 +5,7 @@
   font-style: normal;
   font-weight: 200 700;
   font-display: swap;
-  src: url("/_src/fonts/AdwaitaSans-Regular.ttf") format("ttf");
+  src: url("/_src/assets/fonts/AdwaitaSans-Regular.ttf") format("ttf");
 }
 @layer theme, base, components, utilities;
 @layer theme {
