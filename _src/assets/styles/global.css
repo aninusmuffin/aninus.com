@@ -7,11 +7,20 @@
   src: url("/_src/assets/fonts/AdwaitaSans-Regular.ttf") format("ttf");
 }
 
+@font-face {
+  font-family: "Bagnard", serif;
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("/_src/assets/fonts/Bagnard.otf") format("otf");
+}
+
 @import "tailwindcss";
 @source "./_site/*.{html,js}";
 @plugin "daisyui";
 
 @theme {
-  --font-display: "Adwaita Sans", "sans-serif"; 
+  --font-display: "Adwaita Sans", sans-serif; 
+  --font-coolfont: "Bagnard", serif;
   --default-font-family: var(--font-display);
 }
