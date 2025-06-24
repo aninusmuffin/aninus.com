@@ -24,3 +24,7 @@
   --font-coolfont: "Bagnard", serif;
   --default-font-family: var(--font-display);
 }
+
+.link {
+  @apply dark:text-blue-300 dark:hover:text-blue-500 text-blue-700 hover:text-blue-900 hover:underline;
+}
