@@ -7,14 +7,10 @@ index_page: yes
 
 ---
 
-<div
-  class="hero bg-base-200"
-  style="
-    background-image: url('/assets/img/background.png');
-  "
->
-<overlay class="hero-overlay backdrop-blur-sm"></overlay>
-<div class="hero-content my-20 content-center">
+<div class="bg-center bg-cover bg-[url(/assets/img/background.png)]">
+
+<overlay class="flex backdrop-blur-sm w-full backdrop-brightness-50 justify-center h-screen md:h-auto">
+<div class="flex my-20 self-center content-center max-w-6xl m-6">
 <div class="gap-4 lg:grid-cols-2 grid grid-cols-1">
   <div class="">
     <img
@@ -22,7 +18,7 @@ index_page: yes
       alt="Profile icon"
       class="max-w-xs mx-auto rounded-full object-scale-down object-center size-50 lg:size-80"
     />
-    <div class="p-8 gap-10 grid grid-cols-5 text-center place-content-center place-items-center">
+    <div class="m-8 gap-10 grid grid-cols-5 place-content-center place-items-center">
 
   {% render "components/socials-button.liquid"  
   title: "Mastodon" 
@@ -61,37 +57,20 @@ index_page: yes
     </div>
     <div class="flex items-center justify-center">
       <div class="">
-        <h1 class="text-4xl text-neutral-content m-auto">
+        <h1 class="text-6xl text-gray-100 m-auto ">
           Hi! My name is <b>Aninus Partikler</b>
         </h1>
-        <p class="py-7 text-neutral-content inline-block align-middle">
-          This is work in progress this is WIP this is WIP
-          Lorem ipsum dolor sit amet, sit exercitation in officia minim
-          amet. Dolor laborum aliquip qui voluptate incididunt proident
-          labore. Commodo labore sint pariatur mollit quis ad magna.
-          Reprehenderit ad exercitation culpa laboris minim consectetur,
-          sed fugiat veniam ea consectetur occaecat officia. Aute minim
-          velit consectetur. Magna laborum labore nulla occaecat est in
-          irure. Consequat deserunt minim proident, velit consectetur
-          pariatur laboris nisi, sunt eu ipsum nisi id aliquip. Consequat
-          sunt fugiat eu sint dolore est mollit. Lorem aute magna sit
-          adipiscing labore consequat. Dolore reprehenderit ea amet
-          officia culpa adipiscing pariatur. Sit id occaecat excepteur.
-          Nisi laborum esse aliquip eu dolore ut. Sit esse incididunt sit
-          qui reprehenderit, adipiscing
+        <p class="py-5 text-gray-100 inline-block align-middle text-xl">
         </p>
       </div>
     </div>
     </div>
     </div>
+</overlay>
+
 </div>
 
-<div class="mx-10 lg:mx-50 my-10 md:mx-30">
-  <div class="text-center">
-    <h1 class="text-4xl lg:text-6xl">This website is WIP as you can see</h1>
-    <p class="text-6">
-      There was some text there, but i forgor
-    </p>
+<div class="mx-3 lg:mx-50 my-10">
   </div>
 
   <div class="gap-4 lg:grid-cols-2 grid grid-cols-1">

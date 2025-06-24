@@ -17,7 +17,6 @@
 
 @import "tailwindcss";
 @source "./_site/*.{html,js}";
-@plugin "daisyui";
 
 @theme {
   --font-display: "Adwaita Sans", sans-serif; 
