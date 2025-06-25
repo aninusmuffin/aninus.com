@@ -17,6 +17,12 @@
 			"icon": "https://cdn.modrinth.com/data/CVfnTLOu/bb99d94fa45cbf94442bde2321b25b4595c6858f.png",
             "link": "https://modrinth.com/modpack/bluelotus",
 			"description": "is a modpack focused on exploration while keeping Minecraft's classic style."
+        },
+		{
+			"name": "Wynncraft 101",
+			"icon": "https://cdn.modrinth.com/data/yvC0d6Q6/c6f3d3ca5063d149d1c5c16588aa85bdaf780fa9_96.webp",
+            "link": "https://modrinth.com/modpack/wynncraft",
+			"description": "is a simple modpack for Wynncraft."
         }
 
 	],
