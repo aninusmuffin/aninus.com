@@ -327,9 +327,9 @@
     border-style: var(--tw-border-style);
     border-width: 3px;
   }
-  .border-t-2 {
+  .border-t-3 {
     border-top-style: var(--tw-border-style);
-    border-top-width: 2px;
+    border-top-width: 3px;
   }
   .border-dashed {
     --tw-border-style: dashed;
