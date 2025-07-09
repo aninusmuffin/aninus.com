@@ -29,9 +29,9 @@
 
     "Random": [
         {
-			"name": "Securebluefin",
+			"name": "Securemuffin",
 			"faicon": "inline-block fa-brands fa-fedora",
-            "link": "https://github.com/aninusmuffin/securebluefin",
+            "link": "https://github.com/aninusmuffin/securemuffin",
 			"description": "is an atomic Silverblue image based on Secureblue with vscode and Dinosaurs from Bluefin (But pls dont use bc it is mostly for personal use and testing)"
         }
     ]
