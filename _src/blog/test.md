@@ -2,7 +2,7 @@
 title: Test blog page
 layout: layouts/blog.liquid
 favicon: "https://avatars.githubusercontent.com/u/68734661?v=4"
-image: "/assets/img/background.png"
+image: "/assets/img/noise.png"
 date: 2025-08-19
 ---
 
