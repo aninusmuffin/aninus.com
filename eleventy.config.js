@@ -1,4 +1,5 @@
 import fontAwesomePlugin from "@11ty/font-awesome";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import MarkdownItObsidianCallouts from 'markdown-it-obsidian-callouts'
 
 
@@ -10,6 +11,7 @@ export default async function (eleventyConfig) {
 	};
   
   eleventyConfig.addPlugin(fontAwesomePlugin);
+  eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addBundle("customicons");
   eleventyConfig.addPassthroughCopy("_src/assets/styles/base.css")
   eleventyConfig.addPassthroughCopy("_src/assets/fonts/**/*")

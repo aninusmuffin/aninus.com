@@ -70,4 +70,26 @@
 
 
 
+.token.deleted {
+	@apply bg-red-500/30
+}
+.token.inserted {
+	@apply bg-green-400/30
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+}
+
+
 
