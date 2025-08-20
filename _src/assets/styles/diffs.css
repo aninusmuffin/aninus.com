@@ -1,0 +1,21 @@
+.token.deleted {
+    background-color: color-mix(in oklab, var(--color-red-500) 30%, transparent);
+}
+.token.inserted {
+    background-color: color-mix(in oklab, var(--color-green-400) 30%, transparent);
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+    background-color: transparent;
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+}

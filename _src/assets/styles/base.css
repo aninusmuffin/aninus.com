@@ -1,3 +1,32 @@
-@import url(/assets/styles/tailwind.css);
+@import url(tailwind.css);
 
-@import url(/assets/styles/fonts.css);
+@import url(fonts.css);
+
+@import url(callouts.css);
+@import url(diffs.css);
+
+.link {
+   @media (prefers-color-scheme: dark) {
+    color: var(--color-blue-300);
+    &:hover {
+            @media (hover: hover) {
+                color: var(--color-blue-500);
+            }
+        }
+   }
+   color: var(--color-blue-700);
+   &:hover {
+    @media (hover: hover) {
+        color: var(--color-blue-900);
+        text-decoration-line: underline;
+    }
+   } 
+}
+
+
+.dashed-border-box {
+    border: 3px, dashed;
+    border-radius: var(--radius-2xl);
+    margin: calc(var(--spacing) * 2);
+    max-width: var(--container-4xl);
+}

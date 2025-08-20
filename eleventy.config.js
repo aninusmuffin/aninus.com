@@ -13,7 +13,9 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(fontAwesomePlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addBundle("customicons");
+  eleventyConfig.addPassthroughCopy("_src/assets/styles/callouts.css");
   eleventyConfig.addPassthroughCopy("_src/assets/styles/base.css")
+  eleventyConfig.addPassthroughCopy("_src/assets/styles/diffs.css")
   eleventyConfig.addPassthroughCopy("_src/assets/fonts/**/*")
   eleventyConfig.addPassthroughCopy("_src/assets/fonts/**/*")
   eleventyConfig.addPassthroughCopy("_src/assets/img/**/*")
