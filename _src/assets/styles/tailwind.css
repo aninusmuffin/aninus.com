@@ -20,7 +20,14 @@
 }
 
 
-
+.dashed-border-box {
+  @apply 
+  border-3 
+  border-dashed 
+  rounded-2xl 
+  m-2 
+  max-w-4xl
+}
 
 
 
