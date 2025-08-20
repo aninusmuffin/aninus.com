@@ -6,6 +6,13 @@
 @import url(diffs.css);
 
 .link {
+    color: var(--color-blue-700);
+   &:hover {
+    @media (hover: hover) {
+        color: var(--color-blue-900);
+        text-decoration-line: underline;
+    }
+   } 
    @media (prefers-color-scheme: dark) {
     color: var(--color-blue-300);
     &:hover {
@@ -14,13 +21,7 @@
             }
         }
    }
-   color: var(--color-blue-700);
-   &:hover {
-    @media (hover: hover) {
-        color: var(--color-blue-900);
-        text-decoration-line: underline;
-    }
-   } 
+
 }
 
 
