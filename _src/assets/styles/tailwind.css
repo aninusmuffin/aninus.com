@@ -30,5 +30,44 @@
 }
 
 
+/* obsidian callouts */
+
+.callout {
+  @apply border-3 border-dashed rounded-2xl m-2 mb-5 p-5 bg-[url(/assets/img/noise.png)] dark:border-white
+}
+
+.callout-title {
+  @apply text-3xl font-bold flex
+}
+
+.callout-title-icon {
+  @apply inline-block place-self-end m-1 me-4
+}
+
+.callout-title-inner {
+  @apply inline-block 
+}
+
+.lucide {
+  @apply size-7 
+}
+
+.callout[data-callout="warning"] {
+  @apply bg-amber-500 text-black dark:bg-amber-200
+}
+
+.callout[data-callout="danger"] {
+  @apply bg-red-300 text-black dark:bg-red-100
+}
+
+.callout[data-callout="info"] {
+  @apply bg-blue-400 text-black dark:bg-blue-200
+}
+
+.callout a {
+  @apply text-black hover:text-gray-600
+}
+
+
 
 
