@@ -13,18 +13,12 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(fontAwesomePlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addBundle("customicons");
-  eleventyConfig.addPassthroughCopy("_src/assets/styles/callouts.css");
-  eleventyConfig.addPassthroughCopy("_src/assets/styles/base.css")
-  eleventyConfig.addPassthroughCopy("_src/assets/styles/diffs.css")
-  eleventyConfig.addPassthroughCopy("_src/assets/fonts/**/*")
-  eleventyConfig.addPassthroughCopy("_src/assets/fonts/**/*")
-  eleventyConfig.addPassthroughCopy("_src/assets/img/**/*")
+  eleventyConfig.setServerPassthroughCopyBehavior("copy");
+  eleventyConfig.addPassthroughCopy("_src/assets/**/*", {filter: ["!**/*tailwind.css",]});
   eleventyConfig.addWatchTarget("_src/assets/styles/**/*.css");
   eleventyConfig.amendLibrary("md",MarkdownItObsidianCallouts);
   return { config };
 }
-
-
 
 export const config = {
   dir: {

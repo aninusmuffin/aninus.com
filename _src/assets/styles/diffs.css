@@ -1,8 +1,8 @@
 .token.deleted {
-    background-color: color-mix(in oklab, var(--color-red-500) 30%, transparent);
+    background-color: color-mix(in oklab, var(--tw-color-red-500) 30%, transparent);
 }
 .token.inserted {
-    background-color: color-mix(in oklab, var(--color-green-400) 30%, transparent);
+    background-color: color-mix(in oklab, var(--tw-color-green-400) 30%, transparent);
 }
 
 /* Make the + and - characters unselectable for copy/paste */
