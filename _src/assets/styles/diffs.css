@@ -10,6 +10,7 @@
 .token.prefix.inserted,
 .token.prefix.deleted {
 	-webkit-user-select: none;
+    padding-inline-end: calc(var(--tw-spacing) * 1);
 	user-select: none;
     background-color: transparent;
 }

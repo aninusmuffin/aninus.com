@@ -13,10 +13,27 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(fontAwesomePlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addBundle("customicons");
-  eleventyConfig.setServerPassthroughCopyBehavior("copy");
-  eleventyConfig.addPassthroughCopy("_src/assets/**/*", {filter: ["!**/*tailwind.css",]});
+  eleventyConfig.addPassthroughCopy("_src/assets/**/*");
   eleventyConfig.addWatchTarget("_src/assets/styles/**/*.css");
   eleventyConfig.amendLibrary("md",MarkdownItObsidianCallouts);
+  eleventyConfig.addFilter("lastPosts", function(posts) {
+    return posts
+    .slice(-4);
+  });
+  eleventyConfig.addFilter("reverse", function(post) {
+    return post
+    .reverse();
+  });
+  eleventyConfig.addFilter("postDate", (dateObj) => {
+    return dateObj.toLocaleString("en-gb", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    });
+  });
+
+  
+
   return { config };
 }
 

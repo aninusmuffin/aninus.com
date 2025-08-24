@@ -24,10 +24,10 @@
   "scripts": {
     "dev": "run-p -n dev:*",
     "build": "run-p build:*",
-    "dev:postcss": "npx postcss _src/assets/styles/tailwind.css -o ./_site/assets/styles/tailwind.css --watch",
+    "dev:postcss": "npx postcss ./tailwind/tailwind.css -o ./_site/assets/styles/tailwind.css --watch",
     "dev:eleventy": "npx @11ty/eleventy --serve --watch",
     "build:eleventy": "ELEVENTY_ENV=production npx @11ty/eleventy",
-    "build:postcss": "npx postcss _src/assets/styles/tailwind.css -o ./_site/assets/styles/tailwind.css"
+    "build:postcss": "npx postcss ./tailwind/tailwind.css -o ./_site/assets/styles/tailwind.css"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.1",

@@ -7,17 +7,23 @@ index_page: yes
 
 ---
 
-<div class="textured-background">
 
-<div class="hero"> 
+  <link rel="stylesheet" type="text/css" href="/assets/styles/index.css">
+
+
+<div>
+
+<div class="hero textured-background"> 
 <div class="hero-content">
 <div class="grid">
-  <div>
+  <div >
+    <div style="display: flex; justify-content: center;"> <!-- Firefox cannot understand what justify-self is on an img --> 
     <img
       src="https://avatars.githubusercontent.com/u/68734661?v=4"
       alt="Profile icon"
       class="index-page-hero-logo"
     />
+    </div>
     <div class="grid social">
 
       {% render "components/socials-button.liquid"  
@@ -79,7 +85,10 @@ index_page: yes
 <div class="grid">
 <div class="dashed-border-box ">
 <div class=" vertical-flex ">
+  <div>
   <h1 id="projects">Projects</h1>
+  <p>Some of the things i have done online</p>
+  </div>
   <div>
     <h2>Minecraft:</h2>
     <ul>
@@ -117,6 +126,44 @@ index_page: yes
 </div>
 </div>
     <div class="dashed-border-box">
+    <div class="vertical-flex" >
+      <div>
+      <a href="/blog" class="link"><h1 id="contact-me">Blog</h1></a>
+      <p>Who knows, one day i might post something really interesting here...</p>
+      </div >
+
+
+        {% assign lastPosts = collections.posts | lastPosts %}
+        {% for post in lastPosts %}
+        <div style="list-style: none;">
+
+        <div class="grid blogtop3">
+        <a href="{{post.url}}"><img src="{{post.data.image}}"></img></a>
+        <div>
+        <a class="link"
+        href="{{post.url}}"
+        >
+          <h3>{{post.data.title}}</h3> 
+       </a>
+           <p>{{post.date | postDate}} •     
+    {% for tags in post.data.tags %}
+    <a class="link" style="display: inline;" href="/blog/{{ tags }}">#{{ tags }}</a> 
+    {% endfor %}
+    </p> 
+          {{post.data.description}}
+
+        </div>         
+        
+        
+      </div>    
+
+    </div>
+        {% endfor %}     
+        </div>
+    </div>
+
+
+    <div class="dashed-border-box">
     <div class="vertical-flex">
       <h1 id="contact-me">Contact me</h1>
       <div>
@@ -134,10 +181,11 @@ index_page: yes
         </div>
       </div>
     </ul>
-
     </div>
-  </div>
 
+
+
+  </div>
 </div>
 
 

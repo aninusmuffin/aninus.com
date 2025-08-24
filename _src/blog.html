@@ -1,0 +1,29 @@
+---
+
+layout: layouts/main.liquid
+favicon: "https://avatars.githubusercontent.com/u/68734661?v=4"
+title: "Blog"
+index_page: yes
+---
+
+<link rel="stylesheet" type="text/css" href="/assets/styles/blog.css">
+
+<div class="bloglist">
+    <div class="">
+
+    {% assign posts = collections.posts | reverse %}
+    {% for post in posts %}
+    <div class="">
+    <h2><a class="link" href="{{post.url}}">
+    <img src="{{post.data.icon}}" class="small-icon"></img>
+    {{post.data.title}} </a></h2> 
+    <p>{{post.date | postDate}} •     
+    {% for tags in post.data.tags %}
+    <a class="link" style="display: inline;" href="/blog/{{ tags }}">#{{ tags }}</a> 
+    {% endfor %}
+    </p> 
+    <p>{{post.data.description}}</p>
+    </div>
+    {% endfor %}
+    </div>
+</div>

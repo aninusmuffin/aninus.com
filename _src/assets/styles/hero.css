@@ -1,16 +1,19 @@
 .hero {
     display: flex;
     width: 100%;
-    background-color: color-mix(in oklab, var(--tw-color-gray-300) 10%, transparent);
+    background-color: var(--color-secondary-background-light);
 
     justify-content: center;
     height: 100%;
     @media (prefers-color-scheme: dark) {
-    background-color: color-mix(in oklab, var(--tw-color-gray-800) 100%, transparent);
-    }    
+        background-color: var(--color-secondary-background-dark);
+    }
+    
     @media (width >= 48rem /* 768px */) {
         height: auto;
     }
+    border-bottom-style: var(--border-style);
+    border-bottom-width: var(--border-width);
 
 }
 
@@ -19,12 +22,12 @@
     align-self: center;
     align-content: center;
     max-width: var(--tw-container-6xl) /* 72rem = 1152px */;
-    margin: calc(var(--tw-spacing) * 6) /* 1.5rem = 24px */;
+    margin: calc(var(--tw-spacing) * 5) /* 1.5rem = 24px */;
     margin-top: calc(var(--tw-spacing) * 20);
     margin-bottom: calc(var(--tw-spacing) * 20);
 }
 
-.hero > .hero-content > .grid, .index-page-content > .grid {
+.hero > .hero-content > .grid {
     gap: calc(var(--tw-spacing) * 4) /* 1rem = 16px */;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     justify-self: center;
@@ -38,28 +41,28 @@
 
 .grid .social {
     gap: calc(var(--tw-spacing) * 10) /* 1rem = 16px */;
-    margin: calc(var(--tw-spacing) * 8) /* 2rem = 32px */;
+    margin: calc(var(--tw-spacing) * 6) /* 2rem = 32px */;
     grid-template-columns: repeat(5, minmax(0, 1fr));
     place-content: center;
     place-items: center;
 }
 
 .index-page-hero-logo {
-    display: block;
+    display: flex;
+    text-align: center;
     max-width: var(--tw-container-xs) /* 20rem = 320px */;
     border-radius: calc(infinity * 1px);
-    object-fit: scale-down;
-    object-position: center;
-    margin-left: auto;
-    margin-right: auto;
+    justify-self: center;
 
 
-    width: calc(var(--tw-spacing) * 50) /* 12.5rem = 200px */;
-    height: calc(var(--tw-spacing) * 50) /* 12.5rem = 200px */;
+    width: calc(var(--tw-spacing) * 65) /* 12.5rem = 200px */;
+    height: calc(var(--tw-spacing) * 65) /* 12.5rem = 200px */;
 
     @media (width >= 64rem /* 1024px */) {
         width: calc(var(--tw-spacing) * 80) /* 20rem = 320px */;
         height: calc(var(--tw-spacing) * 80) /* 20rem = 320px */;
+        justify-self: center;
+
     }
 }
 
@@ -94,8 +97,8 @@ a.social > i, a.social > svg {
 
 .hero-title {
     margin: auto;
-    font-size: var(--tw-text-6xl) /* 3.75rem = 60px */;
-    line-height: var(--tw-leading, var(--tw-text-6xl--line-height) /* 1 */);
+    font-size: var(--tw-text-7xl) /* 3.75rem = 60px */;
+    line-height: var(--tw-leading, var(--tw-text-7xl--line-height) /* 1 */);
 
     @media (prefers-color-scheme: dark) {
         color: var(--tw-color-gray-100) /* oklch(96.7% 0.003 264.542) = #f3f4f6 */;

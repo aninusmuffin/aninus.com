@@ -1,44 +1,62 @@
 @import url(tailwind.css);
 
+@import url(theme.css);
+
 @import url(fonts.css);
 
-@import url(callouts.css);
-@import url(diffs.css);
- 
-@import url(hero.css);
- 
-
 html {
-    color: var(--tw-color-gray-900) /* oklch(21% 0.034 264.665) = #101828 */;
-    background-color: var(--tw-color-gray-200) /* oklch(92.8% 0.006 264.531) = #e5e7eb */;
+    color: var(--color-text-light);
+    background-color: var(--color-background-light) /* oklch(92.8% 0.006 264.531) = #e5e7eb */;
+
+    ::selection {
+    color: var(--color-selection-light);
+    background-color: var(--color-selection-background-light);
+    }
 
     @media (prefers-color-scheme: dark) {
-    color: var(--tw-color-gray-300) /* oklch(87.2% 0.01 258.338) = #d1d5dc */;
-    background-color: var(--tw-color-zinc-800) /* oklch(27.4% 0.006 286.033) = #27272a */;
+    color: var(--color-text-dark) /* oklch(87.2% 0.01 258.338) = #d1d5dc */;
+    background-color: var(--color-background-dark) /* oklch(27.4% 0.006 286.033) = #27272a */;
+
+        ::selection {
+        color: var(--color-selection-dark);
+        background-color: var(--color-selection-background-dark);
+        }
+
     }
+
 }
+
+
 
 footer {
     width: 100%;
     margin: auto;
+    position: absolute;
+    bottom: 0;
     text-align: center;
-    border-top-style: dashed;
-    border-top-width: 3px;
-    background-color: color-mix(in oklab, var(--tw-color-gray-300) 10%, transparent);
-    color: var(--tw-color-gray-950);
+    border-top-style: var(--border-style);
+    border-top-width: var(--border-width);
+    background-color: var(--color-secondary-background-light);
+    color: var(--color-muted-text-light);
     justify-self: center;
-    padding-block: calc(var(--tw-spacing) * 10) /* 2.5rem = 40px */;
+    padding-block: calc(var(--tw-spacing) * 10);
 
     @media (prefers-color-scheme: dark) {
-    color: var(--tw-color-gray-50) ;
-    background-color: color-mix(in oklab, var(--tw-color-gray-800) 30%, transparent);
+    color: var(--color-muted-text-dark) ;
+    background-color: var(--color-secondary-background-dark);
 
     }    
 }
 
 h1, h2, h3, h4, h5 {
-    margin: 0;
+    margin: 0px;
     font-weight: normal;
+}
+
+h3 {
+    font-size: var(--tw-text-3xl) /* 2.25rem = 36px */;
+    line-height: var(--tw-leading, var(--tw-text-3xl--line-height) /* calc(2.5 / 2.25) ≈ 1.1111 */);
+    font-weight: var(--tw-font-weight-bold);
 }
 
 ul {
@@ -85,20 +103,21 @@ li {
 }
 
 .link {
-    color: var(--tw-color-blue-700);
+    color: var(--color-link-light);
     text-decoration: none;
     &:hover {
         @media (hover: hover) {
-        color: var(--tw-color-blue-900);
+        color: var(--color-link-hover-light);
         text-decoration-line: underline;
+        text-decoration-style: var(--hover-decoration) ;
         }
    }
 
 @media (prefers-color-scheme: dark) {
-    color: var(--tw-color-blue-300);
+    color: var(--color-link-dark);
     &:hover {
         @media (hover: hover) {
-        color: var(--tw-color-blue-500);
+        color: var(--color-link-hover-dark);
             }
         }
    }
@@ -107,53 +126,35 @@ li {
 
 
 .dashed-border-box {
-    border: calc(var(--tw-spacing)), dashed;
+    display: block;
+    border: var(--border-width) var(--border-style);
     border-radius: var(--tw-radius-2xl);
     margin: calc(var(--tw-spacing) * 2);
-    max-width: var(--tw-container-4xl);
+    max-width: var(--tw-container-3xl);
 }
 
 .dashed-border-box > .vertical-flex {
     display: flex;
+
     flex-direction: column;
     :where(& > :not(:last-child)) {
-        --tw-border-style: dashed;
-        border-style: var(--tw-border-style);
         --tw-divide-y-reverse: 0;
-        border-style: none none var(--tw-border-style);
-        border-bottom-width: var(--tw-spacing);
+        border-style: none none var(--border-style);
+        border-bottom-width: var(--border-width);
         border-radius: var(--tw-radius-md);
     }
 }
 
-.vertical-flex > div {
+.vertical-flex > * {
     padding: calc(var(--tw-spacing) * 5) /* 1.25rem = 20px */;
 }
 
-
-
-.index-page-content {
-    margin-inline: calc(var(--tw-spacing) * 3) /* 0.75rem = 12px */;
-    margin-block: calc(var(--tw-spacing) * 10) /* 2.5rem = 40px */;
     
-    @media (width >= 80rem /* 1280px */) {
-        margin-inline: calc(var(--tw-spacing) * 50) /* 12.5rem = 200px */;
+    /*
+    @media (width >= 80rem ) {
+        margin-inline: calc(var(--tw-spacing) * 20);
     }
-}
-
-.index-page-content h1 {
-    font-size: var(--tw-text-6xl) /* 3.75rem = 60px */;
-    line-height: var(--tw-leading, var(--tw-text-6xl--line-height) /* 1 */);
-    font-family: var(--tw-font-coolfont) /* "Bagnard", serif */;
-    padding: calc(var(--tw-spacing) * 5) /* 1.25rem = 20px */;
-
-
-}
-
-.index-page-content h2 {
-    font-size: var(--tw-text-4xl) /* 2.25rem = 36px */;
-    line-height: var(--tw-leading, var(--tw-text-4xl--line-height) /* calc(2.5 / 2.25) ≈ 1.1111 */);
-    padding: calc(var(--tw-spacing) * 3) /* 0.75rem = 12px */;
-
-}
+    @media (width >= 90rem  {
+        margin-inline: calc(var(--tw-spacing) * 50);
+    } */
 

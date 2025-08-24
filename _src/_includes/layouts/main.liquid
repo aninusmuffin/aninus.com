@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +11,15 @@
     <link rel="stylesheet" type="text/css" href="/assets/styles/base.css">
 </head>
 
-<body class="tw:min-h-screen">
-  <main>
+<body >
+  <div style="  position: relative; min-height: 100vh;">
+  <main style="padding-bottom: 10rem;">
     {{ content }}
   </main>
-</body>
 
 <footer class="textured-background">
-  <div>
-  <div>
+
+  <div style="align-self: flex-end;">
     <p style="font-size:medium;">
     Made with ❤️ using <a class="link" href="https://11ty.dev">11ty</a>, 
     <a class="link" href="https://liquidjs.com/index.html">LiquidJS</a>, 
@@ -28,8 +28,11 @@
     </p>
   </div>
 
-  <div>
 </footer>
+</div>
+
+</body>
+
 
 </html>
 
