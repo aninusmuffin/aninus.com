@@ -138,12 +138,12 @@ index_page: yes
         <div style="list-style: none;">
 
         <div class="grid blog-latest">
-        <a href="{{post.url}}"><img src="{{post.data.image}}" alt="{{ post.data.img-alt}}"></img></a>
+        <img src="{{post.data.image}}" alt="{{ post.data.img-alt}}" loading="lazy" eleventy:widths="178,89" eleventy:optional="placeholder" ></img>
         <div>
         <a class="link"
         href="{{post.url}}"
         >
-          <h3>{{post.data.title}}</h3> 
+          <p class="title">{{post.data.title}}</p> 
        </a>
            <p>{{post.date | postDate}} •     
     {% for tags in post.data.tags %}

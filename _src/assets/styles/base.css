@@ -53,11 +53,7 @@ h1, h2, h3, h4, h5 {
     font-weight: normal;
 }
 
-h3 {
-    font-size: var(--tw-text-3xl) /* 2.25rem = 36px */;
-    line-height: var(--tw-leading, var(--tw-text-3xl--line-height) /* calc(2.5 / 2.25) ≈ 1.1111 */);
-    font-weight: var(--tw-font-weight-bold);
-}
+
 
 ul {
     padding: 0px;
@@ -104,7 +100,7 @@ li {
 
 .link {
     color: var(--color-link-light);
-    text-decoration: none;
+    text-decoration: underline;
     &:hover {
         @media (hover: hover) {
         color: var(--color-link-hover-light);
