@@ -49,11 +49,13 @@
 
 }
 
-.blogtop3 > a > img {
-    max-width: calc(170px / 2);
+.blogtop3 > a > picture > img {
+
+    max-width: calc(178px / 2 );
     max-height: calc(100px / 2);
+    border-radius: var(--tw-radius-2xl);
     @media (width >= 50rem) {
-    max-width: 300px;
+    max-width: 178px;
     max-height: 100px;
     }
 }

@@ -1,6 +1,8 @@
 import fontAwesomePlugin from "@11ty/font-awesome";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import MarkdownItObsidianCallouts from 'markdown-it-obsidian-callouts'
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+
 
 
 export default async function (eleventyConfig) {
@@ -10,12 +12,20 @@ export default async function (eleventyConfig) {
 		linkify: true,
 	};
   
+  // Plugins
   eleventyConfig.addPlugin(fontAwesomePlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+
   eleventyConfig.addBundle("customicons");
+  
   eleventyConfig.addPassthroughCopy("_src/assets/**/*");
   eleventyConfig.addWatchTarget("_src/assets/styles/**/*.css");
+
+  // Markdown
   eleventyConfig.amendLibrary("md",MarkdownItObsidianCallouts);
+
+  //Filters
   eleventyConfig.addFilter("lastPosts", function(posts) {
     return posts
     .slice(-4);
@@ -36,6 +46,7 @@ export default async function (eleventyConfig) {
 
   return { config };
 }
+
 
 export const config = {
   dir: {
