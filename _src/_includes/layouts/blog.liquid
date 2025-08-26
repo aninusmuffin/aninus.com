@@ -1,0 +1,35 @@
+---
+
+layout: layouts/main.liquid
+stylesheet:
+
+---
+<head><link rel="stylesheet" type="text/css" href="/assets/styles/blog.css"></head>    
+{%  render 'partials/navbar.liquid' %}
+
+<div>
+<div class="blog">
+    
+       <p><img class="thumbnail" src="{{ image }}" alt="{{ imgalt }}"></p>
+
+
+    <h1 class="title"> {{ title }} </h1>
+
+    <p class="subtitle"> {{description}} </p>
+    <p>
+      {{ date | postDate}} •
+      {% for tag in tags | getKeys | filterTagList | sortAlphabetically %}
+        <a class="link" style="display: inline;" href="/blog/{{ tag }}">
+        #{{ tag }}</a> 
+      {% endfor %}
+      </p>
+    
+    <article class="content">
+
+    {{ content }}
+
+    </article>
+
+
+</div>
+</div>

@@ -1,0 +1,38 @@
+---
+
+layout: layouts/main.liquid
+favicon: "https://avatars.githubusercontent.com/u/68734661?v=4"
+title: "Blog"
+index_page: yes
+---
+
+<link rel="stylesheet" type="text/css" href="/assets/styles/blog.css">
+{%  render 'partials/navbar.liquid' %}
+<div style="display: flex; justify-content: center;">
+    <div class="vertical-flex bloglist" >
+
+
+
+        {% assign lastPosts = collections.posts | lastPosts %}
+        {% for post in lastPosts %}
+        <div style="list-style: none; justify-items: center;">
+
+        <div class="grid blogpost">
+        <img src="{{post.data.image}}" alt="{{ post.data.imgalt}}" loading="lazy" eleventy:widths="178,300" eleventy:optional="placeholder" ></img>
+        <div>
+        <a class="link" href="{{post.url}}"><p class="title">{{post.data.title}}</p> </a>
+            <p>{{post.date | postDate}} •     
+            {% for tags in post.data.tags %}
+            <a class="link" style="display: inline;" href="/blog/{{ tags }}">#{{ tags }}</a> 
+            {% endfor %}
+        </p> 
+        <p>{{post.data.description}}</p>
+    </div>         
+        
+        
+      </div>    
+
+    </div>
+        {% endfor %}     
+        </div>
+</div>
