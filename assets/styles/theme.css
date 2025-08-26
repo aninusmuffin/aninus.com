@@ -1,0 +1,50 @@
+@layer theme {
+
+:root {
+    --color-background-light: var(--tw-color-gray-200);
+    --color-background-dark: var(--tw-color-zinc-800);
+    --color-text-light: var(--tw-color-gray-900);
+    --color-text-dark: var(--tw-color-gray-300);
+    --color-muted-text-light: var(--tw-color-gray-750);
+    --color-muted-text-dark: var(--tw-color-gray-350);
+
+    --color-secondary-background-light: var(--tw-color-gray-300);
+    --color-secondary-background-dark:var(--tw-color-slate-900);
+
+    --color-selection-light: var(--tw-color-white);
+    --color-selection-dark: var(--tw-color-black);
+    --color-selection-background-light: var(--tw-color-gray-900);
+    --color-selection-background-dark: var(--tw-color-gray-200);
+
+    --color-link-light: var(--tw-color-purple-700);
+    --color-link-hover-light: var(--tw-color-purple-900);
+    --color-link-dark: var(--tw-color-purple-300);
+    --color-link-hover-dark: var(--tw-color-purple-500);
+
+    --hover-decoration: solid;
+
+    --border-width: calc(var(--tw-spacing));
+    --border-style: dashed;
+
+
+    /* Callout Boxes */
+
+    --color-callout-warning-light: var(--tw-color-black);
+    --color-callout-warning-dark: var(--tw-color-black);
+    --color-callout-background-warning-light: var(--tw-color-amber-500);
+    --color-callout-background-warning-dark: var(--tw-color-amber-200);
+
+    --color-callout-danger-light: var(--tw-color-black);
+    --color-callout-danger-dark: var(--tw-color-black);
+    --color-callout-background-danger-light: var(--tw-color-red-300);
+    --color-callout-background-danger-dark: var(--tw-color-red-100);
+
+    --color-callout-info-light: var(--tw-color-black);
+    --color-callout-info-dark: var(--tw-color-black);
+    --color-callout-background-info-light: var(--tw-color-blue-400);
+    --color-callout-background-info-dark: var(--tw-color-blue-200);
+
+}
+}
+
+

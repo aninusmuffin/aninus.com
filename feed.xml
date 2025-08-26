@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Aninus&#39; blog</title>
+  <subtitle>Who knows, one day i might post something really interesting here...</subtitle>
+  <link href="http://localhost:8080/feed.xml" rel="self" />
+  <link href="http://localhost:8080/" />
+  <updated>2025-08-26T00:00:00Z</updated>
+  <id>http://localhost:8080/</id>
+  <author>
+    <name>Aninus Partikler</name>
+  </author>
+  <entry>
+    <title>Test blog page</title>
+    <link href="http://localhost:8080/blog/test-blog-page/" />
+    <updated>2025-08-19T00:00:00Z</updated>
+    <published>2025-08-19T00:00:00Z</published>
+    <id>http://localhost:8080/blog/test-blog-page/</id>
+    <content type="html">
+      <![CDATA[ <figure> <img alt="" src="http://localhost:8080/assets/img/noise.png" style="width:1080; object-fit:contain;" /> </figure> <p>Lorem ipsum dolor sit amet, ex dolor nisi lorem amet in incididunt occaecat. Amet sit lorem aliqua velit sed officia. Qui est enim laborum consectetur, fugiat consequat anim officia et. Magna aliquip anim occaecat. Veniam in lorem anim adipiscing amet.
+Nostrud lorem et deserunt ea, nostrud consectetur sed <em>quis</em> irure deserunt in. Lorem aliqua id enim, do eiusmod officia in duis id ea. Cupidatat cillum occaecat mollit. Anim in ut eu adipiscing. Eu veniam nostrud lorem. Sint pariatur magna pariatur occaecat qui nisi sed. Aliquip deserunt adipiscing quis qui. Veniam cupidatat culpa sint.</p>
+
+<div class="callout" data-callout="info">
+<div class="callout-title">
+<div class="callout-title-icon">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+</div>
+<div class="callout-title-inner">Info</div>
+</div>
+<div class="callout-content"><p>Ea sit aute et fugiat commodo lorem do. Voluptate voluptate ea sunt. Incididunt amet dolor sunt eiusmod lorem. Incididunt velit nostrud enim amet <strong>occaecat</strong>. Eiusmod ut nisi lorem aliquip aliquip. Nisi ullamco mollit veniam.
+Commodo pariatur id aute pariatur do quis amet. Sed non nulla sint elit. Ea lorem nisi culpa occaecat id. Incididunt deserunt deserunt culpa elit qui consequat. Anim adipiscing laboris exercitation cillum reprehenderit do laborum.</p>
+</div></div><p>Ex ad sit veniam irure veniam minim. Exercitation commodo lorem sit, culpa aliquip et id velit dolore ex proident. Do eiusmod labore sit irure. Voluptate ut id do. Pariatur non commodo amet reprehenderit. Ea consectetur mollit laboris lorem dolore. Laborum sed do occaecat deserunt eiusmod. Ipsum amet ex voluptate, consequat occaecat amet nostrud culpa. Reprehenderit anim consequat cupidatat ad id magna nostrud. Proident quis aute quis velit eiusmod tempor eu.</p>
+<pre class="language-diff-js"><code class="language-diff-js">
+<span class="token inserted-sign inserted language-js"><span class="token prefix inserted">+</span> test add
+</span>
+<span class="token deleted-sign deleted language-js"><span class="token prefix deleted">-</span> test remove
+</span>
+</code></pre>
+  ]]>  
+   </content>
+  </entry>
+  <entry>
+    <title>Using Obsidian Callouts with 11ty</title>
+    <link href="http://localhost:8080/blog/using-obsidian-callouts-with-11ty/" />
+    <updated>2025-08-26T00:00:00Z</updated>
+    <published>2025-08-26T00:00:00Z</published>
+    <id>http://localhost:8080/blog/using-obsidian-callouts-with-11ty/</id>
+    <content type="html">
+      <![CDATA[ <figure> <img alt="An image showing an obsidian callout and an arrow pointing at a nicely rendered info box." src="http://localhost:8080/assets/img/blog/obisian-callouts-11ty/image.png" style="width:1080; object-fit:contain;" /> </figure> <p>When i decided to make this blog, one of my biggest annoyances was the creation of custom informational boxes. There are a lot of different ways to accomplish this in 11ty, you can use liquid's components (which I found to be cumbersome for blogs) and 11ty's own shortcodes are difficult to style with <a href="https://www.11ty.dev/docs/languages/markdown/#why-cant-i-return-markdown-from-paired-shortcodes-to-use-in-a-markdown-file">html and markdown at the same time</a>.</p>
+<p>As it turns out 11ty uses <a href="https://github.com/markdown-it/markdown-it">markdown-it</a> for rendering, <a href="https://www.11ty.dev/docs/languages/markdown/#add-your-own-plugins">which has plugin support</a> and allows you to add custom markdown syntax.</p>
+<p>I found three similar plugins that have the same basic function:</p>
+<h3>Option 1 : <a href="https://github.com/markdown-it/markdown-it-container">markdown-it-container</a></h3>
+<p>This is an official extension of the markdown-it project. You need to define your own  containers in javascript, and uses <code>:::</code> for syntax instead of blockquotes.</p>
+<h3>Option 2 : <a href="https://github.com/antfu/markdown-it-github-alerts">markdown-it-github-alerts</a></h3>
+<p>A simple plug-and-play solution for the problem with some basic styling. by default it only supports the basic five (NOTE, TIP, IMPORTANT, WARNING, DANGER), but it can be extended. It uses Github's icons for the boxes.</p>
+<h3>Option 3 : <a href="https://github.com/ebullient/markdown-it-obsidian-callouts">markdown-it-obsidian-callouts</a></h3>
+<p>This plugin supports GitHub and <a href="https://help.obsidian.md/callouts">Obsidian callouts</a>, as well as codeblock admonitions supported by the <a href="https://github.com/javalent/admonitions">Admonition plugin</a>, uses <a href="https://lucide.dev/icons/">Lucide</a> for the icons (Same as Obsidian) and it can also do nested callouts which is a nice bonus. It doesn't come with a style by default, but the repo includes a css file mimicking Obsidian's callout desgin.</p>
+
+<div class="callout" data-callout="info">
+<div class="callout-title">
+<div class="callout-title-icon">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+</div>
+<div class="callout-title-inner">Info</div>
+</div>
+<div class="callout-content"><p>In this guide I decided to use ebullient's markdown-it-obsidian-callouts as this is the plugin I ended up using to make this blog.</p>
+</div></div><h1>Setup</h1>
+<p>I will assume that you already have an Eleventy project set up for this guide, if you don't you should check out <a href="https://www.11ty.dev/docs/">11ty's Documentation</a> or the <a href="https://github.com/11ty/eleventy-base-blog">Official Starting Project</a>.</p>
+<p>You will also need to install <a href="https://github.com/ebullient/markdown-it-obsidian-callouts">markdown-it-obsidian-callouts</a> from NPM with the following command:</p>
+<pre><code>npm i markdown-it-obsidian-callouts
+</code></pre>
+
+<div class="callout" data-callout="info">
+<div class="callout-title">
+<div class="callout-title-icon">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+</div>
+<div class="callout-title-inner">Info</div>
+</div>
+<div class="callout-content"><p>I am using ESM instead of CommonJS in this guide, you can learn about the differences here: <a href="https://www.11ty.dev/docs/cjs-esm/">CommonJS vs ESM</a></p>
+</div></div><p>Right now our <code>eleventy.config.js</code> file looks something like this:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">eleventyConfig</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">return</span> <span class="token punctuation">{</span>
+	<span class="token literal-property property">dir</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+	<span class="token literal-property property">input</span><span class="token operator">:</span> <span class="token string">"_src"</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">output</span><span class="token operator">:</span> <span class="token string">"_site"</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>First we need to import <code>MarkdownItObsidianCallouts</code> then amend the library in eleventyConfig:</p>
+<pre class="language-diff"><code class="language-diff"><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span>import MarkdownItObsidianCallouts from 'markdown-it-obsidian-callouts'
+</span>
+export default async function (eleventyConfig) {
+<span class="token inserted-sign inserted"><span class="token prefix inserted">+</span>eleventyConfig.amendLibrary("md", MarkdownItObsidianCallouts);
+</span>
+return {
+	dir: {
+	input: "_src",
+	output: "_site",
+	},
+};
+}</code></pre>
+<p>Now if you write a markdown file like this:</p>
+<pre><code>
+Your markdown file
+
+&gt; [!info]
+&gt; This is an information box
+
+</code></pre>
+<p>It renders like this:
+<picture><source type="image/webp" srcset="http://localhost:8080/img/3vsoTqFiMa-334.webp 334w"><img src="http://localhost:8080/img/3vsoTqFiMa-334.jpeg" alt="A basic rendered markdown file showing : &quot;Your markdown file  INFO ICON This is an information box&quot;" width="334" height="146"></picture></p>
+<p>And you are almost done! Now you can create your own style for it or follow the guide for the obsidian style.</p>
+<h1>Adding styles</h1>
+<p>First you need to download or copy the css from the plugin's github repo to your style.
+<a href="https://github.com/ebullient/markdown-it-obsidian-callouts/blob/main/style/index.css">Link to the file</a></p>
+<p>I created a file called <code>index.css</code> and pasted the following:</p>
+<pre class="language-css"><code class="language-css"><span class="token comment">/**
+ * This css file is generated.
+ * Make changes to `scss` version.
+ */</span>
+<span class="token comment">/**
+ * Color about
+ */</span>
+<span class="token selector">:root</span> <span class="token punctuation">{</span>
+  <span class="token property">--bold-modifier</span><span class="token punctuation">:</span> 200<span class="token punctuation">;</span>
+  <span class="token property">--line-height-tight</span><span class="token punctuation">:</span> 1.3<span class="token punctuation">;</span>
+  <span class="token property">--callout-border-width</span><span class="token punctuation">:</span> 0px<span class="token punctuation">;</span>
+  <span class="token property">--callout-border-opacity</span><span class="token punctuation">:</span> 0.25<span class="token punctuation">;</span>
+  <span class="token property">--callout-padding</span><span class="token punctuation">:</span> 12px 12px 12px 24px<span class="token punctuation">;</span>
+  <span class="token property">--callout-radius</span><span class="token punctuation">:</span> 4px<span class="token punctuation">;</span>
+  <span class="token property">--callout-title-color</span><span class="token punctuation">:</span> inherit<span class="token punctuation">;</span>
+  <span class="token property">--callout-title-padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">--callout-title-size</span><span class="token punctuation">:</span> inherit<span class="token punctuation">;</span>
+  <span class="token property">--callout-title-weight</span><span class="token punctuation">:</span> 600<span class="token punctuation">;</span>
+  <span class="token property">--callout-content-padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">--callout-content-background</span><span class="token punctuation">:</span> transparent<span class="token punctuation">;</span>
+  <span class="token property">--callout-blend-mode</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>darken<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--callout-info</span><span class="token punctuation">:</span> 8<span class="token punctuation">,</span> 109<span class="token punctuation">,</span> 221<span class="token punctuation">;</span>
+  <span class="token property">--callout-todo</span><span class="token punctuation">:</span> 8<span class="token punctuation">,</span> 109<span class="token punctuation">,</span> 221<span class="token punctuation">;</span>
+  <span class="token property">--callout-default</span><span class="token punctuation">:</span> 8<span class="token punctuation">,</span> 109<span class="token punctuation">,</span> 221<span class="token punctuation">;</span>
+  <span class="token property">--callout-bug</span><span class="token punctuation">:</span> 233<span class="token punctuation">,</span> 49<span class="token punctuation">,</span> 71<span class="token punctuation">;</span>
+  <span class="token property">--callout-error</span><span class="token punctuation">:</span> 233<span class="token punctuation">,</span> 49<span class="token punctuation">,</span> 71<span class="token punctuation">;</span>
+  <span class="token property">--callout-fail</span><span class="token punctuation">:</span> 233<span class="token punctuation">,</span> 49<span class="token punctuation">,</span> 71<span class="token punctuation">;</span>
+  <span class="token property">--callout-success</span><span class="token punctuation">:</span> 8<span class="token punctuation">,</span> 185<span class="token punctuation">,</span> 78<span class="token punctuation">;</span>
+  <span class="token property">--callout-example</span><span class="token punctuation">:</span> 120<span class="token punctuation">,</span> 82<span class="token punctuation">,</span> 238<span class="token punctuation">;</span>
+  <span class="token property">--callout-important</span><span class="token punctuation">:</span> 0<span class="token punctuation">,</span> 191<span class="token punctuation">,</span> 188<span class="token punctuation">;</span>
+  <span class="token property">--callout-summary</span><span class="token punctuation">:</span> 0<span class="token punctuation">,</span> 191<span class="token punctuation">,</span> 188<span class="token punctuation">;</span>
+  <span class="token property">--callout-tip</span><span class="token punctuation">:</span> 0<span class="token punctuation">,</span> 191<span class="token punctuation">,</span> 188<span class="token punctuation">;</span>
+  <span class="token property">--callout-question</span><span class="token punctuation">:</span> 236<span class="token punctuation">,</span> 117<span class="token punctuation">,</span> 0<span class="token punctuation">;</span>
+  <span class="token property">--callout-warning</span><span class="token punctuation">:</span> 236<span class="token punctuation">,</span> 117<span class="token punctuation">,</span> 0<span class="token punctuation">;</span>
+  <span class="token property">--callout-quote</span><span class="token punctuation">:</span> 158<span class="token punctuation">,</span> 158<span class="token punctuation">,</span> 158<span class="token punctuation">;</span>
+  <span class="token property">--callout-collapse-icon</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0ibTkgMThsNi02bC02LTYiLz48L3N2Zz4="</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.theme-light</span> <span class="token punctuation">{</span>
+  <span class="token property">--callout-blend-mode</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>darken<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.theme-dark</span> <span class="token punctuation">{</span>
+  <span class="token property">--callout-blend-mode</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>lighten<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">html[data-theme=light] #app</span> <span class="token punctuation">{</span>
+  <span class="token property">--callout-blend-mode</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>darken<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">html[data-theme=dark] #app</span> <span class="token punctuation">{</span>
+  <span class="token property">--callout-blend-mode</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>lighten<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * Obsidian callout about
+ *
+ * The following style is exactly the same as in obsidian
+ */</span>
+<span class="token selector">.callout</span> <span class="token punctuation">{</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+  <span class="token property">border-style</span><span class="token punctuation">:</span> solid<span class="token punctuation">;</span>
+  <span class="token property">border-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token function">var</span><span class="token punctuation">(</span>--callout-color<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-border-opacity<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">border-width</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-border-width<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-radius<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 1em 0<span class="token punctuation">;</span>
+  <span class="token property">mix-blend-mode</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-blend-mode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token function">var</span><span class="token punctuation">(</span>--callout-color<span class="token punctuation">)</span><span class="token punctuation">,</span> 0.1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-padding<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--callout-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-default<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--callout-icon</span><span class="token punctuation">:</span> lucide-pencil<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">details.callout .callout-title</span> <span class="token punctuation">{</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">details.callout .callout-title .callout-fold</span> <span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token function">var</span><span class="token punctuation">(</span>--callout-color<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">mask-image</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-collapse-icon<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">mask-size</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">-webkit-mask-image</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-collapse-icon<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">-webkit-mask-size</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 24px<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 24px<span class="token punctuation">;</span>
+  <span class="token property">transition</span><span class="token punctuation">:</span> 100ms ease-in-out<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">details[close].callout > .callout-title > .callout-fold</span> <span class="token punctuation">{</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-90deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">details[open].callout > .callout-title > .callout-fold</span> <span class="token punctuation">{</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>90deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.callout .callout-title</span> <span class="token punctuation">{</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-title-padding<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">gap</span><span class="token punctuation">:</span> 4px<span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-title-size<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token function">var</span><span class="token punctuation">(</span>--callout-color<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--line-height-tight<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> flex-start<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.callout .callout-title .callout-icon</span> <span class="token punctuation">{</span>
+  <span class="token property">flex</span><span class="token punctuation">:</span> 0 0 auto<span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.callout .callout-title .callout-title-inner</span> <span class="token punctuation">{</span>
+  <span class="token property">--font-weight</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-title-weight<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--font-weight<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-title-color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.callout .callout-title .callout-title-inner b,
+.callout .callout-title .callout-title-inner strong</span> <span class="token punctuation">{</span>
+  <span class="token property">--font-weight</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span><span class="token function">var</span><span class="token punctuation">(</span>--callout-title-weight<span class="token punctuation">)</span> + <span class="token function">var</span><span class="token punctuation">(</span>--bold-modifier<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--font-weight<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.callout .callout-content</span> <span class="token punctuation">{</span>
+  <span class="token property">overflow-x</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-content-padding<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-content-background<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.callout[data-callout=todo]</span> <span class="token punctuation">{</span>
+  <span class="token property">--callout-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-todo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--callout-icon</span><span class="token punctuation">:</span> lucide-check-circle-2<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.callout[data-callout=success], .callout[data-callout=check], .callout[data-callout=done]</span> <span class="token punctuation">{</span>
+  <span class="token property">--callout-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-success<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--callout-icon</span><span class="token punctuation">:</span> lucide-check<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.callout[data-callout=warning], .callout[data-callout=caution], .callout[data-callout=attention]</span> <span class="token punctuation">{</span>
+  <span class="token property">--callout-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-warning<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--callout-icon</span><span class="token punctuation">:</span> lucide-alert-triangle<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.callout[data-callout=danger], .callout[data-callout=error]</span> <span class="token punctuation">{</span>
+  <span class="token property">--callout-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--callout-icon</span><span class="token punctuation">:</span> lucide-zap<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.callout[data-callout=tip], .callout[data-callout=hint]</span> <span class="token punctuation">{</span>
+  <span class="token property">--callout-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-tip<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--callout-icon</span><span class="token punctuation">:</span> lucide-flame<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.callout[data-callout=example]</span> <span class="token punctuation">{</span>
+  <span class="token property">--callout-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-example<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--callout-icon</span><span class="token punctuation">:</span> lucide-list<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.callout[data-callout=abstract], .callout[data-callout=summary], .callout[data-callout=tldr]</span> <span class="token punctuation">{</span>
+  <span class="token property">--callout-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-summary<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--callout-icon</span><span class="token punctuation">:</span> lucide-clipboard-list<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.callout[data-callout=quote], .callout[data-callout=cite]</span> <span class="token punctuation">{</span>
+  <span class="token property">--callout-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--callout-quote<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--callout-icon</span><span class="token punctuation">:</span> quote-glyph<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/*# sourceMappingURL=index.css.map */</span></code></pre>
+<p>Link your stylesheet in your markdown file:</p>
+<pre class="language-diff"><code class="language-diff"><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span>&lt;link rel="stylesheet" type="text/css" href="/index.css">
+</span>
+Your markdown file
+
+<span class="token unchanged"><span class="token prefix unchanged"> </span>> [!info]
+<span class="token prefix unchanged"> </span>> This is an information box
+</span></code></pre>
+
+<div class="callout" data-callout="warning">
+<div class="callout-title">
+<div class="callout-title-icon">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-alert-triangle"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg>
+</div>
+<div class="callout-title-inner">Warning</div>
+</div>
+<div class="callout-content"><p>Dont forget to mark your new css file for passthrough in <code>eleventy.config.js</code></p>
+<pre class="language-diff"><code class="language-diff">import MarkdownItObsidianCallouts from 'markdown-it-obsidian-callouts'
+
+export default async function (eleventyConfig) {
+
+<span class="token inserted-sign inserted"><span class="token prefix inserted">+</span>eleventyConfig.addWatchTarget("_src/index.css");
+<span class="token prefix inserted">+</span>eleventyConfig.addPassthroughCopy("_src/index.css");
+</span>eleventyConfig.amendLibrary("md", MarkdownItObsidianCallouts);
+
+return {
+	dir: {
+	input: "_src",
+	output: "_site",
+	},
+};
+
+}</code></pre>
+</div></div><p>And if we run eleventy again our file should look like this:
+<picture><source type="image/webp" srcset="http://localhost:8080/img/lDZLjC_iV9-334.webp 334w"><img src="http://localhost:8080/img/lDZLjC_iV9-334.jpeg" alt="A correctly rendered markdown file showing : &quot;Your markdown file  INFO ICON This is an information box&quot;" width="334" height="146"></picture></p>
+<p>Annddd you are done! I hope that this was useful for at least one person :D</p>
+  ]]>  
+   </content>
+  </entry>
+</feed>

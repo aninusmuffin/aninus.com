@@ -1,0 +1,89 @@
+@import url(hero.css);
+
+.index-page-content {
+    display: flex;
+    justify-content:center;
+
+    margin-inline: calc(var(--tw-spacing) * 3) /* 0.75rem = 12px */;
+    margin-block: calc(var(--tw-spacing) * 10) /* 2.5rem = 40px */;
+}
+
+.index-page-content h1 {
+    font-size: var(--tw-text-6xl) /* 3.75rem = 60px */;
+    line-height: var(--tw-leading, var(--tw-text-6xl--line-height) /* 1 */);
+    font-family:  "Bagnard", serif ;
+
+
+}
+
+.index-page-content h2 {
+    font-size: var(--tw-text-4xl) /* 2.25rem = 36px */;
+    line-height: var(--tw-leading, var(--tw-text-4xl--line-height) /* calc(2.5 / 2.25) ≈ 1.1111 */);
+    padding: calc(var(--tw-spacing) * 3) /* 0.75rem = 12px */;
+
+}
+
+
+.index-page-content > .grid {
+    gap: calc(var(--tw-spacing) * 4) /* 1rem = 16px */;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    justify-self: center;
+
+
+    @media (width >= 64rem /* 1024px */) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+.blog-latest {
+    gap: calc(var(--tw-spacing) * 2) /* 1rem = 16px */;
+    justify-self: center;
+    width: 100%;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+
+    @media (width >= 64rem /* 1024px */) {
+        grid-template-columns:  25% 75%;
+    }
+
+}
+
+.blog-latest > picture > img {
+    align-self: center;
+    max-width: calc(178px * 3);
+    max-height: calc(100px * 3);
+    border-radius: var(--tw-radius-2xl);
+    @media (width >= 50rem) {
+        max-width: 178px;
+        max-height: 100px;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+}
+
+.blog-latest > picture {
+    align-self: center;
+    justify-self: center;
+}
+
+.blog-latest > div {
+    max-width: 30rem;
+    @media (width >= 50rem) {
+    grid-column: 2 / 3;
+    }
+}
+
+.blog-latest > div > p {
+    font-size: medium;
+    margin-block: 5px;
+}
+
+.blog-latest .title {
+    text-align: left;
+    margin: 0px;
+    font-size: var(--tw-text-3xl) /* 2.25rem = 36px */;
+    line-height: var(--tw-leading, var(--tw-text-3xl--line-height) /* calc(2.5 / 2.25) ≈ 1.1111 */);
+    font-weight: var(--tw-font-weight-bold);
+}

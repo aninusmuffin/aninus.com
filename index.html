@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark:bg-zinc-800 bg-gray-200 text-gray-900 dark:text-gray-300">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,55 +8,67 @@
     <meta name="description" content="Hi! I'm Aninus, welcome to my website!">
     <meta name="keywords" content="Programming, art, aninus, aninuscsalas, aninusmuffin">
     <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/68734661?v=4">
-    <link rel="stylesheet" type="text/css" href="/assets/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/base.css">
 </head>
 
-<body class="min-h-screen">
-
-  <main>
+<body>
+  <div style="  position: relative; min-height: 100vh;">
+  <main style="padding-bottom: 10rem;">
     
-<div class="bg-center bg-cover bg-[url(/assets/img/background.png)]">
 
-<overlay class="flex backdrop-blur-sm w-full backdrop-brightness-50 justify-center h-screen md:h-auto">
-<div class="flex my-20 self-center content-center max-w-6xl m-6">
-<div class="gap-4 lg:grid-cols-2 grid grid-cols-1">
-  <div class="">
-    <img src="https://avatars.githubusercontent.com/u/68734661?v=4" alt="Profile icon" class="max-w-xs mx-auto rounded-full object-scale-down object-center size-50 lg:size-80">
-    <div class="m-8 gap-10 grid grid-cols-5 place-content-center place-items-center">
+  <link rel="stylesheet" type="text/css" href="/assets/styles/index.css">
 
-      <a title="Mastodon" rel="me" class=" text-neutral-50 hover:text-neutral-400" href="https://mastodon.social/@aninus">
 
-    <svg class="size-12 lg:size-15"><use href="#fab-fa-mastodon" xlink:href="#fab-fa-mastodon"></use></svg>
+<div>
+
+<div class="hero textured-background"> 
+<div class="hero-content">
+<div class="grid">
+  <div>
+    <div style="display: flex; justify-content: center;"> <!-- Firefox cannot understand what justify-self is on an img --> 
+    <picture><source type="image/webp" srcset="/Mgpyti3ZXB-400.webp 400w"><img src="/Mgpyti3ZXB-400.jpeg" alt="Profile icon" class="index-page-hero-logo" width="400" height="400"></picture>
+    </div>
+    <div class="grid social">
+
+      <a title="Mastodon" rel="me" class="social" href="https://mastodon.social/@aninus">
+
+    <svg aria-hidden="true"><use href="#fab-fa-mastodon" xlink:href="#fab-fa-mastodon"></use></svg>
     </a>
 
-      <a title="Bluesky" rel="me" class=" text-neutral-50 hover:text-neutral-400" href="https://bsky.app/profile/aninus.com">
 
-    <svg class="size-12 lg:size-15"><use href="#fab-fa-bluesky" xlink:href="#fab-fa-bluesky"></use></svg>
+      <a title="Bluesky" rel="me" class="social" href="https://bsky.app/profile/aninus.com">
+
+    <svg aria-hidden="true"><use href="#fab-fa-bluesky" xlink:href="#fab-fa-bluesky"></use></svg>
     </a>
 
-      <a title="Github" rel="me" class=" text-neutral-50 hover:text-neutral-400" href="https://github.com/aninusmuffin">
 
-    <svg class="size-12 lg:size-15"><use href="#fab-fa-github" xlink:href="#fab-fa-github"></use></svg>
+      <a title="Github" rel="me" class="social" href="https://github.com/aninusmuffin">
+
+    <svg aria-hidden="true"><use href="#fab-fa-github" xlink:href="#fab-fa-github"></use></svg>
     </a>
 
-      <a title="Modrinth" rel="me" class=" text-neutral-50 hover:text-neutral-400" href="https://modrinth.com/user/aninus">
 
-    <svg class="size-12 lg:size-15"><use href="#custom-simpleicons-modrith" xlink:href="#custom-simpleicons-modrith"></use></svg>
+      <a title="Modrinth" rel="me" class="social" href="https://modrinth.com/user/aninus">
+
+    <svg><use href="#custom-simpleicons-modrith" xlink:href="#custom-simpleicons-modrith"></use></svg>
 </a>
 
-      <a title="Codeberg" rel="me" class=" text-neutral-50 hover:text-neutral-400" href="https://codeberg.org/aninus">
 
-    <svg class="size-12 lg:size-15"><use href="#custom-simpleicons-codeberg" xlink:href="#custom-simpleicons-codeberg"></use></svg>
+      <a title="Codeberg" rel="me" class="social" href="https://codeberg.org/aninus">
+
+    <svg><use href="#custom-simpleicons-codeberg" xlink:href="#custom-simpleicons-codeberg"></use></svg>
 </a>
+
 
     </div>
   </div>
-    <div class="flex items-center justify-center">
-      <div class="">
-        <h1 class="text-6xl text-gray-100 m-auto ">
+  
+    <div class="flex tw:items-center">
+      <div>
+        <h1 class="hero-title">
           Hi! I'm <b>Aninus</b>.
         </h1>
-        <p class="py-5 text-gray-100 inline-block align-middle text-xl">
+        <p class="hero-text">
           My name is Aninus Partikler, but you might also know me as aninusmuffin or aninuscsalas.
           I self describe as a "hobbyist developer and desginer" and "Worst Developer alive",
           currently trying to learn Android (Kotlin and Jetpack Compose) and GNOME (GTK4) app development. 
@@ -65,62 +77,62 @@
     </div>
 </div>   
 </div>
-</overlay>
+</div>
 
 </div>
 
-<div class="mx-3 lg:mx-50 my-10">
-  <div class="">
+<div class="index-page-content">
 
+<div class="grid">
+<div class="dashed-border-box ">
+<div class=" vertical-flex ">
+  <div>
+  <h1 id="projects">Projects</h1>
+  <p>Some of the things i have done online</p>
   </div>
-
-<div class="gap-4 lg:grid-cols-2 grid grid-cols-1">
-<div class="border-3 border-dashed  rounded-2xl m-2 ">
-<div class="flex flex-col divide-y-3 divide-dashed ">
-  <h1 class="text-6xl pb-5 font-coolfont p-5" id="projects">Projects</h1>
-  <div class="p-5">
-    <h2 class="text-4xl py-3">Minecraft:</h2>
-    <ul class="ms-5 list-disc text-xl">
+  <div>
+    <h2>Minecraft:</h2>
+    <ul>
 
       
-      <li class="py-2">
+      <li>
         <a class="link" href="https://modrinth.com/datapack/serversleep">
-        <img src="https://cdn-raw.modrinth.com/data/Cw8IlnGM/88fa52c1ebede5f48ab9c2a5ff5bea8e12da7259.png" class="size-5 inline-block">
+        <picture><source type="image/webp" srcset="/UxN0M91ABQ-500.webp 500w"><img src="/UxN0M91ABQ-500.jpeg" alt="ServerSleep's icon" class=" small-icon" width="500" height="500"></picture>
         ServerSleep</a> 
         is the simplest multiplayer sleep mod/datapack. Only changes a single gamerule: gamerule playersSleepingPercentage 50
       </li>
       
-      <li class="py-2">
+      <li>
         <a class="link" href="https://tazta2ra.github.io/modpacks/beyond/">
-        <img src="https://cdn.modrinth.com/data/ElPWwjX0/05d7d6107ab3e89e6cce2c2a829ac59968e1a3c9_96.webp" class="size-5 inline-block">
+        <picture><source type="image/webp" srcset="/uArWkEp6sd-96.webp 96w"><img src="/uArWkEp6sd-96.jpeg" alt="Blue Lotus: Beyond's icon" class=" small-icon" width="96" height="96"></picture>
         Blue Lotus: Beyond</a> 
         is a massive vanilla+ modpack focused on exploration and adventure while enhancing vanilla gamplay with lots of Quality of Life improvements.
       </li>
       
-      <li class="py-2">
+      <li>
         <a class="link" href="https://modrinth.com/modpack/bluelotus">
-        <img src="https://cdn.modrinth.com/data/CVfnTLOu/bb99d94fa45cbf94442bde2321b25b4595c6858f.png" class="size-5 inline-block">
+        <picture><source type="image/webp" srcset="/SbHr-lsgrV-256.webp 256w"><img src="/SbHr-lsgrV-256.jpeg" alt="Blue Lotus: Classic's icon" class=" small-icon" width="256" height="256"></picture>
         Blue Lotus: Classic</a> 
         is a modpack focused on exploration while keeping Minecraft's classic style.
       </li>
       
-      <li class="py-2">
+      <li>
         <a class="link" href="https://modrinth.com/modpack/wynncraft">
-        <img src="https://cdn.modrinth.com/data/yvC0d6Q6/c6f3d3ca5063d149d1c5c16588aa85bdaf780fa9_96.webp" class="size-5 inline-block">
+        <picture><source type="image/webp" srcset="/MuHHNcr5y7-96.webp 96w"><img src="/MuHHNcr5y7-96.jpeg" alt="Wynncraft 101's icon" class=" small-icon" width="96" height="96"></picture>
         Wynncraft 101</a> 
         is a simple modpack for Wynncraft.
       </li>
       
     </ul>
     </div>
-<div class="p-5">
-<h2 class="text-4xl py-3">Random:</h2>
-    <ul class="ms-5 list-disc text-xl">
+<div>
+<h2>Random:</h2>
+    <ul>
       
-      <li class="py-2">
+      <li>
         <a class="link" href="https://github.com/aninusmuffin/securemuffin">
         
-        <svg class="size-5 inline-block align-middle"><use href="#fab-fa-fedora" xlink:href="#fab-fa-fedora"></use></svg>
+        <svg class=" small-icon inline-block" aria-hidden="true"><use href="#fab-fa-fedora" xlink:href="#fab-fa-fedora"></use></svg>
         
         Securemuffin</a> 
         is an atomic Silverblue image based on Secureblue with vscode and Dinosaurs from Bluefin (But pls dont use bc it is mostly for personal use and testing)
@@ -131,26 +143,91 @@
   </div>
 </div>
 </div>
-    <div class="border-3 border-dashed p-5 rounded-2xl m-2">
-      <h1 class="text-6xl pb-5 font-coolfont" id="contact-me">Contact me</h1>
+    <div class="dashed-border-box">
+    <div class="vertical-flex">
+      <div>
+      <a href="/blog" class="link"><h1 id="contact-me">Blog</h1></a>
+      <p>Who knows, one day i might post something really interesting here...</p>
+      </div>
 
-    <ul class="ms-5 list-disc text-xl">
-      <li class="py-2"> 
-        You can email me at
-        <a class="link" href="mailto:muffin@aninus.com">
-        <svg class="size-5 inline-block align-middle"><use href="#fas-fa-envelope" xlink:href="#fas-fa-envelope"></use></svg>
-        muffin@aninus.com</a>, with optional encryption using
-        <a class="link" href="https://keys.openpgp.org/search?q=muffin%40aninus.com">
-          <svg class="size-5 inline-block align-middle"><use href="#fas-fa-key" xlink:href="#fas-fa-key"></use></svg>
-          my PGP key.
-        </a>
-      </li>      
 
-    </ul>
+        
+        
+        <div style="list-style: none;">
+
+        <div class="grid blog-latest">
+        <picture><source type="image/webp" srcset="/img/hGmC3-OGM_-89.webp 89w"><img src="/img/hGmC3-OGM_-89.jpeg" alt="" loading="lazy" width="89" height="89"></picture>
+        <div>
+        <a class="link" href="/blog/test-blog-page/">
+          <p class="title">Test blog page</p> 
+       </a>
+           <p>19 Aug 2025 •     
+    
+    <a class="link" style="display: inline;" href="/blog/posts">#posts</a> 
+    
+    </p> 
+    
+    </div>         
+        
+        
+      </div>    
 
     </div>
-  </div>
+        
+        <div style="list-style: none;">
 
+        <div class="grid blog-latest">
+        <picture><source type="image/webp" srcset="/img/YPP0SHiXue-89.webp 89w, /img/YPP0SHiXue-178.webp 178w" sizes="auto"><img src="/img/YPP0SHiXue-89.jpeg" alt="An image showing an obsidian callout and an arrow pointing at a nicely rendered info box." loading="lazy" width="178" height="100" srcset="/img/YPP0SHiXue-89.jpeg 89w, /img/YPP0SHiXue-178.jpeg 178w" sizes="auto"></picture>
+        <div>
+        <a class="link" href="/blog/using-obsidian-callouts-with-11ty/">
+          <p class="title">Using Obsidian Callouts with 11ty</p> 
+       </a>
+           <p>26 Aug 2025 •     
+    
+    <a class="link" style="display: inline;" href="/blog/posts">#posts</a> 
+    
+    <a class="link" style="display: inline;" href="/blog/11ty">#11ty</a> 
+    
+    <a class="link" style="display: inline;" href="/blog/obsidian">#obsidian</a> 
+    
+    <a class="link" style="display: inline;" href="/blog/markdown">#markdown</a> 
+    
+    </p> 
+    A simple guide on how to make an Obsidian style Callout or Information box
+    </div>         
+        
+        
+      </div>    
+
+    </div>
+             
+        </div>
+    </div>
+
+
+    <div class="dashed-border-box">
+    <div class="vertical-flex">
+      <h1 id="contact-me">Contact me</h1>
+      <div>
+      <ul>
+        <li> 
+          You can email me at
+          <a class="link" href="mailto:muffin@aninus.com">
+          <svg class=" small-icon" aria-hidden="true"><use href="#fas-fa-envelope" xlink:href="#fas-fa-envelope"></use></svg>
+          muffin@aninus.com</a>, with optional encryption using
+          <a class="link" href="https://keys.openpgp.org/search?q=muffin%40aninus.com">
+            <svg class=" small-icon" aria-hidden="true"><use href="#fas-fa-key" xlink:href="#fas-fa-key"></use></svg>
+            my PGP key.
+          </a>
+        </li>      
+        </ul></div>
+      </div>
+    
+    </div>
+
+
+
+  </div>
 </div>
 
 
@@ -159,20 +236,23 @@
 
 
   </main>
-</body>
 
-<footer class="w-full m-auto text-center border-t-3 border-dashed bg-gray-300 text-gray-950 dark:bg-gray-800 dark:text-gray-50 justify-center py-10">
-  <div class="">
-    <p>
+<footer class="textured-background">
+
+  <div style="align-self: flex-end;">
+    <p style="font-size:medium;">
     Made with ❤️ using <a class="link" href="https://11ty.dev">11ty</a>, 
     <a class="link" href="https://liquidjs.com/index.html">LiquidJS</a>, 
     <a class="link" href="https://tailwindcss.com/">Tailwind</a> and 
     <a class="link" href="https://fontawesome.com/">Fontawesome</a>
-        
     </p>
   </div>
 
 </footer>
+</div>
+
+</body>
+
 
 </html>
 
