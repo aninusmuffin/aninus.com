@@ -41,24 +41,25 @@
     gap: calc(var(--tw-spacing) * 2) /* 1rem = 16px */;
     justify-self: center;
     width: 100%;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
 
 
     @media (width >= 64rem /* 1024px */) {
-        grid-template-columns: 300px, 600px ;
+        grid-template-columns:  25% 75%;
     }
 
 }
 
 .blog-latest > picture > img {
     align-self: center;
-    max-width: calc(178px / 2 );
-    max-height: calc(100px / 2);
+    max-width: calc(178px * 3);
+    max-height: calc(100px * 3);
     border-radius: var(--tw-radius-2xl);
     @media (width >= 50rem) {
-    max-width: 178px;
-    max-height: 100px;
-    -webkit-user-select: none;
-	user-select: none;
+        max-width: 178px;
+        max-height: 100px;
+        -webkit-user-select: none;
+        user-select: none;
     }
 }
 
@@ -69,7 +70,9 @@
 
 .blog-latest > div {
     max-width: 30rem;
+    @media (width >= 50rem) {
     grid-column: 2 / 3;
+    }
 }
 
 .blog-latest > div > p {
@@ -78,6 +81,7 @@
 }
 
 .blog-latest .title {
+    text-align: left;
     margin: 0px;
     font-size: var(--tw-text-3xl) /* 2.25rem = 36px */;
     line-height: var(--tw-leading, var(--tw-text-3xl--line-height) /* calc(2.5 / 2.25) ≈ 1.1111 */);

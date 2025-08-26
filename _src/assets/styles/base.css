@@ -141,7 +141,8 @@ li {
     }
 }
 
-.vertical-flex > * {
+
+.dashed-border-box > .vertical-flex > * {
     padding: calc(var(--tw-spacing) * 5) /* 1.25rem = 20px */;
 }
 

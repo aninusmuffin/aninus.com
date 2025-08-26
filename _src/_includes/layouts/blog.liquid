@@ -10,19 +10,20 @@ stylesheet:
 <div>
 <div class="blog">
     
-   <img class="thumbnail" src="{{ image }}" alt="{{ img-alt }}">
+       <p><img class="thumbnail" src="{{ image }}" alt="{{ imgalt }}"></p>
+
 
     <h1 class="title"> {{ title }} </h1>
 
     <p class="subtitle"> {{description}} </p>
     <p>
-      {{ date | postDate }} •
-      {% for tags in tags %}
-        <a class="link" style="display: inline;" href="/blog/{{ tags }}">
-        #{{ tags }}</a> 
+      {{ date | postDate}} •
+      {% for tag in tags | getKeys | filterTagList | sortAlphabetically %}
+        <a class="link" style="display: inline;" href="/blog/{{ tag }}">
+        #{{ tag }}</a> 
       {% endfor %}
       </p>
-
+    
     <article class="content">
 
     {{ content }}

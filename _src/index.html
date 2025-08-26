@@ -138,7 +138,7 @@ index_page: yes
         <div style="list-style: none;">
 
         <div class="grid blog-latest">
-        <img src="{{post.data.image}}" alt="{{ post.data.img-alt}}" loading="lazy" eleventy:widths="178,89" eleventy:optional="placeholder" ></img>
+        <img src="{{post.data.image}}" alt="{{ post.data.imgalt}}" loading="lazy" eleventy:widths="178,89" eleventy:optional="placeholder" ></img>
         <div>
         <a class="link"
         href="{{post.url}}"
@@ -150,9 +150,8 @@ index_page: yes
     <a class="link" style="display: inline;" href="/blog/{{ tags }}">#{{ tags }}</a> 
     {% endfor %}
     </p> 
-          {{post.data.description}}
-
-        </div>         
+    {{post.data.description}}
+    </div>         
         
         
       </div>    

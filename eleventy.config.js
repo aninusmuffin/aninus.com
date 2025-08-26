@@ -2,7 +2,10 @@ import fontAwesomePlugin from "@11ty/font-awesome";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import MarkdownItObsidianCallouts from 'markdown-it-obsidian-callouts'
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import pluginFilters from "./_config/filters.js";
 
 
 export default async function (eleventyConfig) {
@@ -16,6 +19,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(fontAwesomePlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+  eleventyConfig.addPlugin(pluginRss);
 
   eleventyConfig.addBundle("customicons");
   
@@ -26,23 +30,29 @@ export default async function (eleventyConfig) {
   eleventyConfig.amendLibrary("md",MarkdownItObsidianCallouts);
 
   //Filters
-  eleventyConfig.addFilter("lastPosts", function(posts) {
-    return posts
-    .slice(-4);
-  });
-  eleventyConfig.addFilter("reverse", function(post) {
-    return post
-    .reverse();
-  });
-  eleventyConfig.addFilter("postDate", (dateObj) => {
-    return dateObj.toLocaleString("en-gb", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    });
-  });
+  eleventyConfig.addPlugin(pluginFilters);
 
-  
+
+  	/* eleventyConfig.addPlugin(feedPlugin, {
+		type: "atom",
+		outputPath: "/feed.xml",
+		collection: {
+			name: "posts", 
+			limit: 10,     
+		},
+		metadata: {
+			language: "en",
+			title: "Aninus' blog",
+			subtitle: "Who knows, one day i might post something really interesting here...",
+			base: "https://aninus.com/",
+			author: {
+				name: "Aninus Partikler",
+				email: "muffin@aninus.com",
+			}
+		}
+	}); */
+
+
 
   return { config };
 }
