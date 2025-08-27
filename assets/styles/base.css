@@ -2,7 +2,17 @@
 
 @import url(theme.css);
 
-@import url(fonts.css);
+
+@font-face {
+  font-family: "Adwaita Sans";
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("/assets/fonts/AdwaitaSans-Regular.woff2") format(woff2);
+}
+
+
+
 
 html {
     color: var(--color-text-light);
@@ -64,7 +74,7 @@ ul {
 body {
     margin: 0px;
     display: block;
-    font-family: Adwaita Sans;
+    font-family: "Adwaita Sans";
 }
 
 p, li, ul {
@@ -96,6 +106,14 @@ li {
     height: calc(var(--tw-spacing) * 5) /* 1.25rem = 20px */;
     display: inline-block;
     vertical-align: middle;
+}
+
+h1 > .icon {
+    width: calc(var(--tw-spacing) * 10) /* 1.25rem = 20px */;
+    height: calc(var(--tw-spacing) * 10) /* 1.25rem = 20px */;
+    display: inline-block;
+    vertical-align: middle;
+    padding-inline-end: calc(var(--tw-spacing) *2);
 }
 
 .link {

@@ -1,5 +1,14 @@
 @import url(hero.css);
 
+
+@font-face {
+  font-family: "Bagnard";
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("/assets/fonts/Bagnard.woff2") format(woff2);
+}
+
 .index-page-content {
     display: flex;
     justify-content:center;
@@ -11,7 +20,7 @@
 .index-page-content h1 {
     font-size: var(--tw-text-6xl) /* 3.75rem = 60px */;
     line-height: var(--tw-leading, var(--tw-text-6xl--line-height) /* 1 */);
-    font-family:  "Bagnard", serif ;
+    font-family:  "Bagnard" ;
 
 
 }
