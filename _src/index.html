@@ -22,6 +22,9 @@ index_page: yes
       src="https://avatars.githubusercontent.com/u/68734661?v=4"
       alt="Profile icon"
       class="index-page-hero-logo"
+      sizes="auto"
+      eleventy:widths="320"
+      eleventy:optional="placeholder"
     />
     </div>
     <div class="grid social">
@@ -98,7 +101,7 @@ index_page: yes
         <a class="link" 
         href="{{Minecraft.link}}"
         >
-        <img src="{{Minecraft.icon}}" alt="{{ Minecraft.name }}'s icon" class=" small-icon"></img>
+        <img src="{{Minecraft.icon}}" loading="lazy" eleventy:widths="50" eleventy:optional="placeholder" alt="{{ Minecraft.name }}'s icon" class=" small-icon"></img>
         {{Minecraft.name}}</a> 
         {{Minecraft.description}}
       </li>
@@ -138,7 +141,7 @@ index_page: yes
         <div style="list-style: none;">
 
         <div class="grid blog-latest">
-        <img src="{{post.data.image}}" alt="{{ post.data.imgalt}}" loading="lazy" eleventy:widths="178,89" eleventy:optional="placeholder" ></img>
+        <img src="{{post.data.image}}" alt="{{ post.data.imgalt}}" sizes="(width < 70rem) 300px , 200px" eleventy:widths="300, 200" eleventy:optional="placeholder" ></img>
         <div>
         <a class="link"
         href="{{post.url}}"
