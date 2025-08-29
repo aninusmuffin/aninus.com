@@ -26,6 +26,7 @@
 
 
 .thumbnail {
+    aspect-ratio: 16/9;
     border-radius: var(--tw-radius-3xl);
     max-height: 30rem;
     max-width: 50rem;
