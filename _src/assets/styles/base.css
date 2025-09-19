@@ -3,6 +3,12 @@
 @import url(theme.css);
 
 
+
+
+
+
+
+
 @font-face {
   font-family: "Adwaita Sans";
   font-style: normal;
@@ -16,7 +22,7 @@
 
 html {
     color: var(--color-text-light);
-    background-color: var(--color-background-light) /* oklch(92.8% 0.006 264.531) = #e5e7eb */;
+    background-color: var(--color-background-light);
 
     ::selection {
     color: var(--color-selection-light);
@@ -24,8 +30,8 @@ html {
     }
 
     @media (prefers-color-scheme: dark) {
-    color: var(--color-text-dark) /* oklch(87.2% 0.01 258.338) = #d1d5dc */;
-    background-color: var(--color-background-dark) /* oklch(27.4% 0.006 286.033) = #27272a */;
+    color: var(--color-text-dark);
+    background-color: var(--color-background-dark);
 
         ::selection {
         color: var(--color-selection-dark);
@@ -36,7 +42,11 @@ html {
 
 }
 
-
+body {
+    margin: 0px;
+    display: block;
+    font-family: "Adwaita Sans", sans-serif;
+}
 
 footer {
     width: 100%;
@@ -44,18 +54,18 @@ footer {
     position: absolute;
     bottom: 0;
     text-align: center;
-    border-top-style: var(--border-style);
-    border-top-width: var(--border-width);
-    background-color: var(--color-secondary-background-light);
-    color: var(--color-muted-text-light);
+    border-top: var(--border-width) var(--border-style);
     justify-self: center;
-    padding-block: calc(var(--tw-spacing) * 10);
+    padding-block: calc(var(--spacing) * 10);
+
+    color: var(--color-muted-text-light);
+    background-color: var(--color-secondary-background-light);
 
     @media (prefers-color-scheme: dark) {
     color: var(--color-muted-text-dark) ;
     background-color: var(--color-secondary-background-dark);
 
-    }    
+    }
 }
 
 h1, h2, h3, h4, h5 {
@@ -67,15 +77,11 @@ h1, h2, h3, h4, h5 {
 
 ul {
     padding: 0px;
-    margin-inline-start: calc(var(--tw-spacing) * 5) /* 1.25rem = 20px */;
+    margin-inline-start: calc(var(--spacing) * 5) /* 1.25rem = 20px */;
     list-style: disc;
 }
 
-body {
-    margin: 0px;
-    display: block;
-    font-family: "Adwaita Sans";
-}
+
 
 p, li, ul {
     font-size: var(--tw-text-xl) /* 1.25rem = 20px */;
@@ -84,7 +90,7 @@ p, li, ul {
 }
 
 li {
-    padding-block: calc(var(--tw-spacing) * 2) /* 0.5rem = 8px */;
+    padding-block: calc(var(--spacing) * 2) /* 0.5rem = 8px */;
 }
 
 
@@ -102,18 +108,18 @@ li {
 }
 
 .small-icon {
-    width: calc(var(--tw-spacing) * 5) /* 1.25rem = 20px */;
-    height: calc(var(--tw-spacing) * 5) /* 1.25rem = 20px */;
+    width: calc(var(--spacing) * 5) /* 1.25rem = 20px */;
+    height: calc(var(--spacing) * 5) /* 1.25rem = 20px */;
     display: inline-block;
     vertical-align: middle;
 }
 
 h1 > .icon {
-    width: calc(var(--tw-spacing) * 10) /* 1.25rem = 20px */;
-    height: calc(var(--tw-spacing) * 10) /* 1.25rem = 20px */;
+    width: calc(var(--spacing) * 10);
+    height: calc(var(--spacing) * 10);
     display: inline-block;
     vertical-align: middle;
-    padding-inline-end: calc(var(--tw-spacing) *2);
+    padding-inline-end: calc(var(--spacing) *2);
 }
 
 .link {
@@ -138,12 +144,24 @@ h1 > .icon {
 
 }
 
+.contenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenter > div {
+    padding-inline: calc(var(--spacing)*5);
+    max-width: 50rem;
+    padding-block: calc(var(--spacing)*5) ;
+}
+
 
 .dashed-border-box {
     display: block;
     border: var(--border-width) var(--border-style);
     border-radius: var(--tw-radius-2xl);
-    margin: calc(var(--tw-spacing) * 2);
+    margin: calc(var(--spacing) * 2);
     max-width: var(--tw-container-3xl);
 }
 
@@ -161,10 +179,10 @@ h1 > .icon {
 
 
 .dashed-border-box > .vertical-flex > * {
-    padding: calc(var(--tw-spacing) * 5) /* 1.25rem = 20px */;
+    padding: calc(var(--spacing) * 5) /* 1.25rem = 20px */;
 }
 
-    
+
     /*
     @media (width >= 80rem ) {
         margin-inline: calc(var(--tw-spacing) * 20);

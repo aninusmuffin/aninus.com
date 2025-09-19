@@ -39,9 +39,9 @@
 
 }
 
-.grid .social {
-    gap: calc(var(--tw-spacing) * 10) /* 1rem = 16px */;
-    margin: calc(var(--tw-spacing) * 6) /* 2rem = 32px */;
+.social {
+    gap: calc(var(--tw-spacing) * 1) /* 1rem = 16px */;
+    margin: calc(var(--tw-spacing) * 1) /* 2rem = 32px */;
     grid-template-columns: repeat(5, minmax(0, 1fr));
     place-content: center;
     place-items: center;
@@ -68,17 +68,17 @@
 
 
 a.social {
-    color: var(--tw-color-black) /* #000 = #000000 */;
+    color: var(--color-link-light);
     &:hover {
         @media (hover: hover) {
-            color: var(--tw-color-neutral-600) /* oklch(43.9% 0 0) = #525252 */;
+            color: var(--color-link-hover-light);
         }
     }
     @media (prefers-color-scheme: dark) {
-        color: var(--tw-color-neutral-50) /* oklch(98.5% 0 0) = #fafafa */;
+        color: var(--color-link-dark);
         &:hover {
             @media (hover: hover) {
-                color: var(--tw-color-neutral-400) /* oklch(70.8% 0 0) = #a1a1a1 */;
+                color: var(--color-link-hover-dark);
             }
         }
     }
@@ -96,7 +96,6 @@ a.social > i, a.social > svg {
 }
 
 .hero-title {
-    margin: auto;
     font-size: var(--tw-text-7xl) /* 3.75rem = 60px */;
     line-height: var(--tw-leading, var(--tw-text-7xl--line-height) /* 1 */);
 
@@ -107,9 +106,30 @@ a.social > i, a.social > svg {
 }
 
 .hero-text {
-    padding-block: calc(var(--tw-spacing) * 5) /* 1.25rem = 20px */;
+    margin: 0px;
+    padding-block: calc(var(--tw-spacing) * 5);
 
     @media (prefers-color-scheme: dark) {
-        color: var(--tw-color-gray-100) /* oklch(96.7% 0.003 264.542) = #f3f4f6 */;
+        color: var(--tw-color-gray-100)
+    }
+}
+
+
+.hero-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.hero-grid {
+    display: grid;
+    gap: calc(var(--tw-spacing) * 4) /* 1rem = 16px */;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    justify-self: center;
+    
+
+    @media (width >= 64rem /* 1024px */) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }

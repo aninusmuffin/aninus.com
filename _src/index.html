@@ -15,10 +15,11 @@ index_page: yes
 <div>
 
 <div class="hero textured-background"> 
+
 <div class="hero-content">
-<div class="grid">
-  <div >
-    <div style="display: flex; justify-content: center;"> <!-- Firefox cannot understand what justify-self is on an img --> 
+
+    <div class="hero-grid">
+    <div style="display: flex; justify-content: center;"><picture>
     <img
       src="https://avatars.githubusercontent.com/u/68734661?v=4"
       alt="Profile icon"
@@ -27,7 +28,19 @@ index_page: yes
       eleventy:widths="320"
       eleventy:optional="placeholder"
       fetchpriority=high
+      
+    />
+    </picture></div>
+    <div style="align-self:end;">
+    <h1 class="hero-title">Hi! I'm <b>Aninus</b>.</h1>
+
+    <p class="hero-text">
+      My name is Aninus Partikler, but you might also know me as aninusmuffin or aninuscsalas.
+      I self describe as a "hobbyist developer and designer" and "Worst Developer alive",
+      currently trying to learn Android (Kotlin and Jetpack Compose) and GNOME (GTK4) app development.
+    </p>
     </div>
+
     <div class="grid social">
 
       {% render "components/socials-button.liquid"  
