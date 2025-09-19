@@ -371,11 +371,7 @@
     --tw-default-mono-font-family: var(--tw-font-mono);
   }
 }
-@layer utilities {
-  .tw\:items-center {
-    align-items: center;
-  }
-}
+@layer utilities;
 @keyframes spin {
   to {
     transform: rotate(360deg);
