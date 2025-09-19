@@ -8,7 +8,7 @@
   font-style: normal;
   font-weight: 200 700;
   font-display: swap;
-  src: url("/assets/fonts/AdwaitaSans-Regular.woff2") format(woff2);
+  src: url("/assets/fonts/AdwaitaSans-Regular.subset.woff2") format(woff2);
 }
 
 
@@ -89,7 +89,7 @@ li {
 
 
 .textured-background {
-    background-image: url(/assets/img/noise.png);
+    background-image: url(/assets/img/noise.webp);
     background-repeat: repeat;
 }
 
