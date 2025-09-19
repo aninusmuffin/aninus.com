@@ -1,6 +1,7 @@
 @layer theme {
 
 :root {
+    --spacing: 0.25rem;
     --color-background-light: var(--tw-color-gray-200);
     --color-background-dark: var(--tw-color-zinc-800);
     --color-text-light: var(--tw-color-gray-900);
@@ -23,7 +24,7 @@
 
     --hover-decoration: solid;
 
-    --border-width: calc(var(--tw-spacing));
+    --border-width: calc(var(--spacing));
     --border-style: dashed;
 
 
