@@ -1,0 +1,44 @@
+
+speedlify-score {
+    height: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: calc(var(--spacing) * 7);
+
+
+    --_circle: var(--color-link);
+
+    &:hover {
+        --_circle: var(--color-link-hover);
+
+    }
+}
+.speedlify-summary {
+    margin-right: 1em;
+}
+.speedlify-score {
+    font-size: 1em; /* 13px /16 */
+    width: 2.6em;
+    height: 2.6em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #0cce6b;
+    color: #088645;
+    margin-left: 0.4615384615385em; /* 6px /13 */
+    box-shadow: 10px 10px 10px black;
+}
+.speedlify-score-ok {
+    color: #ffa400;
+    border-color: currentColor;
+}
+.speedlify-score-bad {
+    color: #ff4e42;
+    border-color: currentColor;
+}
+a.speedlify-score-link {
+    text-decoration: none;
+}

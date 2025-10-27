@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,46 +14,87 @@
     <title>Test blog page</title>
     <link rel="stylesheet" type="text/css" href="/assets/styles/base.css">
     <link rel="preload" as="font" href="/assets/fonts/AdwaitaSans-Regular.subset.woff2" crossorigin="">
+    <link rel="preload" as="font" href="/assets/fonts/Bagnard.woff2" crossorigin="">
     <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/68734661?v=4">
     <meta name="generator" content="Eleventy">
-    </head>
+
+    
+    <meta property="og:type" content="article">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/assets/styles/layouts/blog.css">
+    
+
+</head>
 
 <body>
-  <div style="  position: relative; min-height: 100vh;">
-  <main style="padding-bottom: 10rem;">
-    <meta property="og:type" content="article">
-<head><link rel="stylesheet" type="text/css" href="/assets/styles/blog.css"></head>    
-<link rel="stylesheet" type="text/css" href="/assets/styles/partials/navbar.css">
-<nav>
+    <div style="position: relative; min-height: 100vh;">
+
+        
+        <style>
+nav#navbar {
+    background-image: url(/assets/img/noise.webp);
+    border-bottom: var(--border-width) var(--border-style);
+    padding: calc(var(--spacing));
+    background-color: var(--color-secondary-background);
+
+    @media (prefers-color-scheme: dark) {
+        background-color: var(--color-secondary-background);
+    }
+}
+
+nav#navbar ul{
+    list-style: none;
+}
+
+nav#navbar li{
+    padding: 0;
+    display: inline-block;
+}
+
+
+</style>
+
+<nav id="navbar">
     <ul>
         <li><a href="/">aninus.com</a></li>
+        <li>/</li>
         <li><a href="/blog">Blog</a></li>
+        <li>/</li>
+        <li><a href="/about">About</a></li>
     </ul>
 </nav>
 
-<div>
-<div class="blog">
-    
-       <p><picture><source type="image/webp" srcset="/img/_fxmAhkpKd-1920.webp 1920w"><img class="thumbnail" src="/img/_fxmAhkpKd-1920.jpeg" alt="test" width="1920" height="1080"></picture></p>
+        
 
+        <main style="padding-bottom: 16rem;">
 
-    <h1 class="title"> Test blog page </h1>
+            
+<section class="content">
+    <article>
+        
+        <div><picture><source type="image/webp" srcset="/img/_fxmAhkpKd-1920.webp 1920w"><img class="thumbnail" src="/img/_fxmAhkpKd-1920.jpeg" alt="test" width="1920" height="1080"></picture></div>
 
-    <p class="subtitle"> aaaaaaa aaaaaaaaa aaaaaaa aaaaa aaaaaaaa aaaaaaaaaaaaaaa </p>
-    <p>
-      11 Nov 2025 •
-      
-        <a class="link" style="display: inline;" href="/blog/posts">
-        #posts</a> 
-      
-        <a class="link" style="display: inline;" href="/blog/post">
-        #post</a> 
-      
-      </p>
-    
-    <article class="content">
+        <h1 id="title"> Test blog page </h1>
+        <p id="subtitle"> aaaaaaa aaaaaaaaa aaaaaaa aaaaa aaaaaaaa aaaaaaaaaaaaaaa </p>
+        <p style="text-align: center;">
+            <time datetime="Tue Nov 11 2025 00:00:00 GMT+0000 (Coordinated Universal Time)">11 Nov 2025</time> •
+            
+            <a style="display: inline;" href="/blog/posts">
+            #posts</a>
+             
+            <a style="display: inline;" href="/blog/post">
+            #post</a>
+             
+          </p>
+    <section>
+        <details id="table-of-contents" class="textured-background box" open="">
+            <summary> Table of Contents </summary>
+            
+        </details>
 
-    <p>Lorem ipsum dolor sit amet, ex dolor nisi lorem amet in incididunt occaecat. Amet sit lorem aliqua velit sed officia. Qui est enim laborum consectetur, fugiat consequat anim officia et. Magna aliquip anim occaecat. Veniam in lorem anim adipiscing amet.
+        <div id="post">
+            <p>Lorem ipsum dolor sit amet, ex dolor nisi lorem amet in incididunt occaecat. Amet sit lorem aliqua velit sed officia. Qui est enim laborum consectetur, fugiat consequat anim officia et. Magna aliquip anim occaecat. Veniam in lorem anim adipiscing amet.
 Nostrud lorem et deserunt ea, nostrud consectetur sed <em>quis</em> irure deserunt in. Lorem aliqua id enim, do eiusmod officia in duis id ea. Cupidatat cillum occaecat mollit. Anim in ut eu adipiscing. Eu veniam nostrud lorem. Sint pariatur magna pariatur occaecat qui nisi sed. Aliquip deserunt adipiscing quis qui. Veniam cupidatat culpa sint.</p>
 
 <div class="callout" data-callout="info">
@@ -78,33 +118,34 @@ Commodo pariatur id aute pariatur do quis amet. Sed non nulla sint elit. Ea lore
 </span>}
 </code></pre>
 
-
+        </div>
+    </section>
     </article>
+</section>
 
 
+        </main>
+
+        <footer class="textured-background">
+            <div>
+                
+                <p style="font-size:medium;">
+                Made with ❤️ using <a href="https://11ty.dev">11ty</a>,
+                <a href="https://postcss.org/">PostCSS</a>,
+                <a href="https://liquidjs.com/">LiquidJS</a> and
+                <a href="https://fontawesome.com/">Fontawesome</a>
+                </p>
+                <a href="https://github.com/aninusmuffin/aninus.com/blob/main/./_src/blog/test.md">Edit this page on GitHub</a>
+
+            </div>
+        </footer>
+
+    </div>
+<div style="display: none">
+    
+    
 </div>
-</div>
-
-  </main>
-
-<footer class="textured-background">
-
-  <div style="align-self: flex-end;">
-    <p style="font-size:medium;">
-    Made with ❤️ using <a class="link" href="https://11ty.dev">11ty</a>, 
-    <a class="link" href="https://liquidjs.com/index.html">LiquidJS</a>, 
-    <a class="link" href="https://tailwindcss.com/">Tailwind</a> and 
-    <a class="link" href="https://fontawesome.com/">Fontawesome</a>
-    </p>
-  </div>
-  <a class="link" href="https://github.com/aninusmuffin/aninus.com/blob/main/./_src/blog/test.md">Edit this page on GitHub</a>
-
-
-</footer>
-</div>
-
 </body>
-
 
 
 

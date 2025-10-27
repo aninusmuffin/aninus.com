@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,76 +14,121 @@
     <title>Blog</title>
     <link rel="stylesheet" type="text/css" href="/assets/styles/base.css">
     <link rel="preload" as="font" href="/assets/fonts/AdwaitaSans-Regular.subset.woff2" crossorigin="">
+    <link rel="preload" as="font" href="/assets/fonts/Bagnard.woff2" crossorigin="">
     <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/68734661?v=4">
     <meta name="generator" content="Eleventy">
-    </head>
+
+    
+    
+
+</head>
 
 <body>
-  <div style="  position: relative; min-height: 100vh;">
-  <main style="padding-bottom: 10rem;">
-    
-<link rel="stylesheet" type="text/css" href="/assets/styles/blog.css">
-<link rel="stylesheet" type="text/css" href="/assets/styles/partials/navbar.css">
-<nav>
+    <div style="position: relative; min-height: 100vh;">
+
+        
+        <style>
+nav#navbar {
+    background-image: url(/assets/img/noise.webp);
+    border-bottom: var(--border-width) var(--border-style);
+    padding: calc(var(--spacing));
+    background-color: var(--color-secondary-background);
+
+    @media (prefers-color-scheme: dark) {
+        background-color: var(--color-secondary-background);
+    }
+}
+
+nav#navbar ul{
+    list-style: none;
+}
+
+nav#navbar li{
+    padding: 0;
+    display: inline-block;
+}
+
+
+</style>
+
+<nav id="navbar">
     <ul>
         <li><a href="/">aninus.com</a></li>
+        <li>/</li>
         <li><a href="/blog">Blog</a></li>
+        <li>/</li>
+        <li><a href="/about">About</a></li>
     </ul>
 </nav>
-<div style="display: flex; justify-content: center;">
-    <div class="vertical-flex bloglist">
+
+        
+
+        <main style="padding-bottom: 16rem;">
+
+            
+<section class="content">
+    <article>
+        
+
+
+        <h1>Blog</h1>
+        <p>Who knows, one day I might post something really interesting here...</p>
+        <div class="vertical-flex bloglist">
+        
+        
+
+        <section>
+            <div class="grid blogpost">
+                <picture><source type="image/webp" srcset="/img/Zaob10Uqt5-178.webp 178w, /img/Zaob10Uqt5-300.webp 300w" sizes="auto"><img src="/img/Zaob10Uqt5-178.jpeg" alt="An image showing an obsidian callout and an arrow pointing at a nicely rendered info box." loading="lazy" width="300" height="168" srcset="/img/Zaob10Uqt5-178.jpeg 178w, /img/Zaob10Uqt5-300.jpeg 300w" sizes="auto"></picture>
+                <div>
+                    <p class="title"><a href="/blog/using-obsidian-callouts-with-11ty/">Using Obsidian Callouts with 11ty</a></p>
+                    <p><time datetime="Tue Aug 26 2025 00:00:00 GMT+0000 (Coordinated Universal Time)">26 Aug 2025</time> •
+                        
+                        <a style="display: inline;" href="/blog/posts">#posts</a>
+                        
+                        <a style="display: inline;" href="/blog/11ty">#11ty</a>
+                        
+                        <a style="display: inline;" href="/blog/obsidian">#obsidian</a>
+                        
+                        <a style="display: inline;" href="/blog/markdown">#markdown</a>
+                        
+                    </p>
+                    <p>A simple guide on how to make an Obsidian style Callout or Information box</p>
+                </div>
+            </div>
+        </section>
+
+        
+        </div>
 
 
 
-        
-        
-        <div style="list-style: none; justify-items: center;">
+    </article>
+</section>
 
-        <div class="grid blogpost">
-        <picture><source type="image/webp" srcset="/img/Zaob10Uqt5-178.webp 178w, /img/Zaob10Uqt5-300.webp 300w" sizes="auto"><img src="/img/Zaob10Uqt5-178.jpeg" alt="An image showing an obsidian callout and an arrow pointing at a nicely rendered info box." loading="lazy" width="300" height="168" srcset="/img/Zaob10Uqt5-178.jpeg 178w, /img/Zaob10Uqt5-300.jpeg 300w" sizes="auto"></picture>
-        <div>
-        <a class="link" href="/blog/using-obsidian-callouts-with-11ty/"><p class="title">Using Obsidian Callouts with 11ty</p> </a>
-            <p>26 Aug 2025 •     
-            
-            <a class="link" style="display: inline;" href="/blog/posts">#posts</a> 
-            
-            <a class="link" style="display: inline;" href="/blog/11ty">#11ty</a> 
-            
-            <a class="link" style="display: inline;" href="/blog/obsidian">#obsidian</a> 
-            
-            <a class="link" style="display: inline;" href="/blog/markdown">#markdown</a> 
-            
-        </p> 
-        <p>A simple guide on how to make an Obsidian style Callout or Information box</p>
-    </div>         
-        
-        
-      </div>    
+
+        </main>
+
+        <footer class="textured-background">
+            <div>
+                
+                <p style="font-size:medium;">
+                Made with ❤️ using <a href="https://11ty.dev">11ty</a>,
+                <a href="https://postcss.org/">PostCSS</a>,
+                <a href="https://liquidjs.com/">LiquidJS</a> and
+                <a href="https://fontawesome.com/">Fontawesome</a>
+                </p>
+                <a href="https://github.com/aninusmuffin/aninus.com/blob/main/./_src/blog.html">Edit this page on GitHub</a>
+
+            </div>
+        </footer>
 
     </div>
-             
-        </div>
+<div style="display: none">
+    
+    
 </div>
-  </main>
-
-<footer class="textured-background">
-
-  <div style="align-self: flex-end;">
-    <p style="font-size:medium;">
-    Made with ❤️ using <a class="link" href="https://11ty.dev">11ty</a>, 
-    <a class="link" href="https://liquidjs.com/index.html">LiquidJS</a>, 
-    <a class="link" href="https://tailwindcss.com/">Tailwind</a> and 
-    <a class="link" href="https://fontawesome.com/">Fontawesome</a>
-    </p>
-  </div>
-  <a class="link" href="https://github.com/aninusmuffin/aninus.com/blob/main/./_src/blog.html">Edit this page on GitHub</a>
-
-
-</footer>
-</div>
-
 </body>
-
 
 
 

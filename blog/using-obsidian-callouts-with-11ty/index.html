@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,59 +14,118 @@
     <title>Using Obsidian Callouts with 11ty</title>
     <link rel="stylesheet" type="text/css" href="/assets/styles/base.css">
     <link rel="preload" as="font" href="/assets/fonts/AdwaitaSans-Regular.subset.woff2" crossorigin="">
+    <link rel="preload" as="font" href="/assets/fonts/Bagnard.woff2" crossorigin="">
     <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/68734661?v=4">
     <meta name="generator" content="Eleventy">
-    </head>
+
+    
+    <meta property="og:type" content="article">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/assets/styles/layouts/blog.css">
+    
+
+</head>
 
 <body>
-  <div style="  position: relative; min-height: 100vh;">
-  <main style="padding-bottom: 10rem;">
-    <meta property="og:type" content="article">
-<head><link rel="stylesheet" type="text/css" href="/assets/styles/blog.css"></head>    
-<link rel="stylesheet" type="text/css" href="/assets/styles/partials/navbar.css">
-<nav>
+    <div style="position: relative; min-height: 100vh;">
+
+        
+        <style>
+nav#navbar {
+    background-image: url(/assets/img/noise.webp);
+    border-bottom: var(--border-width) var(--border-style);
+    padding: calc(var(--spacing));
+    background-color: var(--color-secondary-background);
+
+    @media (prefers-color-scheme: dark) {
+        background-color: var(--color-secondary-background);
+    }
+}
+
+nav#navbar ul{
+    list-style: none;
+}
+
+nav#navbar li{
+    padding: 0;
+    display: inline-block;
+}
+
+
+</style>
+
+<nav id="navbar">
     <ul>
         <li><a href="/">aninus.com</a></li>
+        <li>/</li>
         <li><a href="/blog">Blog</a></li>
+        <li>/</li>
+        <li><a href="/about">About</a></li>
     </ul>
 </nav>
 
-<div>
-<div class="blog">
-    
-       <p><picture><source type="image/webp" srcset="/img/Zaob10Uqt5-332.webp 332w"><img class="thumbnail" src="/img/Zaob10Uqt5-332.jpeg" alt="An image showing an obsidian callout and an arrow pointing at a nicely rendered info box." width="332" height="186"></picture></p>
+        
 
+        <main style="padding-bottom: 16rem;">
 
-    <h1 class="title"> Using Obsidian Callouts with 11ty </h1>
+            
+<section class="content">
+    <article>
+        
+        <div><picture><source type="image/webp" srcset="/img/Zaob10Uqt5-332.webp 332w"><img class="thumbnail" src="/img/Zaob10Uqt5-332.jpeg" alt="An image showing an obsidian callout and an arrow pointing at a nicely rendered info box." width="332" height="186"></picture></div>
 
-    <p class="subtitle"> A simple guide on how to make an Obsidian style Callout or Information box </p>
-    <p>
-      26 Aug 2025 •
-      
-        <a class="link" style="display: inline;" href="/blog/posts">
-        #posts</a> 
-      
-        <a class="link" style="display: inline;" href="/blog/11ty">
-        #11ty</a> 
-      
-        <a class="link" style="display: inline;" href="/blog/obsidian">
-        #obsidian</a> 
-      
-        <a class="link" style="display: inline;" href="/blog/markdown">
-        #markdown</a> 
-      
-      </p>
-    
-    <article class="content">
+        <h1 id="title"> Using Obsidian Callouts with 11ty </h1>
+        <p id="subtitle"> A simple guide on how to make an Obsidian style Callout or Information box </p>
+        <p style="text-align: center;">
+            <time datetime="Tue Aug 26 2025 00:00:00 GMT+0000 (Coordinated Universal Time)">26 Aug 2025</time> •
+            
+            <a style="display: inline;" href="/blog/posts">
+            #posts</a>
+             
+            <a style="display: inline;" href="/blog/11ty">
+            #11ty</a>
+             
+            <a style="display: inline;" href="/blog/obsidian">
+            #obsidian</a>
+             
+            <a style="display: inline;" href="/blog/markdown">
+            #markdown</a>
+             
+          </p>
+    <section>
+        <details id="table-of-contents" class="textured-background box" open="">
+            <summary> Table of Contents </summary>
+            <nav class="toc">
+                <ol>
+                    
+                    <li><a href="#option-1-%3A-markdown-it-container">Option 1 : markdown-it-container</a>
+            		</li>
 
-    <p>When i decided to make this blog, one of my biggest annoyances was the creation of custom informational boxes. There are a lot of different ways to accomplish this in 11ty, you can use liquid's components (which I found to be cumbersome for blogs) and 11ty's own shortcodes are difficult to style with <a href="https://www.11ty.dev/docs/languages/markdown/#why-cant-i-return-markdown-from-paired-shortcodes-to-use-in-a-markdown-file">html and markdown at the same time</a>.</p>
+                    <li><a href="#option-2-%3A-markdown-it-github-alerts">Option 2 : markdown-it-github-alerts</a>
+            		</li>
+
+                    <li><a href="#option-3-%3A-markdown-it-obsidian-callouts">Option 3 : markdown-it-obsidian-callouts</a>
+            		</li>
+
+                    <li><a href="#setup">Setup</a>
+            		</li>
+
+                    <li><a href="#adding-styles">Adding styles</a>
+            		</li>
+                </ol>
+            </nav>
+        </details>
+
+        <div id="post">
+            <p>When i decided to make this blog, one of my biggest annoyances was the creation of custom informational boxes. There are a lot of different ways to accomplish this in 11ty, you can use liquid's components (which I found to be cumbersome for blogs) and 11ty's own shortcodes are difficult to style with <a href="https://www.11ty.dev/docs/languages/markdown/#why-cant-i-return-markdown-from-paired-shortcodes-to-use-in-a-markdown-file">html and markdown at the same time</a>.</p>
 <p>As it turns out 11ty uses <a href="https://github.com/markdown-it/markdown-it">markdown-it</a> for rendering, <a href="https://www.11ty.dev/docs/languages/markdown/#add-your-own-plugins">which has plugin support</a> and allows you to add custom markdown syntax.</p>
 <p>I found three similar plugins that have the same basic function:</p>
-<h3>Option 1 : <a href="https://github.com/markdown-it/markdown-it-container">markdown-it-container</a></h3>
+<h2 id="option-1-%3A-markdown-it-container" tabindex="-1">Option 1 : <a href="https://github.com/markdown-it/markdown-it-container">markdown-it-container</a></h2>
 <p>This is an official extension of the markdown-it project. You need to define your own  containers in javascript, and uses <code>:::</code> for syntax instead of blockquotes.</p>
-<h3>Option 2 : <a href="https://github.com/antfu/markdown-it-github-alerts">markdown-it-github-alerts</a></h3>
+<h2 id="option-2-%3A-markdown-it-github-alerts" tabindex="-1">Option 2 : <a href="https://github.com/antfu/markdown-it-github-alerts">markdown-it-github-alerts</a></h2>
 <p>A simple plug-and-play solution for the problem with some basic styling. by default it only supports the basic five (NOTE, TIP, IMPORTANT, WARNING, DANGER), but it can be extended. It uses Github's icons for the boxes.</p>
-<h3>Option 3 : <a href="https://github.com/ebullient/markdown-it-obsidian-callouts">markdown-it-obsidian-callouts</a></h3>
+<h2 id="option-3-%3A-markdown-it-obsidian-callouts" tabindex="-1">Option 3 : <a href="https://github.com/ebullient/markdown-it-obsidian-callouts">markdown-it-obsidian-callouts</a></h2>
 <p>This plugin supports GitHub and <a href="https://help.obsidian.md/callouts">Obsidian callouts</a>, as well as codeblock admonitions supported by the <a href="https://github.com/javalent/admonitions">Admonition plugin</a>, uses <a href="https://lucide.dev/icons/">Lucide</a> for the icons (Same as Obsidian) and it can also do nested callouts which is a nice bonus. It doesn't come with a style by default, but the repo includes a css file mimicking Obsidian's callout desgin.</p>
 
 <div class="callout" data-callout="info">
@@ -78,7 +136,7 @@
 <div class="callout-title-inner">Info</div>
 </div>
 <div class="callout-content"><p>In this guide I decided to use ebullient's markdown-it-obsidian-callouts as this is the plugin I ended up using to make this blog.</p>
-</div></div><h1>Setup</h1>
+</div></div><h2 id="setup" tabindex="-1">Setup</h2>
 <p>I will assume that you already have an Eleventy project set up for this guide, if you don't you should check out <a href="https://www.11ty.dev/docs/">11ty's Documentation</a> or the <a href="https://github.com/11ty/eleventy-base-blog">Official Starting Project</a>.</p>
 <p>You will also need to install <a href="https://github.com/ebullient/markdown-it-obsidian-callouts">markdown-it-obsidian-callouts</a> from NPM with the following command:</p>
 <pre><code>npm i markdown-it-obsidian-callouts
@@ -125,7 +183,7 @@ Your markdown file
 <p>It renders like this:
 <picture><source type="image/webp" srcset="/img/3vsoTqFiMa-334.webp 334w"><img src="/img/3vsoTqFiMa-334.jpeg" alt="A basic rendered markdown file showing : &quot;Your markdown file  INFO ICON This is an information box&quot;" width="334" height="146"></picture></p>
 <p>And you are almost done! Now you can create your own style for it or follow the guide for the obsidian style.</p>
-<h1>Adding styles</h1>
+<h2 id="adding-styles" tabindex="-1">Adding styles</h2>
 <p>First you need to download or copy the css from the plugin's github repo to your style.
 <a href="https://github.com/ebullient/markdown-it-obsidian-callouts/blob/main/style/index.css">Link to the file</a></p>
 <p>I created a file called <code>index.css</code> and pasted the following:</p>
@@ -324,33 +382,34 @@ return {
 <picture><source type="image/webp" srcset="/img/lDZLjC_iV9-334.webp 334w"><img src="/img/lDZLjC_iV9-334.jpeg" alt="A correctly rendered markdown file showing : &quot;Your markdown file  INFO ICON This is an information box&quot;" width="334" height="146"></picture></p>
 <p>Annddd you are done! I hope that this was useful for at least one person :D</p>
 
-
+        </div>
+    </section>
     </article>
+</section>
 
 
+        </main>
+
+        <footer class="textured-background">
+            <div>
+                
+                <p style="font-size:medium;">
+                Made with ❤️ using <a href="https://11ty.dev">11ty</a>,
+                <a href="https://postcss.org/">PostCSS</a>,
+                <a href="https://liquidjs.com/">LiquidJS</a> and
+                <a href="https://fontawesome.com/">Fontawesome</a>
+                </p>
+                <a href="https://github.com/aninusmuffin/aninus.com/blob/main/./_src/blog/Using%20Obsidian%20Callouts%20with%2011ty.md">Edit this page on GitHub</a>
+
+            </div>
+        </footer>
+
+    </div>
+<div style="display: none">
+    
+    
 </div>
-</div>
-
-  </main>
-
-<footer class="textured-background">
-
-  <div style="align-self: flex-end;">
-    <p style="font-size:medium;">
-    Made with ❤️ using <a class="link" href="https://11ty.dev">11ty</a>, 
-    <a class="link" href="https://liquidjs.com/index.html">LiquidJS</a>, 
-    <a class="link" href="https://tailwindcss.com/">Tailwind</a> and 
-    <a class="link" href="https://fontawesome.com/">Fontawesome</a>
-    </p>
-  </div>
-  <a class="link" href="https://github.com/aninusmuffin/aninus.com/blob/main/./_src/blog/Using Obsidian Callouts with 11ty.md">Edit this page on GitHub</a>
-
-
-</footer>
-</div>
-
 </body>
-
 
 
 
