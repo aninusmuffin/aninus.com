@@ -1,7 +1,10 @@
 import fontAwesomePlugin from "@11ty/font-awesome";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import MarkdownItObsidianCallouts from 'markdown-it-obsidian-callouts'
+import MarkdownItAnchor from 'markdown-it-anchor';
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import pluginTOC from 'eleventy-plugin-nesting-toc';
+import PostCSSPlugin from "eleventy-plugin-postcss";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 
 import pluginRss from "@11ty/eleventy-plugin-rss";
@@ -20,15 +23,20 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(eleventyImageTransformPlugin);
   eleventyConfig.addPlugin(pluginRss);
-
+  eleventyConfig.addPlugin(pluginTOC);
+  eleventyConfig.addPlugin(PostCSSPlugin);
   eleventyConfig.addBundle("customicons");
   
   eleventyConfig.addPassthroughCopy("_src/assets/**/*");
+  eleventyConfig.addPassthroughCopy('_src/assets/scripts');
   eleventyConfig.addWatchTarget("_src/assets/styles/**/*.css");
 
-  // Markdown
-  eleventyConfig.amendLibrary("md",MarkdownItObsidianCallouts);
-
+    // Markdown
+    eleventyConfig.amendLibrary("md",MarkdownItObsidianCallouts);
+    eleventyConfig.amendLibrary("md",MarkdownItAnchor);
+    eleventyConfig.addPairedShortcode('responsive-table', (content) => {
+        return `<div style="overflow-x: auto; margin-block: calc(var(--spacing)*5);">${content}</div>`
+    })
   //Filters
   eleventyConfig.addPlugin(pluginFilters);
 

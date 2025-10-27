@@ -1,38 +1,36 @@
 ---
 
-layout: layouts/main.liquid
+layout: layouts/article.liquid
 favicon: "https://avatars.githubusercontent.com/u/68734661?v=4"
 title: "Blog"
-index_page: yes
+navbar: True
+
 ---
 
-<link rel="stylesheet" type="text/css" href="/assets/styles/blog.css">
-{%  render 'partials/navbar.liquid' %}
-<div style="display: flex; justify-content: center;">
-    <div class="vertical-flex bloglist" >
 
 
-
-        {% assign lastPosts = collections.posts | lastPosts %}
+        <h1>Blog</h1>
+        <p>Who knows, one day I might post something really interesting here...</p>
+        <div class="vertical-flex bloglist">
+        {% assign lastPosts = collections.posts | reverse %}
         {% for post in lastPosts %}
-        <div style="list-style: none; justify-items: center;">
 
-        <div class="grid blogpost">
-        <img src="{{post.data.image}}" alt="{{ post.data.imgalt}}" loading="lazy" eleventy:widths="178,300" eleventy:optional="placeholder" ></img>
-        <div>
-        <a class="link" href="{{post.url}}"><p class="title">{{post.data.title}}</p> </a>
-            <p>{{post.date | postDate}} •     
-            {% for tags in post.data.tags %}
-            <a class="link" style="display: inline;" href="/blog/{{ tags }}">#{{ tags }}</a> 
-            {% endfor %}
-        </p> 
-        <p>{{post.data.description}}</p>
-    </div>         
-        
-        
-      </div>    
+        <section>
+            <div class="grid blogpost">
+                <img src="{{post.data.image}}" alt="{{ post.data.imgalt}}" loading="lazy" eleventy:widths="178,300" eleventy:optional="placeholder" >
+                <div>
+                    <p class="title"><a  href="{{post.url}}">{{post.data.title}}</a></p>
+                    <p><time datetime="{{post.date}}">{{post.date | postDate}}</time> •
+                        {% for tags in post.data.tags %}
+                        <a  style="display: inline;" href="/blog/{{ tags }}">#{{ tags }}</a>
+                        {% endfor %}
+                    </p>
+                    <p>{{post.data.description}}</p>
+                </div>
+            </div>
+        </section>
 
-    </div>
-        {% endfor %}     
+        {% endfor %}
         </div>
-</div>
+
+

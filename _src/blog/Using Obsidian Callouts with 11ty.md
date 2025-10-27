@@ -17,20 +17,20 @@ As it turns out 11ty uses [markdown-it](https://github.com/markdown-it/markdown-
 
 I found three similar plugins that have the same basic function:
 
-### Option 1 : [markdown-it-container](https://github.com/markdown-it/markdown-it-container)
+## Option 1 : [markdown-it-container](https://github.com/markdown-it/markdown-it-container)
 This is an official extension of the markdown-it project. You need to define your own  containers in javascript, and uses `:::` for syntax instead of blockquotes.
 
-### Option 2 : [markdown-it-github-alerts](https://github.com/antfu/markdown-it-github-alerts)
+## Option 2 : [markdown-it-github-alerts](https://github.com/antfu/markdown-it-github-alerts)
 A simple plug-and-play solution for the problem with some basic styling. by default it only supports the basic five (NOTE, TIP, IMPORTANT, WARNING, DANGER), but it can be extended. It uses Github's icons for the boxes.
 
-### Option 3 : [markdown-it-obsidian-callouts](https://github.com/ebullient/markdown-it-obsidian-callouts)
+## Option 3 : [markdown-it-obsidian-callouts](https://github.com/ebullient/markdown-it-obsidian-callouts)
 This plugin supports GitHub and [Obsidian callouts](https://help.obsidian.md/callouts), as well as codeblock admonitions supported by the [Admonition plugin](https://github.com/javalent/admonitions), uses [Lucide](https://lucide.dev/icons/) for the icons (Same as Obsidian) and it can also do nested callouts which is a nice bonus. It doesn't come with a style by default, but the repo includes a css file mimicking Obsidian's callout desgin. 
 
 > [!info] Info
 > In this guide I decided to use ebullient's markdown-it-obsidian-callouts as this is the plugin I ended up using to make this blog.
 
 
-# Setup
+## Setup
 
 I will assume that you already have an Eleventy project set up for this guide, if you don't you should check out [11ty's Documentation](https://www.11ty.dev/docs/) or the [Official Starting Project](https://github.com/11ty/eleventy-base-blog).
 
@@ -90,7 +90,7 @@ It renders like this:
 
 And you are almost done! Now you can create your own style for it or follow the guide for the obsidian style.
 
-# Adding styles
+## Adding styles
 
 First you need to download or copy the css from the plugin's github repo to your style.
 [Link to the file](https://github.com/ebullient/markdown-it-obsidian-callouts/blob/main/style/index.css)

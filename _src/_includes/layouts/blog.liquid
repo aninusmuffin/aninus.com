@@ -1,35 +1,29 @@
 ---
 
-layout: layouts/main.liquid
+layout: layouts/article.liquid
+style: layouts/blog
+blogpost: True
 
 ---
-<meta property="og:type" content="article">
-<head><link rel="stylesheet" type="text/css" href="/assets/styles/blog.css"></head>    
-{%  render 'partials/navbar.liquid' %}
 
-<div>
-<div class="blog">
-    
-       <p><img class="thumbnail" src="{{ image }}" alt="{{ imgalt }}"></p>
+        <div><img class="thumbnail" src="{{ image }}" alt="{{ imgalt }}"></div>
 
+        <h1 id="title"> {{ title }} </h1>
+        <p id="subtitle"> {{description}} </p>
+        <p style="text-align: center;">
+            <time datetime="{{ date }}">{{ date | postDate}}</time> •
+            {% for tag in tags | getKeys | filterTagList | sortAlphabetically %}
+            <a  style="display: inline;" href="/blog/{{ tag }}">
+            #{{ tag }}</a>
+             {% endfor %}
+          </p>
+    <section>
+        <details id="table-of-contents" class="textured-background box" open>
+            <summary> Table of Contents </summary>
+            {{ content | toc }}
+        </details>
 
-    <h1 class="title"> {{ title }} </h1>
-
-    <p class="subtitle"> {{description}} </p>
-    <p>
-      {{ date | postDate}} •
-      {% for tag in tags | getKeys | filterTagList | sortAlphabetically %}
-        <a class="link" style="display: inline;" href="/blog/{{ tag }}">
-        #{{ tag }}</a> 
-      {% endfor %}
-      </p>
-    
-    <article class="content">
-
-    {{ content }}
-
-    </article>
-
-
-</div>
-</div>
+        <div id="post">
+            {{ content }}
+        </div>
+    </section>

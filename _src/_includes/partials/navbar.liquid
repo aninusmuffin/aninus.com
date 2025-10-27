@@ -1,7 +1,33 @@
-<link rel="stylesheet" type="text/css" href="/assets/styles/partials/navbar.css">
-<nav>
+<style>
+nav#navbar {
+    background-image: url(/assets/img/noise.webp);
+    border-bottom: var(--border-width) var(--border-style);
+    padding: calc(var(--spacing));
+    background-color: var(--color-secondary-background);
+
+    @media (prefers-color-scheme: dark) {
+        background-color: var(--color-secondary-background);
+    }
+}
+
+nav#navbar ul{
+    list-style: none;
+}
+
+nav#navbar li{
+    padding: 0;
+    display: inline-block;
+}
+
+
+</style>
+
+<nav id="navbar">
     <ul>
-        <li><a href="/">aninus.com</a></li>
-        <li><a href="/blog">Blog</a></li>
+        <li><a  href="/">aninus.com</a></li>
+        <li>/</li>
+        <li><a  href="/blog">Blog</a></li>
+        <li>/</li>
+        <li><a  href="/about">About</a></li>
     </ul>
 </nav>

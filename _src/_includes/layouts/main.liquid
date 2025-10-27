@@ -12,38 +12,62 @@
     <meta name="keywords" content="Programming, art, aninus, aninuscsalas, aninusmuffin">
 
     <title>{{ title }}</title>
-    <link rel="stylesheet" type="text/css" href="/assets/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/base.css">
     <link rel="preload" as="font" href="/assets/fonts/AdwaitaSans-Regular.subset.woff2" crossorigin>
+    <link rel="preload" as="font" href="/assets/fonts/Bagnard.woff2" crossorigin>
     <link rel="icon" type="image/x-icon" href="{{ favicon }}">
     <meta name="generator" content="Eleventy">
-    </head>
 
-<body >
-  <div style="  position: relative; min-height: 100vh;">
-  <main style="padding-bottom: 10rem;">
-    {{ content }}
-  </main>
+    {% if blogpost %}
+    <meta property="og:type" content="article">
+    {% endif %}
+    {% if style %}
+    <link rel="stylesheet" type="text/css" href="/assets/styles/{{ style }}.css">
+    {% endif %}
 
-<footer class="textured-background">
+</head>
 
-  <div style="align-self: flex-end;">
-    <p style="font-size:medium;">
-    Made with ❤️ using <a class="link" href="https://11ty.dev">11ty</a>, 
-    <a class="link" href="https://liquidjs.com/index.html">LiquidJS</a>, 
-    <a class="link" href="https://tailwindcss.com/">Tailwind</a> and 
-    <a class="link" href="https://fontawesome.com/">Fontawesome</a>
-    </p>
-  </div>
-  <a class="link" href="https://github.com/aninusmuffin/aninus.com/blob/main/{{ page.inputPath | uri_escape }}">Edit this page on GitHub</a>
+<body>
+    <div style="position: relative; min-height: 100vh;">
 
+        {% if navbar %}
+        {%  render 'partials/navbar.liquid' %}
+        {% endif %}
 
-</footer>
+        <main style="padding-bottom: 16rem;">
+
+            {{ content }}
+
+        </main>
+
+        <footer class="textured-background">
+            <div>
+                {% if index_page %}
+                <a style="text-decoration: none" href="https://www.11ty.dev/speedlify/aninus-com/">
+                    <speedlify-score speedlify-url="https://www.11ty.dev/speedlify" hash="3959661a" score weight rank rank-change></speedlify-score>
+                    <script src="/assets/scripts/speedify-score.js" defer async></script>
+                    <link rel="stylesheet" href="/assets/styles/speedify.css" media="print" onload="this.media='all'">
+                </a>
+                {% endif %}
+                <p style="font-size:medium;">
+                Made with ❤️ using <a  href="https://11ty.dev">11ty</a>,
+                <a  href="https://postcss.org/">PostCSS</a>,
+                <a  href="https://liquidjs.com/">LiquidJS</a> and
+                <a  href="https://fontawesome.com/">Fontawesome</a>
+                </p>
+                <a  href="https://github.com/aninusmuffin/aninus.com/blob/main/{{ page.inputPath | uri_escape }}">Edit this page on GitHub</a>
+
+            </div>
+        </footer>
+
+    </div>
+<div style="display: none">
+    {% getBundle "fontawesome" %}
+    {% getBundle "customicons" %}
 </div>
-
 </body>
 
-{% getBundle "fontawesome" %}
-{% getBundle "customicons" %}
+
 
 </html>
 

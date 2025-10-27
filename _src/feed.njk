@@ -34,7 +34,7 @@
     <published>{{ post.date | dateToRfc3339 }}</published>
     <id>{{ absolutePostUrl }}</id>
     <content type="html">
-      <![CDATA[ <figure> <img alt="{{ post.data.imgalt }}" src="{{ metadata.base }}{{ post.data.image }}" /> </figure> {{ post.content | renderTransforms(post.data.page, metadata.base) | safe  }}  ]]>  
+      <![CDATA[ <figure> <img alt="{{ post.data.imgalt }}" src="{{ metadata.base }}{{ post.data.image }}" /> </figure> {{ post.content | renderTransforms(post.data.page, metadata.base) | safe  }}  ]]>
    </content>
   </entry>
   {%- endfor %}

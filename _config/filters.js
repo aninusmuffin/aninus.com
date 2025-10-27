@@ -1,12 +1,9 @@
 export default function(eleventyConfig) {
     eleventyConfig.addFilter("lastPosts", function(posts) {
     return posts
-    .slice(-4);
+        .slice(-4);
   });
-    eleventyConfig.addFilter("reverse", function(post) {
-    return post
-    .reverse();
-  });
+
     eleventyConfig.addFilter("postDate", (dateObj) => {
     return dateObj.toLocaleString("en-gb", {
       year: "numeric",

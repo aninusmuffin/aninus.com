@@ -3,8 +3,9 @@
     rel="me"
     class="social"
     href="{{href}}">
-{% if fontawesome %}
-    <i class="{{icon}}"></i>
+    {% if fontawesome %}
+        <i class="{{icon}}"></i>
     {% else %}
-    <svg><use href="{{icon}}" xlink:href="{{icon}}"></use></svg>
-{% endif %}</a>
+        <svg><use href="{{icon}}" xlink:href="{{icon}}"></use></svg>
+    {% endif %}
+</a>
