@@ -1,86 +1,114 @@
 @layer theme {
 
-:root {
+    /*noinspection CssInvalidFunction*/
+    :root {
+        color-scheme: normal;
+        /* Due to chrome bug color-scheme: normal doesn't work*/
+        @media (prefers-color-scheme: dark) {
+            color-scheme: dark;
+        }
+        --text-size-regular: 1.25rem;
+        --line-height-regular: calc(1.75 / 1.25);
+        --text-size-title: 4.5rem;
+        --line-height-title: 1;
+        --text-subtitle: 3.75rem;
+        --text-heading1: 3.75rem;
+        --text-heading3: 2.25rem;
+        --text-heading4: 1.85rem;
+        --container-box: 48rem;
 
-    --text-size-regular: 1.25rem;
-    --line-height-regular: calc(1.75 / 1.25);
-    --text-size-title: 4.5rem;
-    --line-height-title: 1;
-    --text-subtitle: 3.75rem;
-    --text-heading1: 3.75rem;
-    --text-heading3: 2.25rem;
-    --text-heading4: 1.85rem;
-    --container-box: 48rem;
+        --radius-md: 0.375rem;
+        --radius-box: 1rem;
+        --container-6xl: 72rem /* 1152px */;
 
-    --radius-md: 0.375rem;
-    --radius-box: 1rem;
-    --container-6xl: 72rem /* 1152px */;
+        --hover-decoration: solid;
+        --border-width: calc(var(--spacing));
+        --border-style: dashed;
 
-    --hover-decoration: solid;
-    --border-width: calc(var(--spacing));
-    --border-style: dashed;
-
-    --spacing: 0.25rem;
-
-    --color-background: oklch(92.8% 0.006 264.531);
-    --color-text: oklch(21% 0.034 264.665);
-    --color-muted-text: oklch(37.3% 0.034 259.733);
-    --color-selection-background: oklch(21% 0.034 264.665);
-    --color-selection: oklch(1 0 100);
-    --color-link: oklch(49.6% 0.265 301.924);
-    --color-link-hover: oklch(38.1% 0.176 304.987);
-    --color-secondary-background: oklch(87.2% 0.01 258.338);
-
-    --color-code-background: oklch(21% 0.034 264.665);
-    --color-code: oklch(87.2% 0.01 258.338);
-    --color-code-selection-background: oklch(92.8% 0.006 264.531);
-    --color-code-selection: oklch(0 0 0);
-
-    --color-button: oklch(87.2% 0.01 258.338);
-    --color-button-hover: var(--color-link);
+        --spacing: 0.25rem;
 
 
+        --color-background: light-dark(oklch(92.8% 0.006 264.531), oklch(27.4% 0.006 286.033));
+        --color-text: light-dark(oklch(21% 0.034 264.665), oklch(87.2% 0.01 258.338));
+        --color-muted-text: light-dark(oklch(37.3% 0.034 259.733), oklch(87.2% 0.01 258.338));
+        --color-selection-background: light-dark(oklch(21% 0.034 264.665), oklch(92.8% 0.006 264.531));
+        --color-selection: light-dark(oklch(1 0 100), oklch(0 0 0));
+        --color-link: light-dark(oklch(49.6% 0.265 301.924), oklch(82.7% 0.119 306.383));
+        --color-link-hover: light-dark(oklch(38.1% 0.176 304.987), oklch(62.7% 0.265 303.9));
+        --color-secondary-background: light-dark(oklch(87.2% 0.01 258.338), oklch(20.8% 0.042 265.755));
 
-    @media (prefers-color-scheme: dark) {
-        --color-background: oklch(27.4% 0.006 286.033);
-        --color-text: oklch(87.2% 0.01 258.338);
-        --color-muted-text: oklch(87.2% 0.01 258.338);
-        --color-link: oklch(82.7% 0.119 306.383);
-        --color-link-hover: oklch(62.7% 0.265 303.9);
-        --color-selection-dark: oklch(0 0 0);
-        --color-selection-background: oklch(92.8% 0.006 264.531);
-        --color-secondary-background: oklch(20.8% 0.042 265.755);
-        --color-button: oklch(0 0 0);
-        --color-button-hover: oklch(82.7% 0.119 306.383);
+        --color-button: light-dark(oklch(87.2% 0.01 258.338), oklch(0 0 0));
+        --color-button-hover: var(--color-link);
+
+        --color-code-background: oklch(21% 0.034 264.665);
+        --color-code: oklch(87.2% 0.01 258.338);
+        --color-code-selection-background: oklch(92.8% 0.006 264.531);
+        --color-code-selection: oklch(0 0 0);
+
+        /* Speedify color */
+        --_circle: var(--color-link);
+
+
+        /* Callout Boxes */
+        --color-callout-warning: light-dark(oklch(0 0 0), oklch(0 0 0));
+        --color-callout-background-warning: light-dark(oklch(76.9% 0.188 70.08), oklch(92.4% 0.12 95.746));
+        --color-callout-danger: light-dark(oklch(0 0 0), oklch(0 0 0));
+        --color-callout-background-danger: light-dark(oklch(80.8% 0.114 19.571), oklch(93.6% 0.032 17.717));
+        --color-callout-info: light-dark(oklch(0 0 0), oklch(0 0 0));
+        --color-callout-background-info: light-dark(oklch(70.7% 0.165 254.624), oklch(88.2% 0.059 254.128));
+
+
+        --diff-add: oklch(79.2% 0.209 151.711);
+        --diff-remove: oklch(63.7% 0.237 25.331);
+
+        /* Right now (2025-10-28) light-dark() is still new to baseline */
+        /*noinspection CssInvalidFunction*/
+        @supports not (color: light-dark(red, blue)) {
+            --color-background: oklch(92.8% 0.006 264.531);
+            --color-text: oklch(21% 0.034 264.665);
+            --color-muted-text: oklch(37.3% 0.034 259.733);
+            --color-selection-background: oklch(21% 0.034 264.665);
+            --color-selection: oklch(1 0 100);
+            --color-link: oklch(49.6% 0.265 301.924);
+            --color-link-hover: oklch(38.1% 0.176 304.987);
+            --color-secondary-background: oklch(87.2% 0.01 258.338);
+
+            --color-button: oklch(87.2% 0.01 258.338);
+            --color-button-hover: var(--color-link);
+
+            @media (prefers-color-scheme: dark) {
+                --color-background: oklch(27.4% 0.006 286.033);
+                --color-text: oklch(87.2% 0.01 258.338);
+                --color-muted-text: oklch(87.2% 0.01 258.338);
+                --color-link: oklch(82.7% 0.119 306.383);
+                --color-link-hover: oklch(62.7% 0.265 303.9);
+                --color-selection-dark: oklch(0 0 0);
+                --color-selection-background: oklch(92.8% 0.006 264.531);
+                --color-secondary-background: oklch(20.8% 0.042 265.755);
+                --color-button: oklch(0 0 0);
+                --color-button-hover: oklch(82.7% 0.119 306.383);
+            }
+            --color-callout-warning: oklch(0 0 0);
+            --color-callout-background-warning: oklch(76.9% 0.188 70.08);
+            --color-callout-danger: oklch(0 0 0);
+            --color-callout-background-danger: oklch(80.8% 0.114 19.571);
+            --color-callout-info: oklch(0 0 0);
+            --color-callout-background-info: oklch(70.7% 0.165 254.624);
+
+
+            @media (prefers-color-scheme: dark) {
+                --color-callout-warning: oklch(0 0 0);
+                --color-callout-background-warning: oklch(92.4% 0.12 95.746);
+                --color-callout-danger: oklch(0 0 0);
+                --color-callout-background-danger: oklch(93.6% 0.032 17.717);
+                --color-callout-info: oklch(0 0 0);
+                --color-callout-background-info: oklch(88.2% 0.059 254.128);
+
+            }
+
+        }
+
     }
-
-
-    --_circle: var(--color-link);
-
-
-    /* Callout Boxes */
-
-    --color-callout-warning: oklch(0 0 0);
-    --color-callout-background-warning: oklch(76.9% 0.188 70.08);
-    --color-callout-danger: oklch(0 0 0);
-    --color-callout-background-danger: oklch(80.8% 0.114 19.571);
-    --color-callout-info: oklch(0 0 0);
-    --color-callout-background-info: oklch(70.7% 0.165 254.624);
-
-
-    @media (prefers-color-scheme: dark) {
-        --color-callout-warning: oklch(0 0 0);
-        --color-callout-background-warning: oklch(92.4% 0.12 95.746);
-        --color-callout-danger: oklch(0 0 0);
-        --color-callout-background-danger: oklch(93.6% 0.032 17.717);
-        --color-callout-info: oklch(0 0 0);
-        --color-callout-background-info: oklch(88.2% 0.059 254.128);
-
-    }
-
-    --diff-add: oklch(79.2% 0.209 151.711);
-    --diff-remove: oklch(63.7% 0.237 25.331);
-}
 }
 
 @font-face {
