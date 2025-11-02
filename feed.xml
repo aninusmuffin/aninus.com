@@ -71,12 +71,11 @@ return {
 };
 }</code></pre>
 <p>Now if you write a markdown file like this:</p>
-<pre><code>
+<pre class="language-md"><code class="language-md">
 Your markdown file
 
-&gt; [!info]
-&gt; This is an information box
-
+<span class="token blockquote punctuation">></span> [!info]
+<span class="token blockquote punctuation">></span> This is an information box
 </code></pre>
 <p>It renders like this:
 <picture><source type="image/webp" srcset="https://aninus.com/img/3vsoTqFiMa-334.webp 334w"><img src="https://aninus.com/img/3vsoTqFiMa-334.jpeg" alt="A basic rendered markdown file showing : &quot;Your markdown file  INFO ICON This is an information box&quot;" width="334" height="146"></picture></p>

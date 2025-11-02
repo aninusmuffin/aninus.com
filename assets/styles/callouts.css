@@ -73,7 +73,7 @@
 
 
 .callout a {
-    color: var(--color-text);
+    color: inherit;
     &:hover {
         @media (hover: hover) {
             color: var(--color-link-hover);
