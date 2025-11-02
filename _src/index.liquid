@@ -97,7 +97,7 @@ style: index
         <div>
             <dt>
                 <a href="{{Minecraft.link}}">
-                <img src="{{Minecraft.icon}}" loading="lazy" sizes="50px" eleventy:widths="50" eleventy:optional="placeholder" alt="{{ Minecraft.name }}'s icon" class=" small-icon">
+                <img src="{{Minecraft.icon}}" loading="lazy" sizes="50px" eleventy:widths="50" eleventy:optional="placeholder" alt="{{ Minecraft.name }}'s icon" class=" icon">
                 {{Minecraft.name}}</a>
             </dt>
               <dd>{{Minecraft.description}}</dd>
@@ -114,7 +114,7 @@ style: index
             <dt>
                 <a href="{{Random.link}}">
                     {% if Random.faicon %}
-                    <i class=" small-icon {{Random.faicon}}"></i>
+                    <i class=" icon {{Random.faicon}}"></i>
                     {% endif %}
                     {{Random.name}}
                 </a>
@@ -167,10 +167,10 @@ style: index
         <li> 
           You can email me at
           <a  href="mailto:muffin@aninus.com">
-          <i class=" small-icon fa-solid fa-envelope"></i>
+          <i class=" icon fa-solid fa-envelope"></i>
           muffin@aninus.com</a>, with optional encryption using
           <a  href="https://keys.openpgp.org/search?q=muffin%40aninus.com">
-            <i class=" small-icon fa-solid fa-key"></i>
+            <i class=" icon fa-solid fa-key"></i>
             my PGP key.
           </a>
         </li>      

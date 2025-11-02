@@ -1,4 +1,4 @@
-@import url(theme.css);
+@import url(./theme/theme.css);
 @import url(layouts/article.css);
 @import url(speedify.css);
 @import url(bloglist.css);
@@ -19,7 +19,7 @@ html {
     background-color: var(--color-background);
 
         &::selection {
-        color: var(--color-selection-dark);
+        color: var(--color-selection);
         background-color: var(--color-selection-background);
         }
 

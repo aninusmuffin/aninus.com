@@ -1,0 +1,160 @@
+@layer theme {
+
+    /*noinspection CssInvalidFunction*/
+    :root {
+        color-scheme: normal;
+        /* Due to chrome bug color-scheme: normal doesn't work*/
+        @media (prefers-color-scheme: dark) {
+            color-scheme: dark;
+        }
+        --text-size-regular: 1.25rem;
+        --line-height-regular: calc(1.75 / 1.25);
+        --text-size-title: 4.5rem;
+        --line-height-title: 1;
+        --text-subtitle: 3.75rem;
+        --text-heading1: 3.75rem;
+        --text-heading3: 2.25rem;
+        --text-heading4: 1.85rem;
+        --container-box: 48rem;
+
+        --radius-md: 0.375rem;
+        --radius-box: 1rem;
+        --container-6xl: 72rem /* 1152px */;
+
+        --hover-decoration: solid;
+        --border-width: calc(var(--spacing));
+        --border-style: dashed;
+
+        --spacing: 0.25rem;
+
+
+        --color-black: oklch(0 0 0);
+        --color-white: oklch(1 0 89.876);
+
+        --color-purple-light: oklch(82.7% 0.119 306.383);
+        --color-purple: oklch(49.6% 0.265 301.924);
+        --color-purple-dark: oklch(38.1% 0.176 304.987);
+
+        --color-orange-light: oklch(92.4% 0.12 95.746);
+        --color-orange: oklch(76.9% 0.188 70.08);
+
+        --color-blue-light: oklch(88.2% 0.059 254.128);
+        --color-blue: oklch(70.7% 0.165 254.624);
+        --color-blue-reallydark: oklch(18.113% 0.04675 246.17);
+
+        --color-grey-light: oklch(87.2% 0.01 258.338);
+        --color-grey-dark: oklch(27.4% 0.006 286.033);
+        --color-grey-reallylight: oklch(92.8% 0.006 264.531);
+
+
+
+        --color-primary: light-dark(var(--color-purple), var(--color-purple-light));
+        --color-text: light-dark(var(--color-blue-reallydark), var(--color-grey-light));
+        --color-background: light-dark(var(--color-grey-reallylight), var(--color-grey-dark));
+        --color-secondary-background: light-dark(var(--color-grey-light), var(--color-blue-reallydark));
+
+
+        --color-link: var(--color-primary);
+        --acolor-link-hover: light-dark(oklch(38.1% 0.176 304.987), oklch(62.7% 0.265 303.9));
+        --color-link-hover: light-dark(color-mix(in oklab, var(--color-link) 50%, var(--color-purple-dark)), color-mix(in oklab, var(--color-link) 70%, var(--color-purple-dark)));
+
+        --color-button-hover: var(--color-primary);
+        --color-button: light-dark(var(--color-grey-light), var(--color-blue-reallydark));
+
+        --color-muted-text: light-dark(oklch(37.3% 0.034 259.733), oklch(87.2% 0.01 258.338));
+
+        --color-selection-background: light-dark(var(--color-blue-reallydark), var(--color-grey-light));
+        --color-selection: light-dark(var(--color-white), var(--color-black));
+
+        --color-code-background: var(--color-blue-reallydark);
+        --color-code: var(--color-grey-light);
+        --color-code-selection-background: var(--color-grey-reallylight);
+        --color-code-selection: var(--color-black);
+
+        /* Speedify color */
+        --_circle: var(--color-primary);
+
+
+        /* Callout Boxes */
+        --color-callout-warning: light-dark(var(--color-black), var(--color-black));
+        --color-callout-background-warning: light-dark(var(--color-orange), var(--color-orange-light));
+        --color-callout-danger: light-dark(var(--color-black), var(--color-black));
+        --color-callout-background-danger: light-dark(oklch(80.8% 0.114 19.571), oklch(93.6% 0.032 17.717));
+        --color-callout-info: light-dark(var(--color-black), var(--color-black));
+        --color-callout-background-info: light-dark(var(--color-blue), var(--color-blue-light));
+
+
+        --diff-add: oklch(79.2% 0.209 151.711);
+        --diff-remove: oklch(63.7% 0.237 25.331);
+
+
+
+    }
+}
+
+@layer theme-legacy {
+    :root {
+        /* Right now (2025-10-28) light-dark() is still new to baseline */
+        /*noinspection CssInvalidFunction*/
+        @supports not (color: light-dark(red, blue)) {
+            --color-background: #e5e7eb;
+            --color-text: #101828;
+            --color-muted-text: #364153;
+            --color-selection-background: #101828;
+            --color-selection: #ffffff;
+            --color-link: #8200db;
+            --color-link-hover: #59168b;
+            --color-secondary-background: #d1d5dc;
+
+            --color-button: #d1d5dc;
+            --color-button-hover: var(--color-link);
+
+            @media (prefers-color-scheme: dark) {
+                --color-background: #27272a;
+                --color-text: #d1d5dc;
+                --color-muted-text: #d1d5dc;
+                --color-link: #dab2ff;
+                --color-link-hover: #ad46ff;
+                --color-selection-dark: #000000;
+                --color-selection-background: #e5e7eb;
+                --color-secondary-background: #0f172b;
+                --color-button: #000000;
+                --color-button-hover: #dab2ff;
+            }
+            --color-callout-warning: #000000;
+            --color-callout-background-warning: #fe9a00;
+            --color-callout-danger: #000000;
+            --color-callout-background-danger: #ffa2a2;
+            --color-callout-info: #000000;
+            --color-callout-background-info: #51a2ff;
+
+
+            @media (prefers-color-scheme: dark) {
+                --color-callout-warning: #000000;
+                --color-callout-background-warning: #fee685;
+                --color-callout-danger: #000000;
+                --color-callout-background-danger: #ffe2e2;
+                --color-callout-info: #000000;
+                --color-callout-background-info: #bedbff;
+
+            }
+
+        }
+    }
+}
+
+@font-face {
+    font-family: "Bagnard";
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    src: url("/assets/fonts/Bagnard.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: "Adwaita Sans";
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    src: url("/assets/fonts/AdwaitaSans-Regular.subset.woff2") format("woff2");
+}
