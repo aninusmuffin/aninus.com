@@ -1,6 +1,6 @@
 ---
 
-layout: layouts/article.liquid
+layout: article
 favicon: "/assets/img/favicon.webp"
 title: "About"
 description: "A very borring page with all of the thing about me"

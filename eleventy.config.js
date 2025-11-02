@@ -17,6 +17,10 @@ export default async function (eleventyConfig) {
 		breaks: true,
 		linkify: true,
 	};
+
+    // Layouts
+    eleventyConfig.addLayoutAlias("main", "layouts/main.liquid");
+    eleventyConfig.addLayoutAlias("article", "layouts/article.liquid");
   
   // Plugins
   eleventyConfig.addPlugin(fontAwesomePlugin);
