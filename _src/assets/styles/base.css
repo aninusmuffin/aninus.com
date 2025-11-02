@@ -112,18 +112,17 @@ li {
     display: flex;
 }
 
-.small-icon {
-    width: calc(var(--spacing) * 5);
-    height: calc(var(--spacing) * 5);
+.icon {
+    width: 1em;
+    height: 1em;
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: center;
+
 }
 
-h2 > .icon {
-    width: calc(var(--spacing) * 10);
-    height: calc(var(--spacing) * 10);
-    display: inline-block;
-    vertical-align: middle;
+h2 .icon {
+    width: 0.75em;
+    height: 0.75em;
     padding-inline-end: calc(var(--spacing) *2);
 }
 
