@@ -76,7 +76,7 @@ return {
 
 
 Now if you write a markdown file like this:
-```
+```md
 
 Your markdown file
 
