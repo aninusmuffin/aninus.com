@@ -6,6 +6,7 @@
 
 
 html {
+
     color: var(--color-text);
     background-color: var(--color-background);
 
@@ -117,6 +118,7 @@ li {
     height: 1em;
     display: inline-block;
     vertical-align: center;
+    box-sizing: content-box;
 
 }
 
@@ -156,6 +158,10 @@ a {
     max-width: var(--container-box);
 }
 
+.box > *:not(.vertical-flex) {
+    margin: calc(var(--spacing) * 5);
+}
+
 .box > .vertical-flex {
     display: flex;
     flex-direction: column;
@@ -170,4 +176,30 @@ a {
 .box > .vertical-flex > * {
     padding: calc(var(--spacing) * 5);
 }
+
+
+nav#navbar {
+    background-image: url(/assets/img/noise.webp);
+    border-bottom: var(--border-width) var(--border-style);
+    padding: calc(var(--spacing));
+    background-color: var(--color-secondary-background);
+
+    @media (prefers-color-scheme: dark) {
+        background-color: var(--color-secondary-background);
+    }
+}
+
+nav#navbar ul{
+    list-style: none;
+}
+
+nav#navbar li{
+    padding: 0;
+    display: inline-block;
+}
+
+nav#navbar li:not(:first-child):before {
+    content: '/ ';
+}
+
 

@@ -1,0 +1,19 @@
+<footer class="textured-background">
+    <div>
+
+        <a webc:if="index_page" style="text-decoration: none" href="https://www.11ty.dev/speedlify/aninus-com/">
+            <speedlify-score speedlify-url="https://www.11ty.dev/speedlify" hash="3959661a" score weight rank rank-change></speedlify-score>
+            <script src="../../assets/scripts/speedify-score.js" defer async></script>
+            <link rel="stylesheet" href="../../assets/styles/speedify.css" media="print" onload="this.media='all'">
+        </a>
+
+        <p style="font-size:medium;">
+            Made with ❤️ using <a  href="https://11ty.dev">11ty</a>,
+            <a  href="https://postcss.org/">PostCSS</a>,
+            <a  href="https://liquidjs.com/">LiquidJS</a> and
+            <a  href="https://fontawesome.com/">Fontawesome</a>
+        </p>
+        <a  href="https://github.com/aninusmuffin/aninus.com/blob/main/{{ page.inputPath | uri_escape }}">Edit this page on GitHub</a>
+
+    </div>
+</footer>

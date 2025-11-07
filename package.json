@@ -34,9 +34,12 @@
     "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-plugin-rss": "^2.0.4",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "@11ty/eleventy-plugin-webc": "^0.12.0-beta.7",
     "@11ty/font-awesome": "^1.0.0-beta.12",
+    "@awesome.me/webawesome": "^3.0.0",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^7.0.0",
+    "@zachleat/line-numbers": "^1.0.3",
     "cssesc": "^3.0.0",
     "eleventy-plugin-nesting-toc": "^1.3.0",
     "eleventy-plugin-postcss": "^3.0.1",
@@ -50,6 +53,7 @@
     "speedlify-score": "^4.0.4"
   },
   "devDependencies": {
+    "esbuild": "^0.25.11",
     "onchange": "^7.1.0"
   }
 }

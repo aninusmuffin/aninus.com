@@ -3,14 +3,11 @@
 layout: main
 favicon: "/assets/img/favicon.webp"
 title: "Aninus Partikler"
-description: "Hi! I'm Aninus, welcome to my website!"
+description: 'My name is Aninus Partikler, but you might also know me as aninusmuffin or aninuscsalas. I self describe as a "hobbyist developer and designer" and "Worst Developer alive"'
 index_page: yes
 style: index
 
 ---
-
-
-
 
 <header class="hero textured-background">
     <div class="hero-content">
@@ -37,40 +34,33 @@ style: index
             </div>
 
             <div class="grid social">
+                {% renderTemplate "webc" %}
+                <socials-button title="Mastodon"
+                                @fontawesome icon="fa-brands fa-mastodon"
+                                href="https://mastodon.social/@aninus">
+                </socials-button>
 
-                  {%- render "components/socials-button.liquid",
-                  title: "Mastodon",
-                  href: "https://mastodon.social/@aninus",
-                  icon: "fa-brands fa-mastodon",
-                  fontawesome
-                  -%}
+                <socials-button @title="Bluesky"
+                                @fontawesome @icon="fa-brands fa-bluesky"
+                                @href="https://bsky.app/profile/aninus.com" >
 
-                  {%- render "components/socials-button.liquid",
-                  title: "Bluesky",
-                  href: "https://bsky.app/profile/aninus.com",
-                  icon: "fa-brands fa-bluesky",
-                  fontawesome
-                  -%}
+                </socials-button>
+                <socials-button @title="Github"
+                                @fontawesome @icon="fa-brands fa-github"
+                                @href="https://github.com/aninusmuffin">
+                </socials-button>
 
-                  {%- render "components/socials-button.liquid",
-                  title: "Github" ,
-                  href: "https://github.com/aninusmuffin",
-                  icon: "fa-brands fa-github",
-                  fontawesome
-                  -%}
+                <socials-button @title="Modrinth"
+                                @icon="#custom-simpleicons-modrith"
+                                @href="https://modrinth.com/user/aninus">
+                </socials-button>
 
-                  {%- render "components/socials-button.liquid",
-                  title: "Modrinth",
-                  href: "https://modrinth.com/user/aninus",
-                  icon: '#custom-simpleicons-modrith'
-                  -%}
+                <socials-button @title="Codeberg"
+                                @icon="#custom-simpleicons-codeberg"
+                                @href="https://codeberg.org/aninus">
+                </socials-button>
 
-                  {%- render "components/socials-button.liquid",
-                  title: "Codeberg",
-                  href: "https://codeberg.org/aninus",
-                  icon: '#custom-simpleicons-codeberg'
-                  -%}
-
+                {% endrenderTemplate %}
             </div>
 
             <a class="button"  href="/about/">More about me</a>
@@ -86,7 +76,7 @@ style: index
 <div class="box">
   <div class="vertical-flex">
     <div>
-        <h2 id="projects"><i class="icon fa-solid fa-folder-open"></i>Projects</h2>
+        <h2 id="projects">{% icon "fas:folder-open" %}Projects</h2>
         <p>Some of the things I have done online</p>
     </div>
 
@@ -133,7 +123,7 @@ style: index
 <div class="box">
   <div class="vertical-flex" >
     <div>
-      <a href="/blog"><h2 id="blog"><i class="icon fa-solid fa-book"></i>Blog</h2></a>
+      <a href="/blog"><h2 id="blog">{% icon "fas:book" %}Blog</h2></a>
       <p>Who knows, one day I might post something really interesting here...</p>
     </div>
 
@@ -161,18 +151,13 @@ style: index
 
 <div class="box">
   <div class="vertical-flex">
-    <h2 id="contact-me"><i class="icon fa-solid fa-user"></i>Contact me</h2>
+    <h2 id="contact-me">{% icon "fas:user" %}Contact me</h2>
     <div>
       <ul>
         <li> 
           You can email me at
-          <a  href="mailto:muffin@aninus.com">
-          <i class=" icon fa-solid fa-envelope"></i>
-          muffin@aninus.com</a>, with optional encryption using
-          <a  href="https://keys.openpgp.org/search?q=muffin%40aninus.com">
-            <i class=" icon fa-solid fa-key"></i>
-            my PGP key.
-          </a>
+          <a  href="mailto:muffin@aninus.com">{% icon "fas:envelope" %} muffin@aninus.com</a>, with optional encryption using
+          <a  href="https://keys.openpgp.org/search?q=muffin%40aninus.com">{% icon "fas:key" %} my PGP key.</a>
         </li>      
 
     </ul>

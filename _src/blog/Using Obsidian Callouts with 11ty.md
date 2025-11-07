@@ -59,30 +59,27 @@ return {
 
 First we need to import `MarkdownItObsidianCallouts` then amend the library in eleventyConfig:
 
-```diff
+```diff-js
 +import MarkdownItObsidianCallouts from 'markdown-it-obsidian-callouts'
 
 export default async function (eleventyConfig) {
 +eleventyConfig.amendLibrary("md", MarkdownItObsidianCallouts);
 
 return {
-	dir: {
-	input: "_src",
-	output: "_site",
-	},
+    dir: {
+    input: "_src",
+    output: "_site",
+    },
 };
 }
 ```
 
-
 Now if you write a markdown file like this:
 ```md
-
 Your markdown file
 
 > [!info]
 > This is an information box
-
 ```
 
 It renders like this:
@@ -257,6 +254,7 @@ details[open].callout > .callout-title > .callout-fold {
 
 /*# sourceMappingURL=index.css.map */
 ```
+
 
 Link your stylesheet in your markdown file:
 ```diff

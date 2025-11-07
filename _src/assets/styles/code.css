@@ -1,13 +1,61 @@
-code[class*="language-"],
-pre[class*="language-"] {
-    white-space: pre-wrap;
-    overflow-wrap: break-word;
+
+line-numbers {
+    font-family: monospace;
+    font-size: var(--text-size-regular);
+    line-height: var(--line-height-regular);
+    display: flex;
+    --uln-padding-v: 1em;
+    --uln-padding-h: 0.5em;
+    width: 100%;
+}
+
+
+article pre {
+    white-space: pre;
     overflow: auto;
 
+    width: 100%;
+    max-width: 50rem;
+    font-size: var(--text-size-regular);
+    line-height: var(--line-height-regular);
+    border-radius: var(--radius-box);
+    color: var(--color-code);
+    background-color: var(--color-code-background);
+
+
+}
+
+
+
+article pre > code {
+    scrollbar-color: var(--color-code) var(--color-code-background);
+    overflow: auto;
+    display: block;
+    padding-inline: calc(var(--spacing) * 6);
+    padding-block: 1em;
+
+ /*   max-height: 500px; */
+
+
+
+
+}
+
+pre > code::selection, pre > code *::selection{
+    background-color: var(--color-code-selection-background);
+    color: var(--color-code-selection);
+
+}
+
+
+
+
+
+code[class*="language-"],
+pre[class*="language-"] {
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
-
     -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
@@ -102,4 +150,29 @@ pre[class*="language-"] {
 
 .token.entity {
     cursor: help;
+}
+
+
+.token.deleted {
+    background-color: color-mix(in oklab, var(--diff-remove) 30%, transparent);
+}
+.token.inserted {
+    background-color: color-mix(in oklab, var(--diff-add) 30%, transparent);
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+    -webkit-user-select: none;
+    padding-inline-end: calc(var(--spacing) * 1);
+    user-select: none;
+    background-color: transparent;
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+    min-width: 100%;
+    display: inline;
 }
