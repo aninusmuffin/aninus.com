@@ -37,8 +37,7 @@
 </div></div><h2 id="setup" tabindex="-1">Setup</h2>
 <p>I will assume that you already have an Eleventy project set up for this guide, if you don't you should check out <a href="https://www.11ty.dev/docs/">11ty's Documentation</a> or the <a href="https://github.com/11ty/eleventy-base-blog">Official Starting Project</a>.</p>
 <p>You will also need to install <a href="https://github.com/ebullient/markdown-it-obsidian-callouts">markdown-it-obsidian-callouts</a> from NPM with the following command:</p>
-<pre><code>npm i markdown-it-obsidian-callouts
-</code></pre>
+<pre tabindex="0"><code>npm i markdown-it-obsidian-callouts</code></pre>
 
 <div class="callout" data-callout="info">
 <div class="callout-title">
@@ -49,7 +48,7 @@
 </div>
 <div class="callout-content"><p>I am using ESM instead of CommonJS in this guide, you can learn about the differences here: <a href="https://www.11ty.dev/docs/cjs-esm/">CommonJS vs ESM</a></p>
 </div></div><p>Right now our <code>eleventy.config.js</code> file looks something like this:</p>
-<pre class="language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">eleventyConfig</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-js" tabindex="0"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">eleventyConfig</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 <span class="token keyword">return</span> <span class="token punctuation">{</span>
 	<span class="token literal-property property">dir</span><span class="token operator">:</span> <span class="token punctuation">{</span>
 	<span class="token literal-property property">input</span><span class="token operator">:</span> <span class="token string">"_src"</span><span class="token punctuation">,</span>
@@ -58,25 +57,23 @@
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <p>First we need to import <code>MarkdownItObsidianCallouts</code> then amend the library in eleventyConfig:</p>
-<pre class="language-diff"><code class="language-diff"><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span>import MarkdownItObsidianCallouts from 'markdown-it-obsidian-callouts'
+<pre class="language-diff-js" tabindex="0"><code class="language-diff-js"><span class="token inserted-sign inserted language-js"><span class="token prefix inserted">+</span><span class="token keyword">import</span> MarkdownItObsidianCallouts <span class="token keyword">from</span> <span class="token string">'markdown-it-obsidian-callouts'</span>
 </span>
 export default async function (eleventyConfig) {
-<span class="token inserted-sign inserted"><span class="token prefix inserted">+</span>eleventyConfig.amendLibrary("md", MarkdownItObsidianCallouts);
+<span class="token inserted-sign inserted language-js"><span class="token prefix inserted">+</span>eleventyConfig<span class="token punctuation">.</span><span class="token function">amendLibrary</span><span class="token punctuation">(</span><span class="token string">"md"</span><span class="token punctuation">,</span> MarkdownItObsidianCallouts<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span>
 return {
-	dir: {
-	input: "_src",
-	output: "_site",
-	},
-};
+<span class="token unchanged language-js"><span class="token prefix unchanged"> </span>   <span class="token literal-property property">dir</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+<span class="token prefix unchanged"> </span>   <span class="token literal-property property">input</span><span class="token operator">:</span> <span class="token string">"_src"</span><span class="token punctuation">,</span>
+<span class="token prefix unchanged"> </span>   <span class="token literal-property property">output</span><span class="token operator">:</span> <span class="token string">"_site"</span><span class="token punctuation">,</span>
+<span class="token prefix unchanged"> </span>   <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span>};
 }</code></pre>
 <p>Now if you write a markdown file like this:</p>
-<pre class="language-md"><code class="language-md">
-Your markdown file
+<pre class="language-md" tabindex="0"><code class="language-md">Your markdown file
 
 <span class="token blockquote punctuation">></span> [!info]
-<span class="token blockquote punctuation">></span> This is an information box
-</code></pre>
+<span class="token blockquote punctuation">></span> This is an information box</code></pre>
 <p>It renders like this:
 <picture><source type="image/webp" srcset="https://aninus.com/img/3vsoTqFiMa-334.webp 334w"><img src="https://aninus.com/img/3vsoTqFiMa-334.jpeg" alt="A basic rendered markdown file showing : &quot;Your markdown file  INFO ICON This is an information box&quot;" width="334" height="146"></picture></p>
 <p>And you are almost done! Now you can create your own style for it or follow the guide for the obsidian style.</p>
@@ -84,7 +81,7 @@ Your markdown file
 <p>First you need to download or copy the css from the plugin's github repo to your style.
 <a href="https://github.com/ebullient/markdown-it-obsidian-callouts/blob/main/style/index.css">Link to the file</a></p>
 <p>I created a file called <code>index.css</code> and pasted the following:</p>
-<pre class="language-css"><code class="language-css"><span class="token comment">/**
+<pre class="language-css" tabindex="0"><code class="language-css"><span class="token comment">/**
  * This css file is generated.
  * Make changes to `scss` version.
  */</span>
@@ -243,13 +240,12 @@ Your markdown file
 
 <span class="token comment">/*# sourceMappingURL=index.css.map */</span></code></pre>
 <p>Link your stylesheet in your markdown file:</p>
-<pre class="language-diff"><code class="language-diff"><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span>&lt;link rel="stylesheet" type="text/css" href="/index.css">
+<pre class="language-diff" tabindex="0"><code class="language-diff"><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span>&lt;link rel="stylesheet" type="text/css" href="/index.css">
 </span>
 Your markdown file
 
 <span class="token unchanged"><span class="token prefix unchanged"> </span>> [!info]
-<span class="token prefix unchanged"> </span>> This is an information box
-</span></code></pre>
+<span class="token prefix unchanged"> </span>> This is an information box</span></code></pre>
 
 <div class="callout" data-callout="warning">
 <div class="callout-title">
@@ -259,7 +255,7 @@ Your markdown file
 <div class="callout-title-inner">Warning</div>
 </div>
 <div class="callout-content"><p>Dont forget to mark your new css file for passthrough in <code>eleventy.config.js</code></p>
-<pre class="language-diff"><code class="language-diff">import MarkdownItObsidianCallouts from 'markdown-it-obsidian-callouts'
+<pre class="language-diff" tabindex="0"><code class="language-diff">import MarkdownItObsidianCallouts from 'markdown-it-obsidian-callouts'
 
 export default async function (eleventyConfig) {
 

@@ -159,6 +159,182 @@
     src: url("/assets/fonts/AdwaitaSans-Regular.subset.woff2") format("woff2");
 }
 
+line-numbers {
+    font-family: monospace;
+    font-size: var(--text-size-regular);
+    line-height: var(--line-height-regular);
+    display: flex;
+    --uln-padding-v: 1em;
+    --uln-padding-h: 0.5em;
+    width: 100%;
+}
+
+article pre {
+    white-space: pre;
+    overflow: auto;
+
+    width: 100%;
+    max-width: 50rem;
+    font-size: var(--text-size-regular);
+    line-height: var(--line-height-regular);
+    border-radius: var(--radius-box);
+    color: var(--color-code);
+    background-color: var(--color-code-background);
+
+
+}
+
+article pre > code {
+    scrollbar-color: var(--color-code) var(--color-code-background);
+    overflow: auto;
+    display: block;
+    padding-inline: calc(var(--spacing) * 6);
+    padding-block: 1em;
+
+ /*   max-height: 500px; */
+
+
+
+
+}
+
+pre > code::selection, pre > code *::selection{
+    background-color: var(--color-code-selection-background);
+    color: var(--color-code-selection);
+
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+/* Code blocks */
+
+pre[class*="language-"] {
+
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+}
+
+/* Inline code */
+
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #f8f8f2;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+    color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+    color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+    color: #e6db74;
+}
+
+.token.keyword {
+    color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+    color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+.token.deleted {
+    background-color: color-mix(in oklab, var(--diff-remove) 30%, transparent);
+}
+
+.token.inserted {
+    background-color: color-mix(in oklab, var(--diff-add) 30%, transparent);
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+    -webkit-user-select: none;
+    padding-inline-end: calc(var(--spacing) * 1);
+    user-select: none;
+    background-color: transparent;
+}
+
+/* Optional: full-width background color */
+
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+    min-width: 100%;
+    display: inline;
+}
+
 .content{
     display: flex;
     align-items: center;
@@ -290,6 +466,7 @@ speedlify-score {
 }
 
 html {
+
     color: var(--color-text);
     background-color: var(--color-background);
 
@@ -401,6 +578,7 @@ li {
     height: 1em;
     display: inline-block;
     vertical-align: center;
+    box-sizing: content-box;
 
 }
 
@@ -440,6 +618,10 @@ a {
     max-width: var(--container-box);
 }
 
+.box > *:not(.vertical-flex) {
+    margin: calc(var(--spacing) * 5);
+}
+
 .box > .vertical-flex {
     display: flex;
     flex-direction: column;
@@ -453,4 +635,29 @@ a {
 .box > .vertical-flex > * {
     padding: calc(var(--spacing) * 5);
 }
+
+nav#navbar {
+    background-image: url(/assets/img/noise.webp);
+    border-bottom: var(--border-width) var(--border-style);
+    padding: calc(var(--spacing));
+    background-color: var(--color-secondary-background);
+
+    @media (prefers-color-scheme: dark) {
+        background-color: var(--color-secondary-background);
+    }
+}
+
+nav#navbar ul{
+    list-style: none;
+}
+
+nav#navbar li{
+    padding: 0;
+    display: inline-block;
+}
+
+nav#navbar li:not(:first-child):before {
+    content: '/ ';
+}
+
 

@@ -82,166 +82,6 @@
 }
 
 
-.token.deleted {
-    background-color: color-mix(in oklab, var(--diff-remove) 30%, transparent);
-}
-
-
-.token.inserted {
-    background-color: color-mix(in oklab, var(--diff-add) 30%, transparent);
-}
-
-
-/* Make the + and - characters unselectable for copy/paste */
-
-
-.token.prefix.unchanged,
-.token.prefix.inserted,
-.token.prefix.deleted {
-    -webkit-user-select: none;
-    padding-inline-end: calc(var(--spacing) * 1);
-    user-select: none;
-    background-color: transparent;
-}
-
-
-/* Optional: full-width background color */
-
-
-.token.inserted:not(.prefix),
-.token.deleted:not(.prefix) {
-    display: block;
-}
-
-
-code[class*="language-"],
-pre[class*="language-"] {
-    white-space: pre-wrap;
-    overflow-wrap: break-word;
-    overflow: auto;
-
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-}
-
-
-/* Code blocks */
-
-
-pre[class*="language-"] {
-
-}
-
-
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-}
-
-
-/* Inline code */
-
-
-:not(pre) > code[class*="language-"] {
-    padding: .1em;
-    border-radius: .3em;
-    white-space: normal;
-}
-
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-    color: slategray;
-}
-
-
-.token.punctuation {
-    color: #f8f8f2;
-}
-
-
-.token.namespace {
-    opacity: .7;
-}
-
-
-.token.property,
-.token.tag,
-.token.constant,
-.token.symbol,
-.token.deleted {
-    color: #f92672;
-}
-
-
-.token.boolean,
-.token.number {
-    color: #ae81ff;
-}
-
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-    color: #a6e22e;
-}
-
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string,
-.token.variable {
-    color: #f8f8f2;
-}
-
-
-.token.atrule,
-.token.attr-value,
-.token.function,
-.token.class-name {
-    color: #e6db74;
-}
-
-
-.token.keyword {
-    color: #66d9ef;
-}
-
-
-.token.regex,
-.token.important {
-    color: #fd971f;
-}
-
-
-.token.important,
-.token.bold {
-    font-weight: bold;
-}
-
-
-.token.italic {
-    font-style: italic;
-}
-
-
-.token.entity {
-    cursor: help;
-}
-
-
 .content {
     margin-block: calc(var(--spacing) * 10);
     margin-inline: calc(var(--spacing) * 5);
@@ -282,41 +122,6 @@ article img {
 
 #subtitle {
     text-align: center;
-}
-
-
-article pre {
-        max-width: 100%;
-        overflow: auto;
-
-}
-
-
-code:not(p > code)::selection, code:not(p > code) *::selection{
-        background-color: var(--color-code-selection-background);
-        color: var(--color-code-selection);
-
-}
-
-
-article code:not(p > code) {
-
-
-    font-size: var(--text-size-regular);
-    line-height: var(--line-height-regular);
-    display: block;
-    border-radius: var(--radius-box);
-    background-color: var(--color-code-background);
-    padding: calc(var(--spacing) * 6);
-    overflow-x:auto;
-    text-wrap: wrap;
-    white-space: pre-wrap;
-    word-break: break-word;
-    color: var(--color-code);
-    max-height: 500px;
-    @media (width >= 64rem /* 1024px */) {
-        overflow-x:auto;
-        }
 }
 
 
@@ -390,8 +195,9 @@ article code:not(p > code) {
 
 article > section {
     display: grid;
+    grid-template-columns: 100%;
     @media (width >= 50rem) {
-        grid-template-columns: 3fr 1fr;
+        grid-template-columns: 75% 25%;
         gap: calc(var(--spacing) * 5);
     }
 
@@ -399,6 +205,8 @@ article > section {
 
 
 #post {
+    width: 100%;
+    max-width: 50rem;
     @media (width >= 50rem /* 1024px */) {
         grid-column: 1;
         grid-row: 1;
