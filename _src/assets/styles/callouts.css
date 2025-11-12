@@ -12,8 +12,8 @@
 
 
 .callout-title {
-    font-size: var(--text-heading3) /* 1.875rem = 30px */;
-    line-height: var(--line-height-title) ;
+    font-size: var(--font-size-bigish);
+    line-height: var(--line-height-title);
     font-weight: bold;
 }
 

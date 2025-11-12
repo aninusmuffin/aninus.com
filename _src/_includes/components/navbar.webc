@@ -1,5 +1,5 @@
 <nav id="navbar">
-    <ul>
+    <ul class="cluster">
         <li><a href="/">aninus.com</a></li>
         <li><a href="/blog">Blog</a></li>
         <li><a href="/about">About</a></li>

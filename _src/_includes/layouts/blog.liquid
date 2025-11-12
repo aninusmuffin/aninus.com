@@ -6,24 +6,37 @@ blogpost: True
 
 ---
 
-        <div><img class="thumbnail" src="{{ image }}" alt="{{ imgalt }}"></div>
+        <img class="thumbnail" src="{{ image }}" alt="{{ imgalt }}">
 
         <h1 id="title"> {{ title }} </h1>
         <p id="subtitle"> {{description}} </p>
         <p style="text-align: center;">
-            <time datetime="{{ date }}">{{ date | postDate}}</time> •
+            {% icon "fas:calendar" %} <time datetime="{{ date | date: "%Y-%m-%dT%H:%M:%S" }}">{{ date | postDate}}</time> •
             {% for tag in tags | getKeys | filterTagList | sortAlphabetically %}
             <a  style="display: inline;" href="/blog/{{ tag }}">
             #{{ tag }}</a>
              {% endfor %}
           </p>
-    <section>
+    <div class="switcher">
         <details id="table-of-contents" class="textured-background box" open>
             <summary> Table of Contents </summary>
             {{ content | toc }}
         </details>
 
-        <div id="post">
+        <div id="post" class="stack">
             {{ content }}
         </div>
-    </section>
+    </div>
+
+
+<script type="module" src="/static/line-numbers.js"></script>
+<script type="module">
+    const LineNumbers = customElements.get("line-numbers") ;
+    Array.from(document.querySelectorAll("pre:not(.callout-content > pre)")).forEach(el => {
+        if(el.closest("blockquote") || el.innerText.split("\n").length <= 3) {
+            return;
+        }
+
+        LineNumbers.upgrade(el)
+    });
+</script>

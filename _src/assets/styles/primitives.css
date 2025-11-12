@@ -1,0 +1,67 @@
+.box {
+    border: var(--border-width) var(--border-style);
+    border-radius: var(--radius-box);
+
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.box.separated > * + * {
+    padding-block: 1rem;
+    margin-block: 0;
+    border-block-start-style: var(--border-style);
+    border-block-start-width: var(--border-width);
+    border-radius: var(--radius-md);
+}
+
+.box > * {
+    margin-block: 1rem;
+}
+
+
+.box  > * {
+    padding-inline: calc(var(--spacing) * 5);
+}
+
+
+[class^='stack'] > * {
+    margin-block: 0;
+}
+
+.stack-small > * + * {
+    margin-block-start: 0.5rem;
+}
+
+.stack-large > * + * {
+    margin-block-start: 3rem;
+}
+
+.stack > * + * {
+    margin-block-start: 1rem;
+}
+
+
+.cluster {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+.switcher {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    --threshold: 30rem;
+}
+.switcher > * {
+    flex-grow: 1;
+    flex-basis: calc((var(--threshold) - 100%) * 999);
+}
+

@@ -1,5 +1,5 @@
 <footer class="textured-background">
-    <div>
+    <div class="stack">
         {% if index_page %}
         <a style="text-decoration: none" href="https://www.11ty.dev/speedlify/aninus-com/">
             <speedlify-score speedlify-url="https://www.11ty.dev/speedlify" hash="3959661a" score weight rank rank-change></speedlify-score>
@@ -7,13 +7,12 @@
             <link rel="stylesheet" href="../../assets/styles/speedify.css" media="print" onload="this.media='all'">
         </a>
         {% endif %}
-        <p style="font-size:medium;">
-            Made with ❤️ using <a  href="https://11ty.dev">11ty</a>,
-            <a  href="https://postcss.org/">PostCSS</a>,
-            <a  href="https://liquidjs.com/">LiquidJS</a> and
-            <a  href="https://fontawesome.com/">Fontawesome</a>
-        </p>
-        <a  href="https://github.com/aninusmuffin/aninus.com/blob/main/{{ page.inputPath | uri_escape }}">Edit this page on GitHub</a>
+        <ul class="cluster" style="justify-content: center">
+            <li><a href="/about#about-this-site">About this site</a></li>
+            <li><a href="https://github.com/aninusmuffin/aninus.com/blob/main/LICENSE">License</a></li>
+            <li><a href="https://github.com/aninusmuffin/aninus.com/blob/main/{{ page.inputPath | uri_escape }}">Edit this page</a></li>
+        </ul>
+        <p >Built on: <time datetime="{{ "today" | date: "%Y-%m-%d %H:%M" }}" class="build-date">{{ "today" | date: "%Y-%m-%d %H:%M" }}</time></p>
 
     </div>
 </footer>

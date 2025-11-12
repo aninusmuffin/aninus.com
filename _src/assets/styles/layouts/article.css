@@ -9,10 +9,11 @@
 }
 
 .content article {
-/*    margin-top: calc(var(--spacing) * 10); */
-    max-width: 55rem;
+    box-sizing: content-box;
+    max-width: 70ch;
     overflow-wrap: break-word;
     width: 100%;
+    margin-block: calc(var(--spacing)*6);
 
 }
 
@@ -26,6 +27,11 @@ table {
 
 }
 
+hr {
+    background-color: var(--color-text);
+    block-size: 0.2em;
+    inline-size: 90%;
+}
 
 td, th {
     padding: calc(var(--spacing)*4);
@@ -39,3 +45,10 @@ th {
     background-color: var(--color-secondary-background);
 }
 
+.webfavicon {
+    box-sizing: content-box;
+    inline-size: 1.2em;
+    block-size: 1.2em;
+    border-radius: 1rem;
+    margin-inline-end: var(--spacing);
+}

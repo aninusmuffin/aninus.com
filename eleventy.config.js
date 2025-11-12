@@ -2,6 +2,7 @@ import fontAwesomePlugin from "@11ty/font-awesome";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import MarkdownItObsidianCallouts from 'markdown-it-obsidian-callouts'
 import MarkdownItAnchor from 'markdown-it-anchor';
+import MarkdownItContainer from "markdown-it-container";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import pluginTOC from 'eleventy-plugin-nesting-toc';
 import PostCSSPlugin from "eleventy-plugin-postcss";
@@ -43,6 +44,7 @@ export default async function (eleventyConfig) {
     eleventyConfig.addPlugin(PostCSSPlugin);
     eleventyConfig.addBundle("customicons");
     eleventyConfig.addPlugin(RenderPlugin);
+
     eleventyConfig.addPlugin(pluginWebc, {
         components: "_src/_includes/components/**/*.webc",
     });
@@ -58,34 +60,20 @@ export default async function (eleventyConfig) {
 
     // Markdown
     eleventyConfig.amendLibrary("md",MarkdownItObsidianCallouts);
-    eleventyConfig.amendLibrary("md",MarkdownItAnchor);
+
+    eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(MarkdownItAnchor, {tabIndex: false}));
+    eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(MarkdownItContainer, "responsive-table"));
     eleventyConfig.addPairedShortcode('responsive-table', (content) => {
-        return `<div style="overflow-x: auto; margin-block: calc(var(--spacing)*5);">${content}</div>`
+        return `<div class="responsive-table">${content}</div>`
     })
+
+    eleventyConfig.addPairedShortcode('link-with-logo', (content, href) => {
+        const encoded = encodeURIComponent(href);
+        return `<a href="${href}"><img class="webfavicon" sizes="1em" src="https://v1.indieweb-avatar.11ty.dev/${encoded}/" alt="${content}">${content}</a>`
+    })
+
   //Filters
   eleventyConfig.addPlugin(pluginFilters);
-
-
-  	/* eleventyConfig.addPlugin(feedPlugin, {
-		type: "atom",
-		outputPath: "/feed.xml",
-		collection: {
-			name: "posts", 
-			limit: 10,     
-		},
-		metadata: {
-			language: "en",
-			title: "Aninus' blog",
-			subtitle: "Who knows, one day i might post something really interesting here...",
-			base: "https://aninus.com/",
-			author: {
-				name: "Aninus Partikler",
-				email: "muffin@aninus.com",
-			}
-		}
-	}); */
-
-
 
   return { config };
 }

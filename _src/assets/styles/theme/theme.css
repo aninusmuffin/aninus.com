@@ -2,30 +2,40 @@
 
     /*noinspection CssInvalidFunction*/
     :root {
+        @view-transition {
+            navigation: auto;
+        }
+
         color-scheme: normal;
         /* Due to chrome bug color-scheme: normal doesn't work*/
         @media (prefers-color-scheme: dark) {
             color-scheme: dark;
         }
-        --text-size-regular: 1.25rem;
-        --line-height-regular: calc(1.75 / 1.25);
+        --ratio: 1.5;
+        --font-size-base: calc(1rem + 0.20vw);
+        --font-size-large: calc(var(--font-size-base) * pow(var(--ratio), 3));
+        --font-size-big: calc(var(--font-size-base) * pow(var(--ratio), 2));
+        --font-size-bigish: calc(var(--font-size-base) * pow(var(--ratio), 1));
+        --font-size-medium: calc(var(--font-size-base) * pow(var(--ratio), 0));
+        --font-size-small: calc(var(--font-size-base) / pow(var(--ratio), 1));
+
+        font-size: var(--font-size-base);
+        --line-height-regular: 1.5;
         --text-size-title: 4.5rem;
         --line-height-title: 1;
         --text-subtitle: 3.75rem;
-        --text-heading1: 3.75rem;
-        --text-heading3: 2.25rem;
-        --text-heading4: 1.85rem;
-        --container-box: 48rem;
+        --container-box: 60ch;
+
 
         --radius-md: 0.375rem;
         --radius-box: 1rem;
-        --container-6xl: 72rem /* 1152px */;
+        --container-6xl: calc(60rem + 0.5rem);
 
-        --hover-decoration: solid;
+        --hover-decoration: wavy;
         --border-width: calc(var(--spacing));
         --border-style: dashed;
 
-        --spacing: 0.25rem;
+        --spacing: calc(0.25rem);
 
 
         --color-black: oklch(0 0 0);

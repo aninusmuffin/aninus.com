@@ -3,8 +3,8 @@
 layout: main
 favicon: "/assets/img/favicon.webp"
 title: "Aninus Partikler"
-description: 'My name is Aninus Partikler, but you might also know me as aninusmuffin or aninuscsalas. I self describe as a "hobbyist developer and designer" and "Worst Developer alive"'
-index_page: yes
+description: "My name is Aninus Partikler, but you might also know me as aninusmuffin or aninuscsalas. I self describe as a &#34;hobbyist developer and designer&#34; and &#34;Worst Developer alive&#34;"
+index_page: true
 style: index
 
 ---
@@ -24,9 +24,9 @@ style: index
                   fetchpriority=high
                 /></picture>
             </div>
-            <div style="align-self:end;">
-                <h1 class="hero-title">Hi! I'm <b>Aninus</b>.</h1>
-                <p class="hero-text">
+            <div class="stack-small" style="align-self:end;">
+                <h1>Hi! I'm <b>Aninus</b>.</h1>
+                <p>
                   My name is Aninus Partikler, but you might also know me as aninusmuffin or aninuscsalas.
                   I self describe as a "hobbyist developer and designer" and "Worst Developer alive",
                   currently trying to learn Android (Kotlin and Jetpack Compose) and GNOME (GTK4) app development.
@@ -73,16 +73,16 @@ style: index
 
 <div class="grid">
 
-<div class="box">
-  <div class="vertical-flex">
-    <div>
+<div class="box separated">
+
+    <div class="stack-small">
         <h2 id="projects">{% icon "fas:folder-open" %}Projects</h2>
         <p>Some of the things I have done online</p>
     </div>
 
-  <div>
+  <div class="stack-small">
     <h3>Minecraft:</h3>
-    <dl>
+    <dl class="stack-small">
     {% for Minecraft in projects.Minecraft %}
         <div>
             <dt>
@@ -96,7 +96,7 @@ style: index
     </dl>
   </div>
 
-  <div>
+  <div class="stack-small">
     <h3>Random:</h3>
     <dl>
     {% for Random in projects.Random %}
@@ -116,55 +116,47 @@ style: index
     </dl>
   </div>
 
-  </div>
+
 </div>
 
 
-<div class="box">
-  <div class="vertical-flex" >
-    <div>
-      <a href="/blog"><h2 id="blog">{% icon "fas:book" %}Blog</h2></a>
+<div class="box separated">
+    <div class="stack-small">
+      <h2 id="blog"><a href="/blog">{% icon "fas:book" %}Blog</a></h2>
       <p>Who knows, one day I might post something really interesting here...</p>
     </div>
-
     {% assign lastPosts = collections.posts | lastPosts | reverse  %}
     {% for post in lastPosts %}
-    <div style="list-style: none;">
-      <div class="grid blog-latest">
+    <div>
+      <div class="switcher blogpost">
       <img src="{{post.data.image}}" alt="{{ post.data.imgalt}}" sizes="(width < 70rem) 300px , 200px" eleventy:widths="300, 200" eleventy:optional="placeholder" >
-      <div>
-        <a href="{{post.url}}"><p class="title">{{post.data.title}}</p></a>
-          <p><time datetime="{{post.date | postDate}}">{{post.date | postDate}}</time> •
+      <div class="stack-small">
+        <p><a class="title" href="{{post.url}}">{{post.data.title}}</a></p>
+          <p><time datetime="{{post.date | date: "%Y-%m-%dT%H:%M:%S"}}">{{post.date | postDate}}</time> •
           {% for tags in post.data.tags %}
           <a  style="display: inline;" href="/blog/{{ tags }}">#{{ tags }}</a>
           {% endfor %}
         </p> 
-        {{post.data.description}}
+        <p>{{post.data.description}}</p>
       </div>         
       </div>    
     </div>
     {% endfor %}
-
-  </div>
 </div>
 
 
-<div class="box">
-  <div class="vertical-flex">
+<div class="box separated">
     <h2 id="contact-me">{% icon "fas:user" %}Contact me</h2>
     <div>
-      <ul>
+      <ul class="stack">
         <li> 
           You can email me at
           <a  href="mailto:muffin@aninus.com">{% icon "fas:envelope" %} muffin@aninus.com</a>, with optional encryption using
           <a  href="https://keys.openpgp.org/search?q=muffin%40aninus.com">{% icon "fas:key" %} my PGP key.</a>
-        </li>      
-
+        </li>
     </ul>
     </div>
   </div>
-</div>
-
 </div>
 </div>
 
