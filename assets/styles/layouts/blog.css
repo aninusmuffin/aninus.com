@@ -12,8 +12,8 @@
 
 
 .callout-title {
-    font-size: var(--text-heading3) /* 1.875rem = 30px */;
-    line-height: var(--line-height-title) ;
+    font-size: var(--font-size-bigish);
+    line-height: var(--line-height-title);
     font-weight: bold;
 }
 
@@ -104,17 +104,16 @@ article img {
 .thumbnail {
     aspect-ratio: 16/9;
     border-radius: var(--radius-box);
-    max-height: 30rem;
-    max-width: 45rem;
-    width: 100%;
-    height: 100%;
+    max-block-size: 20rem;
+    max-inline-size: 35rem;
+    inline-size: 100%;
+    block-size: 100%;
 
 }
 
 
 #title {
     font-size: var(--text-size-title);
-    line-height: var(--text-heading1);
     text-align: center;
     font-weight: bolder;
 }
@@ -122,19 +121,6 @@ article img {
 
 #subtitle {
     text-align: center;
-}
-
-
-/*
-.content h1 {
-    font-family: "Adwaita Sans", sans-serif;
-    line-height: var(--line-height-title);}
-*/
-
-
-.content h3 {
-    font-size: var(--text-heading3) ;
-    line-height: var(--line-height-title);
 }
 
 
@@ -160,27 +146,47 @@ article img {
 }
 
 
+.switcher {
+    container-type: inline-size;
+}
+
+
 #table-of-contents  {
+    flex-shrink: 1;
+    flex-grow: 0.5;
+    flex-basis: 20rem;
     max-height: 55rem;
     overflow-y: auto;
     background-color: var(--color-secondary-background);
-    padding: calc(var(--spacing)*5);
+    padding: calc(var(--spacing)*2);
     height: fit-content;
-    @media (width >= 50rem /* 1024px */) {
-        grid-column: 2;
+    order: 0;
+
+
+
+}
+
+
+@container (width >= 61.7rem) {
+    #table-of-contents {
         position: sticky;
         top: calc(var(--spacing) * 5);
+        order: 9;
     }
+}
 
-    &:hover {
-        cursor: pointer;
-    }
+
+.switcher > #table-of-contents {
+    --treshold: 50rem;
 
 }
 
 
 #table-of-contents summary{
-    font-size: var(--text-size-regular);
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 
@@ -193,20 +199,25 @@ article img {
 }
 
 
-article > section {
+article > div {
     display: grid;
-    grid-template-columns: 100%;
+    justify-content: center;
+    max-inline-size: 120ch;
+ /*   grid-template-columns: 100%;
     @media (width >= 50rem) {
-        grid-template-columns: 75% 25%;
+        grid-template-columns: 60% 25%;
         gap: calc(var(--spacing) * 5);
     }
-
+*/
 }
 
 
 #post {
+
+    flex-grow: 5;
     width: 100%;
-    max-width: 50rem;
+    max-inline-size: 65ch;
+    flex-basis: 70ch;
     @media (width >= 50rem /* 1024px */) {
         grid-column: 1;
         grid-row: 1;

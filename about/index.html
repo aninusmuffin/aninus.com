@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="title" property="og:title" content="About">
-    <meta name="description" property="og:description" content="A very borring page with all of the thing about me">
+    <meta name="description" property="og:description" content="A very borring page with all of the things about me">
     <meta property="og:image" content="">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -23,8 +23,8 @@
 
     <style>
      svg {
-         width: 2rem;
-         height: 2rem;
+         width: 1em;
+         height: 1em;
      }
     </style>
 
@@ -37,7 +37,7 @@
 
         
             <nav id="navbar">
-    <ul>
+    <ul class="cluster">
         <li><a href="/">aninus.com</a></li>
         <li><a href="/blog">Blog</a></li>
         <li><a href="/about">About</a></li>
@@ -50,17 +50,17 @@
 
 
 
-        <main style="padding-bottom: 16rem;">
+        <main class="stack-large" style="padding-bottom: 16rem;">
 
             
-<section class="content">
-    <article>
-        <h1 id="about" tabindex="-1">About</h1>
+<div class="content">
+    <article class="stack">
+        <h1 id="about">About</h1>
 <p>As you might have already guessed my name is Aninus Partikler, I'm a so called hobbist programmer and failure.
 I like making stuff, but my programming knowledge is not really the best.</p>
-<h2 id="also-this-site-is-very-wip" tabindex="-1">Also this site is very WIP</h2>
+<h2 id="my-current-setup">My current setup</h2>
 <p>Here's a cool table:</p>
-<div style="overflow-x: auto; margin-block: calc(var(--spacing)*5);">
+<div class="responsive-table">
 <table>
 <thead>
 <tr>
@@ -92,26 +92,58 @@ I like making stuff, but my programming knowledge is not really the best.</p>
 </tbody>
 </table>
 </div>
+<hr>
+<h2 id="about-this-site">About this site</h2>
+<p>I made this site to learn web development and to try the latest and greatest HTML and CSS features. The site has changed
+a lot since its first inception, and I hope that I can make it better and improve my skills.</p>
+<h3 id="made-using">Made using</h3>
+<ul>
+<li>HTML and CSS <em>(shocking)</em></li>
+<li><a href="https://11ty.dev"><picture><source type="image/webp" srcset="/about/bqCviR6h2R-60.webp 60w" sizes="1em"><img class="webfavicon" src="/about/bqCviR6h2R-60.jpeg" alt=" 11ty " width="60" height="60"></picture> 11ty </a></li>
+<li><a href="https://liquidjs.com"><picture><source type="image/webp" srcset="/about/Jqcf76mIIC-60.webp 60w" sizes="1em"><img class="webfavicon" src="/about/Jqcf76mIIC-60.jpeg" alt=" Liquid " width="60" height="60"></picture> Liquid </a></li>
+<li><a href="https://postcss.org"><picture><source type="image/webp" srcset="/about/aymdB00XOR-48.webp 48w" sizes="1em"><img class="webfavicon" src="/about/aymdB00XOR-48.jpeg" alt=" PostCSS " width="48" height="48"></picture> PostCSS </a></li>
+<li><a href="https://fontawesome.com"><picture><source type="image/webp" srcset="/about/hPuCRtLjAW-60.webp 60w" sizes="1em"><img class="webfavicon" src="/about/hPuCRtLjAW-60.jpeg" alt=" Fontawsome " width="60" height="60"></picture> Fontawsome </a></li>
+<li><a href="https://github.com/11ty/webc">WebC</a></li>
+</ul>
+<p>Previously used:</p>
+<ul>
+<li><s>TailwindCSS</s></li>
+<li><s>DasyUI</s></li>
+</ul>
+<h3 id="great-resources-i-found">Great resources I found</h3>
+<ul>
+<li><a href="https://every-layout.dev/">Every Layout</a></li>
+<li><a href="https://esif.dev/">esif.dev</a></li>
+</ul>
+<h3 id="inspiration">Inspiration</h3>
+<ul>
+<li><a href="https://jacobgeller.com/">Jacob Geller's Website</a></li>
+<li><a href="https://exa.y2k.diy/">Exa's Corner</a></li>
+<li><a href="https://www.zachleat.com/">Zach Leatherman</a></li>
+<li><a href="https://beeps.website/">beeps</a></li>
+<li><a href="https://geopjr.dev/">GeopJr</a></li>
+<li><a href="https://tobiasbernard.com/">Tobias Bernard</a></li>
+</ul>
 
     </article>
-</section>
+</div>
 
 
         </main>
 
         <footer class="textured-background">
-    <div>
+    <div class="stack">
         
-        <p style="font-size:medium;">
-            Made with ❤️ using <a href="https://11ty.dev">11ty</a>,
-            <a href="https://postcss.org/">PostCSS</a>,
-            <a href="https://liquidjs.com/">LiquidJS</a> and
-            <a href="https://fontawesome.com/">Fontawesome</a>
-        </p>
-        <a href="https://github.com/aninusmuffin/aninus.com/blob/main/">Edit this page on GitHub</a>
+        <ul class="cluster" style="justify-content: center">
+            <li><a href="/about#about-this-site">About this site</a></li>
+            <li><a href="https://github.com/aninusmuffin/aninus.com/blob/main/LICENSE">License</a></li>
+            <li><a href="https://github.com/aninusmuffin/aninus.com/blob/main/">Edit this page</a></li>
+        </ul>
+        <p>Built on: <time datetime="2025-11-12 16:15" class="build-date">2025-11-12 16:15</time></p>
 
     </div>
 </footer>
+
 
     </div>
 <div style="display: none">

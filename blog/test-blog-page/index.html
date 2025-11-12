@@ -27,8 +27,8 @@
 
     <style>
      svg {
-         width: 2rem;
-         height: 2rem;
+         width: 1em;
+         height: 1em;
      }
     </style>
 
@@ -41,7 +41,7 @@
 
         
             <nav id="navbar">
-    <ul>
+    <ul class="cluster">
         <li><a href="/">aninus.com</a></li>
         <li><a href="/blog">Blog</a></li>
         <li><a href="/about">About</a></li>
@@ -54,18 +54,18 @@
 
 
 
-        <main style="padding-bottom: 16rem;">
+        <main class="stack-large" style="padding-bottom: 16rem;">
 
             
-<section class="content">
-    <article>
+<div class="content">
+    <article class="stack">
         
-        <div><picture><source type="image/webp" srcset="/img/_fxmAhkpKd-1920.webp 1920w"><img class="thumbnail" src="/img/_fxmAhkpKd-1920.jpeg" alt="test" width="1920" height="1080"></picture></div>
+        <picture><source type="image/webp" srcset="/img/_fxmAhkpKd-1920.webp 1920w"><img class="thumbnail" src="/img/_fxmAhkpKd-1920.jpeg" alt="test" width="1920" height="1080"></picture>
 
         <h1 id="title"> Test blog page </h1>
         <p id="subtitle"> aaaaaaa aaaaaaaaa aaaaaaa aaaaa aaaaaaaa aaaaaaaaaaaaaaa </p>
         <p style="text-align: center;">
-            <time datetime="Tue Nov 11 2025 00:00:00 GMT+0000 (Coordinated Universal Time)">11 Nov 2025</time> •
+            <svg class="icon"><use href="#fas-fa-calendar" xlink:href="#fas-fa-calendar"></use></svg> <time datetime="2025-11-11T00:00:00">11 Nov 2025</time> •
             
             <a style="display: inline;" href="/blog/posts">
             #posts</a>
@@ -74,13 +74,13 @@
             #post</a>
              
           </p>
-    <section>
+    <div class="switcher">
         <details id="table-of-contents" class="textured-background box" open="">
             <summary> Table of Contents </summary>
             
         </details>
 
-        <div id="post">
+        <div id="post" class="stack">
             <p>Lorem ipsum dolor sit amet, ex dolor nisi lorem amet in incididunt occaecat. Amet sit lorem aliqua velit sed officia. Qui est enim laborum consectetur, fugiat consequat anim officia et. Magna aliquip anim occaecat. Veniam in lorem anim adipiscing amet.
 Nostrud lorem et deserunt ea, nostrud consectetur sed <em>quis</em> irure deserunt in. Lorem aliqua id enim, do eiusmod officia in duis id ea. Cupidatat cillum occaecat mollit. Anim in ut eu adipiscing. Eu veniam nostrud lorem. Sint pariatur magna pariatur occaecat qui nisi sed. Aliquip deserunt adipiscing quis qui. Veniam cupidatat culpa sint.</p>
 
@@ -104,30 +104,43 @@ Commodo pariatur id aute pariatur do quis amet. Sed non nulla sint elit. Ea lore
 </span>}</code></pre>
 
         </div>
-    </section>
+    </div>
+
+
+<script type="module" src="/static/line-numbers.js"></script>
+<script type="module">
+    const LineNumbers = customElements.get("line-numbers") ;
+    Array.from(document.querySelectorAll("pre:not(.callout-content > pre)")).forEach(el => {
+        if(el.closest("blockquote") || el.innerText.split("\n").length <= 3) {
+            return;
+        }
+
+        LineNumbers.upgrade(el)
+    });
+</script>
     </article>
-</section>
+</div>
 
 
         </main>
 
         <footer class="textured-background">
-    <div>
+    <div class="stack">
         
-        <p style="font-size:medium;">
-            Made with ❤️ using <a href="https://11ty.dev">11ty</a>,
-            <a href="https://postcss.org/">PostCSS</a>,
-            <a href="https://liquidjs.com/">LiquidJS</a> and
-            <a href="https://fontawesome.com/">Fontawesome</a>
-        </p>
-        <a href="https://github.com/aninusmuffin/aninus.com/blob/main/">Edit this page on GitHub</a>
+        <ul class="cluster" style="justify-content: center">
+            <li><a href="/about#about-this-site">About this site</a></li>
+            <li><a href="https://github.com/aninusmuffin/aninus.com/blob/main/LICENSE">License</a></li>
+            <li><a href="https://github.com/aninusmuffin/aninus.com/blob/main/">Edit this page</a></li>
+        </ul>
+        <p>Built on: <time datetime="2025-11-12 16:15" class="build-date">2025-11-12 16:15</time></p>
 
     </div>
 </footer>
 
+
     </div>
 <div style="display: none">
-    
+    <svg style="display: none;"><symbol data-prefix="fas" data-icon="calendar" class="svg-inline--fa fa-calendar" role="img" viewBox="0 0 448 512" aria-hidden="true" id="fas-fa-calendar"><path fill="currentColor" d="M128 0C110.3 0 96 14.3 96 32l0 32-32 0C28.7 64 0 92.7 0 128l0 48 448 0 0-48c0-35.3-28.7-64-64-64l-32 0 0-32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 32-128 0 0-32c0-17.7-14.3-32-32-32zM0 224L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-192-448 0z"></path></symbol></svg>
     
 </div>
 </body>

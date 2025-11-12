@@ -27,8 +27,8 @@
 
     <style>
      svg {
-         width: 2rem;
-         height: 2rem;
+         width: 1em;
+         height: 1em;
      }
     </style>
 
@@ -41,7 +41,7 @@
 
         
             <nav id="navbar">
-    <ul>
+    <ul class="cluster">
         <li><a href="/">aninus.com</a></li>
         <li><a href="/blog">Blog</a></li>
         <li><a href="/about">About</a></li>
@@ -54,18 +54,18 @@
 
 
 
-        <main style="padding-bottom: 16rem;">
+        <main class="stack-large" style="padding-bottom: 16rem;">
 
             
-<section class="content">
-    <article>
+<div class="content">
+    <article class="stack">
         
-        <div><picture><source type="image/webp" srcset="/img/Zaob10Uqt5-332.webp 332w"><img class="thumbnail" src="/img/Zaob10Uqt5-332.jpeg" alt="An image showing an obsidian callout and an arrow pointing at a nicely rendered info box." width="332" height="186"></picture></div>
+        <picture><source type="image/webp" srcset="/img/Zaob10Uqt5-332.webp 332w"><img class="thumbnail" src="/img/Zaob10Uqt5-332.jpeg" alt="An image showing an obsidian callout and an arrow pointing at a nicely rendered info box." width="332" height="186"></picture>
 
         <h1 id="title"> Using Obsidian Callouts with 11ty </h1>
         <p id="subtitle"> A simple guide on how to make an Obsidian style Callout or Information box </p>
         <p style="text-align: center;">
-            <time datetime="Tue Aug 26 2025 00:00:00 GMT+0000 (Coordinated Universal Time)">26 Aug 2025</time> •
+            <svg class="icon"><use href="#fas-fa-calendar" xlink:href="#fas-fa-calendar"></use></svg> <time datetime="2025-08-26T00:00:00">26 Aug 2025</time> •
             
             <a style="display: inline;" href="/blog/posts">
             #posts</a>
@@ -80,7 +80,7 @@
             #markdown</a>
              
           </p>
-    <section>
+    <div class="switcher">
         <details id="table-of-contents" class="textured-background box" open="">
             <summary> Table of Contents </summary>
             <nav class="toc">
@@ -104,15 +104,15 @@
             </nav>
         </details>
 
-        <div id="post">
+        <div id="post" class="stack">
             <p>When i decided to make this blog, one of my biggest annoyances was the creation of custom informational boxes. There are a lot of different ways to accomplish this in 11ty, you can use liquid's components (which I found to be cumbersome for blogs) and 11ty's own shortcodes are difficult to style with <a href="https://www.11ty.dev/docs/languages/markdown/#why-cant-i-return-markdown-from-paired-shortcodes-to-use-in-a-markdown-file">html and markdown at the same time</a>.</p>
 <p>As it turns out 11ty uses <a href="https://github.com/markdown-it/markdown-it">markdown-it</a> for rendering, <a href="https://www.11ty.dev/docs/languages/markdown/#add-your-own-plugins">which has plugin support</a> and allows you to add custom markdown syntax.</p>
 <p>I found three similar plugins that have the same basic function:</p>
-<h2 id="option-1-%3A-markdown-it-container" tabindex="-1">Option 1 : <a href="https://github.com/markdown-it/markdown-it-container">markdown-it-container</a></h2>
+<h2 id="option-1-%3A-markdown-it-container">Option 1 : <a href="https://github.com/markdown-it/markdown-it-container">markdown-it-container</a></h2>
 <p>This is an official extension of the markdown-it project. You need to define your own  containers in javascript, and uses <code>:::</code> for syntax instead of blockquotes.</p>
-<h2 id="option-2-%3A-markdown-it-github-alerts" tabindex="-1">Option 2 : <a href="https://github.com/antfu/markdown-it-github-alerts">markdown-it-github-alerts</a></h2>
+<h2 id="option-2-%3A-markdown-it-github-alerts">Option 2 : <a href="https://github.com/antfu/markdown-it-github-alerts">markdown-it-github-alerts</a></h2>
 <p>A simple plug-and-play solution for the problem with some basic styling. by default it only supports the basic five (NOTE, TIP, IMPORTANT, WARNING, DANGER), but it can be extended. It uses Github's icons for the boxes.</p>
-<h2 id="option-3-%3A-markdown-it-obsidian-callouts" tabindex="-1">Option 3 : <a href="https://github.com/ebullient/markdown-it-obsidian-callouts">markdown-it-obsidian-callouts</a></h2>
+<h2 id="option-3-%3A-markdown-it-obsidian-callouts">Option 3 : <a href="https://github.com/ebullient/markdown-it-obsidian-callouts">markdown-it-obsidian-callouts</a></h2>
 <p>This plugin supports GitHub and <a href="https://help.obsidian.md/callouts">Obsidian callouts</a>, as well as codeblock admonitions supported by the <a href="https://github.com/javalent/admonitions">Admonition plugin</a>, uses <a href="https://lucide.dev/icons/">Lucide</a> for the icons (Same as Obsidian) and it can also do nested callouts which is a nice bonus. It doesn't come with a style by default, but the repo includes a css file mimicking Obsidian's callout desgin.</p>
 
 <div class="callout" data-callout="info">
@@ -123,7 +123,7 @@
 <div class="callout-title-inner">Info</div>
 </div>
 <div class="callout-content"><p>In this guide I decided to use ebullient's markdown-it-obsidian-callouts as this is the plugin I ended up using to make this blog.</p>
-</div></div><h2 id="setup" tabindex="-1">Setup</h2>
+</div></div><h2 id="setup">Setup</h2>
 <p>I will assume that you already have an Eleventy project set up for this guide, if you don't you should check out <a href="https://www.11ty.dev/docs/">11ty's Documentation</a> or the <a href="https://github.com/11ty/eleventy-base-blog">Official Starting Project</a>.</p>
 <p>You will also need to install <a href="https://github.com/ebullient/markdown-it-obsidian-callouts">markdown-it-obsidian-callouts</a> from NPM with the following command:</p>
 <pre tabindex="0"><code>npm i markdown-it-obsidian-callouts</code></pre>
@@ -166,7 +166,7 @@ return {
 <p>It renders like this:
 <picture><source type="image/webp" srcset="/img/3vsoTqFiMa-334.webp 334w"><img src="/img/3vsoTqFiMa-334.jpeg" alt="A basic rendered markdown file showing : &quot;Your markdown file  INFO ICON This is an information box&quot;" width="334" height="146"></picture></p>
 <p>And you are almost done! Now you can create your own style for it or follow the guide for the obsidian style.</p>
-<h2 id="adding-styles" tabindex="-1">Adding styles</h2>
+<h2 id="adding-styles">Adding styles</h2>
 <p>First you need to download or copy the css from the plugin's github repo to your style.
 <a href="https://github.com/ebullient/markdown-it-obsidian-callouts/blob/main/style/index.css">Link to the file</a></p>
 <p>I created a file called <code>index.css</code> and pasted the following:</p>
@@ -365,30 +365,43 @@ return {
 <p>Annddd you are done! I hope that this was useful for at least one person :D</p>
 
         </div>
-    </section>
+    </div>
+
+
+<script type="module" src="/static/line-numbers.js"></script>
+<script type="module">
+    const LineNumbers = customElements.get("line-numbers") ;
+    Array.from(document.querySelectorAll("pre:not(.callout-content > pre)")).forEach(el => {
+        if(el.closest("blockquote") || el.innerText.split("\n").length <= 3) {
+            return;
+        }
+
+        LineNumbers.upgrade(el)
+    });
+</script>
     </article>
-</section>
+</div>
 
 
         </main>
 
         <footer class="textured-background">
-    <div>
+    <div class="stack">
         
-        <p style="font-size:medium;">
-            Made with ❤️ using <a href="https://11ty.dev">11ty</a>,
-            <a href="https://postcss.org/">PostCSS</a>,
-            <a href="https://liquidjs.com/">LiquidJS</a> and
-            <a href="https://fontawesome.com/">Fontawesome</a>
-        </p>
-        <a href="https://github.com/aninusmuffin/aninus.com/blob/main/">Edit this page on GitHub</a>
+        <ul class="cluster" style="justify-content: center">
+            <li><a href="/about#about-this-site">About this site</a></li>
+            <li><a href="https://github.com/aninusmuffin/aninus.com/blob/main/LICENSE">License</a></li>
+            <li><a href="https://github.com/aninusmuffin/aninus.com/blob/main/">Edit this page</a></li>
+        </ul>
+        <p>Built on: <time datetime="2025-11-12 16:15" class="build-date">2025-11-12 16:15</time></p>
 
     </div>
 </footer>
 
+
     </div>
 <div style="display: none">
-    
+    <svg style="display: none;"><symbol data-prefix="fas" data-icon="calendar" class="svg-inline--fa fa-calendar" role="img" viewBox="0 0 448 512" aria-hidden="true" id="fas-fa-calendar"><path fill="currentColor" d="M128 0C110.3 0 96 14.3 96 32l0 32-32 0C28.7 64 0 92.7 0 128l0 48 448 0 0-48c0-35.3-28.7-64-64-64l-32 0 0-32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 32-128 0 0-32c0-17.7-14.3-32-32-32zM0 224L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-192-448 0z"></path></symbol></svg>
     
 </div>
 </body>

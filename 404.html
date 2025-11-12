@@ -23,8 +23,8 @@
 
     <style>
      svg {
-         width: 2rem;
-         height: 2rem;
+         width: 1em;
+         height: 1em;
      }
     </style>
 
@@ -37,7 +37,7 @@
 
         
             <nav id="navbar">
-    <ul>
+    <ul class="cluster">
         <li><a href="/">aninus.com</a></li>
         <li><a href="/blog">Blog</a></li>
         <li><a href="/about">About</a></li>
@@ -50,33 +50,34 @@
 
 
 
-        <main style="padding-bottom: 16rem;">
+        <main class="stack-large" style="padding-bottom: 16rem;">
 
             
-<div class="contenter">
-    <div style="text-align: center;">
-    <h1><b>404</b></h1>
-    <p>Not found</p>
-    <a href="/">Back to home</a>
-    </div>
+<div class="content">
+    <article class="stack">
+        <h1 id="404">404</h1>
+<p>Not found</p>
+<p><a href="/">Back to home</a></p>
+
+    </article>
 </div>
 
 
         </main>
 
         <footer class="textured-background">
-    <div>
+    <div class="stack">
         
-        <p style="font-size:medium;">
-            Made with ❤️ using <a href="https://11ty.dev">11ty</a>,
-            <a href="https://postcss.org/">PostCSS</a>,
-            <a href="https://liquidjs.com/">LiquidJS</a> and
-            <a href="https://fontawesome.com/">Fontawesome</a>
-        </p>
-        <a href="https://github.com/aninusmuffin/aninus.com/blob/main/">Edit this page on GitHub</a>
+        <ul class="cluster" style="justify-content: center">
+            <li><a href="/about#about-this-site">About this site</a></li>
+            <li><a href="https://github.com/aninusmuffin/aninus.com/blob/main/LICENSE">License</a></li>
+            <li><a href="https://github.com/aninusmuffin/aninus.com/blob/main/">Edit this page</a></li>
+        </ul>
+        <p>Built on: <time datetime="2025-11-12 16:15" class="build-date">2025-11-12 16:15</time></p>
 
     </div>
 </footer>
+
 
     </div>
 <div style="display: none">
