@@ -1,7 +1,7 @@
 
 line-numbers {
     font-family: monospace;
-    font-size: var(--text-size-regular);
+    font-size: var(--font-size-base);
     line-height: var(--line-height-regular);
     display: flex;
     --uln-padding-v: 1em;
@@ -16,7 +16,7 @@ article pre {
 
     width: 100%;
     max-width: 50rem;
-    font-size: var(--text-size-regular);
+    font-size: var(--font-size-base);
     line-height: var(--line-height-regular);
     border-radius: var(--radius-box);
     color: var(--color-code);
