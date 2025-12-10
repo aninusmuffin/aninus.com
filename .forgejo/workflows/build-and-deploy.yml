@@ -1,0 +1,29 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  build:
+    runs-on: codeberg-tiny
+
+    strategy:
+      matrix:
+        node-version: ['20.10.0']
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Running Eleventy
+        run: npm run build:eleventy
+          
+      - name: Deploy to cloudflare
+        uses: https://github.com/cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy /_site --project-name=aninus
