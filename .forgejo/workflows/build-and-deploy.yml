@@ -8,11 +8,11 @@ jobs:
   build:
     runs-on: codeberg-tiny
 
-    strategy:
-      matrix:
-        node-version: ['20.10.0']
-
     steps:
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
       - uses: actions/checkout@v6
 
       - name: Install dependencies
