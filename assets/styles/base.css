@@ -235,7 +235,6 @@
 
 line-numbers {
     font-family: monospace;
-    font-size: var(--text-size-regular);
     line-height: var(--line-height-regular);
     display: flex;
     --uln-padding-v: 1em;
@@ -246,16 +245,12 @@ line-numbers {
 article pre {
     white-space: pre;
     overflow: auto;
-
     width: 100%;
     max-width: 50rem;
-    font-size: var(--text-size-regular);
     line-height: var(--line-height-regular);
     border-radius: var(--radius-box);
     color: var(--color-code);
     background-color: var(--color-code-background);
-
-
 }
 
 article pre > code {
