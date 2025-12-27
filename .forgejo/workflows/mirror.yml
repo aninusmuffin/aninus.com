@@ -14,8 +14,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 'Mirror to Codeberg'
-        uses: cssnr/mirror-repository-action@v1
+      - name: 'Mirror to Github'
+        uses: https://github.com/cssnr/mirror-repository-action@v1
         with:
           url: https://github.com/aninusmuffin/aninus.com
           create: true
