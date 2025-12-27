@@ -27,11 +27,3 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy _site --project-name=aninus
-
-      - name: Deploy to gh-pages
-        uses: https://github.com/peaceiris/actions-gh-pages@v4
-        with:
-          publish_dir: _site
-          external_repository: aninusmuffin/aninus.com
-          deploy_key: ${{ secrets.GH_ACTIONS_DEPLOY_KEY }}
-          cname: aninus.com
