@@ -25,27 +25,49 @@
   <g
      id="layer3"
      transform="translate(-9.5e-5,27.425883)">
-    <text
-       style="font-size:400px;font-family:'AdwaitaMono Nerd Font';-inkscape-font-specification:'AdwaitaMono Nerd Font';fill:#ff8ab9;fill-opacity:1;stroke-width:30;stroke-linecap:round;stroke-linejoin:round"
-       x="419.99991"
-       y="839.87939"
-       id="text3"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'AdwaitaMono Nerd Font';-inkscape-font-specification:'AdwaitaMono Nerd Font Bold'"
-         id="tspan3">+</tspan></text>
-    <text
-       style="font-size:400px;font-family:'AdwaitaMono Nerd Font';-inkscape-font-specification:'AdwaitaMono Nerd Font';fill:#fafa47;fill-opacity:1;stroke-width:30;stroke-linecap:round;stroke-linejoin:round"
-       x="284.89951"
-       y="719.8797"
-       id="text4"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'AdwaitaMono Nerd Font';-inkscape-font-specification:'AdwaitaMono Nerd Font Bold'"
-         id="tspan1">*</tspan></text>
-    <text
-       style="font-size:400px;font-family:'AdwaitaMono Nerd Font';-inkscape-font-specification:'AdwaitaMono Nerd Font';fill:#fafa47;fill-opacity:1;stroke-width:30;stroke-linecap:round;stroke-linejoin:round"
-       x="555.10052"
-       y="719.8797"
-       id="text2"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'AdwaitaMono Nerd Font';-inkscape-font-specification:'AdwaitaMono Nerd Font Bold'"
-         id="tspan2">*</tspan></text>
+    <g
+       id="g1"
+       style="display:none">
+      <text
+         style="font-size:400px;font-family:'AdwaitaMono Nerd Font';-inkscape-font-specification:'AdwaitaMono Nerd Font';fill:#ff8ab9;fill-opacity:1;stroke-width:30;stroke-linecap:round;stroke-linejoin:round"
+         x="419.99991"
+         y="839.87939"
+         id="text3"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'AdwaitaMono Nerd Font';-inkscape-font-specification:'AdwaitaMono Nerd Font Bold'"
+           id="tspan3">+</tspan></text>
+      <text
+         style="font-size:400px;font-family:'AdwaitaMono Nerd Font';-inkscape-font-specification:'AdwaitaMono Nerd Font';fill:#fafa47;fill-opacity:1;stroke-width:30;stroke-linecap:round;stroke-linejoin:round"
+         x="284.89951"
+         y="719.8797"
+         id="text4"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'AdwaitaMono Nerd Font';-inkscape-font-specification:'AdwaitaMono Nerd Font Bold'"
+           id="tspan1">*</tspan></text>
+      <text
+         style="font-size:400px;font-family:'AdwaitaMono Nerd Font';-inkscape-font-specification:'AdwaitaMono Nerd Font';fill:#fafa47;fill-opacity:1;stroke-width:30;stroke-linecap:round;stroke-linejoin:round"
+         x="555.10052"
+         y="719.8797"
+         id="text2"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'AdwaitaMono Nerd Font';-inkscape-font-specification:'AdwaitaMono Nerd Font Bold'"
+           id="tspan2">*</tspan></text>
+    </g>
+    <g
+       id="g7">
+      <path
+         style="font-weight:bold;font-size:400px;font-family:'AdwaitaMono Nerd Font';-inkscape-font-specification:'AdwaitaMono Nerd Font Bold';fill:#ff8ab9;stroke-width:30;stroke-linecap:round;stroke-linejoin:round"
+         d="m 518.39991,795.07939 v -72.8 h -66 v -36.8 h 66 v -72.8 h 43.2 v 72.8 h 66 v 36.8 h -66 v 72.8 z"
+         id="text5"
+         aria-label="+" />
+      <path
+         style="font-weight:bold;font-size:400px;font-family:'AdwaitaMono Nerd Font';-inkscape-font-specification:'AdwaitaMono Nerd Font Bold';fill:#fafa47;stroke-width:30;stroke-linecap:round;stroke-linejoin:round"
+         d="m 381.29951,615.8797 2.8,-63.2 -50.8,32.4 -24,-34.8 59.2,-30.8 -59.2,-30.8 24,-34.8 50.8,32.4 -2.8,-63.6 h 47.2 l -2.8,63.6 50.8,-32.4 24,34.8 -59.2,30.8 59.2,30.8 -24,34.8 -50.8,-32.4 2.8,63.2 z"
+         id="text6"
+         aria-label="*" />
+      <path
+         style="font-weight:bold;font-size:400px;font-family:'AdwaitaMono Nerd Font';-inkscape-font-specification:'AdwaitaMono Nerd Font Bold';fill:#fafa47;stroke-width:30;stroke-linecap:round;stroke-linejoin:round"
+         d="m 651.50052,615.8797 2.8,-63.2 -50.8,32.4 -24,-34.8 59.2,-30.8 -59.2,-30.8 24,-34.8 50.8,32.4 -2.8,-63.6 h 47.2 l -2.8,63.6 50.8,-32.4 24,34.8 -59.2,30.8 59.2,30.8 -24,34.8 -50.8,-32.4 2.8,63.2 z"
+         id="text7"
+         aria-label="*" />
+    </g>
     <g
        id="g8"
        transform="translate(-55.82633,-16.094102)">
