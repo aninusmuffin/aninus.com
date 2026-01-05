@@ -2,60 +2,81 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="180.24297mm"
-   height="180.24297mm"
-   viewBox="0 0 180.24297 180.24297"
+   width="1080"
+   height="1080"
+   viewBox="0 0 1080 1080"
    version="1.1"
-   id="svg5"
-   xml:space="preserve"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
-   sodipodi:docname="an1.svg"
-   inkscape:export-filename="an1-400.png"
-   inkscape:export-xdpi="56.368355"
-   inkscape:export-ydpi="56.368355"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   id="svg1"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
-     id="namedview7"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:document-units="mm"
-     showgrid="false"
-     inkscape:zoom="0.98520767"
-     inkscape:cx="96.933878"
-     inkscape:cy="293.33917"
-     inkscape:window-width="1920"
-     inkscape:window-height="1011"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" /><defs
-     id="defs2" /><g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
      id="layer1"
-     transform="translate(-13.944953,-77.946251)"><rect
-       style="fill:#4d4d4d;stroke-width:0.264583"
-       id="rect447"
-       width="180.24297"
-       height="180.24297"
-       x="13.944953"
-       y="77.946251" /><path
-       id="rect4001"
-       style="fill:#333333;fill-opacity:1;stroke-width:0.264583"
-       d="M 135.8792,28.723117 135.87885,223.4056 277.36423,165.6499 209.2442,-1.2251897 Z"
-       transform="rotate(22.205759)" /><circle
-       style="fill:#ffff00;stroke-width:0.244576"
-       id="path233"
-       cx="103.15816"
-       cy="135.34653"
-       r="34.581345" /><path
-       id="rect287"
-       style="fill:#ffff00;stroke-width:0.244576"
-       d="m 122.67458,177.84265 a 34.581345,34.581345 0 0 1 -19.51641,6.05135 34.581345,34.581345 0 0 1 -19.258946,-5.8875 c -26.663756,3.38107 -34.439675,13.35921 -34.43747,24.24313 v 34.24401 H 158.60339 v -34.24401 c -0.0455,-10.50446 -8.83728,-21.10542 -35.92881,-24.40698 z" /></g></svg>
+     style="display:inline;fill:#8200db;fill-opacity:1">
+    <rect
+       style="fill:#8200db;fill-opacity:1;stroke-width:30;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1"
+       width="1080"
+       height="1080"
+       x="0"
+       y="0" />
+  </g>
+  <g
+     id="layer3"
+     transform="translate(-9.5e-5,27.425883)">
+    <text
+       style="font-size:400px;font-family:'AdwaitaMono Nerd Font';-inkscape-font-specification:'AdwaitaMono Nerd Font';fill:#ff8ab9;fill-opacity:1;stroke-width:30;stroke-linecap:round;stroke-linejoin:round"
+       x="419.99991"
+       y="839.87939"
+       id="text3"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'AdwaitaMono Nerd Font';-inkscape-font-specification:'AdwaitaMono Nerd Font Bold'"
+         id="tspan3">+</tspan></text>
+    <text
+       style="font-size:400px;font-family:'AdwaitaMono Nerd Font';-inkscape-font-specification:'AdwaitaMono Nerd Font';fill:#fafa47;fill-opacity:1;stroke-width:30;stroke-linecap:round;stroke-linejoin:round"
+       x="284.89951"
+       y="719.8797"
+       id="text4"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'AdwaitaMono Nerd Font';-inkscape-font-specification:'AdwaitaMono Nerd Font Bold'"
+         id="tspan1">*</tspan></text>
+    <text
+       style="font-size:400px;font-family:'AdwaitaMono Nerd Font';-inkscape-font-specification:'AdwaitaMono Nerd Font';fill:#fafa47;fill-opacity:1;stroke-width:30;stroke-linecap:round;stroke-linejoin:round"
+       x="555.10052"
+       y="719.8797"
+       id="text2"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'AdwaitaMono Nerd Font';-inkscape-font-specification:'AdwaitaMono Nerd Font Bold'"
+         id="tspan2">*</tspan></text>
+    <g
+       id="g8"
+       transform="translate(-55.82633,-16.094102)">
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:50;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         d="M 274.3953,649.37392 415.03382,687.0579"
+         id="path4" />
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:50;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         d="M 274.69518,790.57295 415.3337,752.88897"
+         id="path4-6" />
+    </g>
+    <g
+       id="g9"
+       transform="translate(55.58173,-16.094102)">
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:50;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         d="M 805.84949,649.37392 665.21097,687.0579"
+         id="path5" />
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:50;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         d="M 805.54961,790.57295 664.91109,752.88897"
+         id="path6" />
+    </g>
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:50;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 218.56897,366.40988 c 2.45972,-68.59221 -14.98716,-251.4017 242.02337,5.78542"
+       id="path7" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:50;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 861.43122,366.40988 c -2.45972,-68.59221 14.98716,-251.4017 -242.02337,5.78542"
+       id="path8" />
+  </g>
+</svg>

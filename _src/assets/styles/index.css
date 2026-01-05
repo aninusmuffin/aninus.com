@@ -1,97 +1,24 @@
-@import "bloglist.css";
 
 h1, h2, h3, h4, h5 {
-    margin: 0;
     font-weight: normal;
 }
 
-.index-page-content {
-    display: flex;
-    justify-content:center;
-
-    margin-inline: calc(var(--spacing) * 3);
-}
-
-.index-page-content .box {
-    max-width: var(--container-box);
-    width: 100%;
-}
-
-.index-page-content h2 {
-    line-height: var(--line-height-title);
+.icontent h2 {
     font-family: "Bagnard", serif;
 }
 
-.index-page-content h3 {
-    line-height: var(--line-height-title);
-}
 
-
-.index-page-content > .grid {
-    min-inline-size: min(120ch, 100%);
-    max-width: 120ch;
+.icontent.grid {
+    padding-inline: 1rem;
+    max-inline-size: 120ch;
     gap: calc(var(--spacing) * 4);
-    grid-template-columns: repeat(auto-fit, minmax(min(45ch, 100%), 1fr));
-    justify-self: center;
-    justify-items: center;
+    --grid-column-size: 45ch;
 }
 
 
-.blog-latest {
-    gap: calc(var(--spacing) * 2) /* 1rem = 16px */;
-    justify-self: center;
-    width: 100%;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-
-
-    @media (width >= 50rem /* 1024px */) {
-        grid-template-columns:  25% 75%;
-    }
-
-}
-
-.blog-latest > picture > img {
-    aspect-ratio: 16/9;
-    align-self: center;
-    max-width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: var(--radius-box);
-    @media (width >= 50rem) {
-        width: auto;
-        height: auto;
-        max-width: 100%;
-        max-height: 100%;
-        -webkit-user-select: none;
-        user-select: none;
-    }
-}
-
-.blog-latest > picture {
-    align-self: center;
-    justify-self: center;
-}
-
-.blog-latest > div {
-    max-width: 30rem;
-    @media (width >= 50rem) {
-    grid-column: 2 / 3;
-    }
-}
-
-.blog-latest > div > p {
-    line-height: 1;
-    font-size: var(--font-size-small);
-}
-
-.blog-latest .title {
-    text-align: left;
-    font-size: var(--font-size-medium);
-    font-weight: bold;
-}
 
 .button {
-    display: inline;
+    display: inline-block;
     justify-self: center;
     border-radius: var(--radius-box);
     border-width: var(--border-width);
@@ -108,11 +35,14 @@ h1, h2, h3, h4, h5 {
 }
 
 .hero {
+    view-transition-name: nav;
     display: flex;
     justify-content: center;
     inline-size: 100%;
-    block-size: 100%;
+    align-self: center;
+
     background-color: var(--color-secondary-background);
+    border-color: var(--color-text);
     border-block-end-style: var(--border-style);
     border-block-end-width: var(--border-width);
 
@@ -128,33 +58,31 @@ h1, h2, h3, h4, h5 {
     margin-bottom: calc(var(--spacing) * 20);
 }
 
-.hero > .hero-content > .grid {
-    gap: calc(var(--spacing) * 4) /* 1rem = 16px */;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    justify-self: center;
-
-
-    @media (width >= 64rem /* 1024px */) {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-}
-
-.social {
-
-}
 
 #index-page-hero-logo {
+    view-transition-name: mylogo;
     display: flex;
     text-align: center;
     border-radius: calc(infinity * 1px);
     justify-self: center;
-    width: calc(var(--spacing) * 65);
-    height: calc(var(--spacing) * 65);
+    max-inline-size: calc(var(--spacing) * 65);
+    inline-size: 100%;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
-.active{
+#index-page-hero-logo.active{
     animation: spin 1.5s normal;
+    &:hover {
+        cursor: default;
+    }
+
+}
+
+#index-page-hero-logo:active {
+    transform: scale(98%);
+    transition-duration: 0.2s;
 }
 
 @keyframes spin {
@@ -162,41 +90,41 @@ h1, h2, h3, h4, h5 {
         transform: rotate(0deg);
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate(360deg) scale(1);
     }
 }
 
-div.social {
-    display: grid;
-    gap: calc(var(--spacing) * 1) /* 1rem = 16px */;
-    margin: calc(var(--spacing) * 1) /* 2rem = 32px */;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    place-content: center;
-    place-items: center;
+.socials {
+    --grid-column-size: var(--font-size-4);
 }
 
 a.social {
+    display: block;
     color: var(--color-link);
+    transition-duration: 0.1s;
     &:hover {
         @media (hover: hover) {
             color: var(--color-link-hover);
+            transform: scale(110%);
+            transition-duration: 0.1s;
         }
     }
 }
 
 a.social > svg {
-    width: 3.5rem;
-    height: 3.5rem;
-
+    width: var(--font-size-4);
+    height: var(--font-size-4);
 
 }
 
 .hero h1 {
     font-family: "Adwaita Sans", sans-serif;
-    font-size: var(--text-size-title);
     line-height: var(--line-height-title);
 }
 
+.hero p, .hero h1 {
+    max-inline-size: none;
+}
 
 .hero-column {
     display: flex;
@@ -208,8 +136,12 @@ a.social > svg {
 .hero-grid {
     display: grid;
     gap: calc(var(--spacing) * 4) /* 1rem = 16px */;
-    grid-auto-columns: minmax(10px, auto);
     grid-template-columns: repeat(auto-fit, minmax(min(40ch, 100%), 1fr));
     justify-self: center;
 
+}
+
+.feedbar {
+    --sidebar-size: 1ch;
+    font-size: var(--font-size-4);
 }

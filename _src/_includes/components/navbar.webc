@@ -1,7 +1,11 @@
 <nav id="navbar">
     <ul class="cluster">
-        <li><a href="/">aninus.com</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/about">About</a></li>
+        <li><a style="display: block" href="/">
+
+            <picture id="mylogo" class="icon"><img src="/assets/img/aninus.svg" alt="Profile icon"/></picture>
+        </a></li>
+        <li><a href="/blog"><i class="icon fa-solid fa-book"></i>Blog</a></li>
+        <li><a href="/about"><i class="icon fa-solid fa-user"></i>About</a></li>
+        <li><a href="/uses"><i class="fa-solid fa-box-open"></i>Uses</a></li>
     </ul>
 </nav>

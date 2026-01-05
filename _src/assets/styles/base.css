@@ -4,76 +4,97 @@
 @import url(speedify.css);
 @import url(bloglist.css);
 
+
 * {
     box-sizing: border-box;
-}
-
-html {
-    scrollbar-color: var(--color-primary) var(--color-background);
-    color: var(--color-text);
-    background-color: var(--color-background);
-
+    max-inline-size: 60ch;
     &::selection {
-    color: var(--color-selection);
-    background-color: var(--color-selection-background);
-    }
-
-    @media (prefers-color-scheme: dark) {
-    color: var(--color-text);
-    background-color: var(--color-background);
-
-        &::selection {
         color: var(--color-selection);
         background-color: var(--color-selection-background);
-        }
-
     }
+    &:focus-visible{
+        outline: var(--spacing) solid  var(--color-text);
+        transition-duration: 0.2s;
+    }
+}
 
+html,
+body,
+div,
+header,
+nav,
+main,
+line-numbers,
+footer {
+    max-inline-size: none;
+}
+
+h1,h2,h3,h4,h5,h6,p, summary {
+    color: var(--color-text);
+}
+
+
+
+html {
+    color: var(--color-text);
+    scrollbar-color: var(--color-secondary) var(--color-background);
+    background-color: var(--color-background);
+    overflow-wrap: break-word;
 }
 
 body {
     margin: 0;
-    display: block;
+    display: flex;
+    flex-direction: column;
     font-family: "Adwaita Sans", sans-serif;
+    min-height: 100vh;
+}
+
+
+main {
+    view-transition-name: main;
+    flex-grow: 1;
+    align-items: center;
 }
 
 footer {
-    width: 100%;
-    justify-content: center;
+    view-transition-name: footer;
     display: flex;
-    margin: auto;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    border-top: var(--border-width) var(--border-style);
-    justify-self: center;
+    justify-content: center;
+    margin-inline: auto;
+    inline-size: 100%;
+    max-inline-size: 120ch;
+    min-block-size: fit-content;
+
+    margin-block-start: 5rem;
+
     padding-block: calc(var(--spacing) * 10);
+    border-top: var(--border-width) var(--border-style);
+    border-inline: var(--border-width) var(--border-style);
+    border-top-left-radius: var(--radius-box);
+    border-top-right-radius: var(--radius-box);
 
-    color: var(--color-muted-text);
+    text-align: center;
+    border-color: inherit;
+    color: var(--color-text);
     background-color: var(--color-secondary-background);
-
-    @media (prefers-color-scheme: dark) {
-    color: var(--color-muted-text) ;
-    background-color: var(--color-secondary-background);
-
-    }
 }
 
 h1 {
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-4);
     font-family: Bagnard, serif;
 }
 
 h2 {
-    font-size: var(--font-size-big);
+    font-size: var(--font-size-3);
 }
 
 h3 {
-    font-size: var(--font-size-bigish);
+    font-size: var(--font-size-2);
 }
 
 h4,h5,h6 {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-1);
 }
 
 h5 {
@@ -84,25 +105,23 @@ h6 {
     font-weight: 300;
 }
 
-
 ul {
     padding: 0;
     margin-inline-start: calc(var(--spacing) * 5);
     list-style: disc;
 }
 
-h1, h2, h3 {
-    max-inline-size: 60ch;
+picture, img {
+    block-size: auto;
+    max-inline-size: 100%;
 }
-
 
 p, li, ul, dd, dt {
     line-height: var(--line-height-regular);
     overflow-wrap: break-word;
-
 }
 
-dl,ul {
+dl,ul,ol {
     margin-block: 0;
 }
 
@@ -115,8 +134,7 @@ a {
     text-decoration: underline;
     &:hover {
         @media (hover: hover) {
-
-        color: var(--color-link-hover);
+            color: var(--color-link-hover);
             text-decoration-skip-ink: none;
             text-decoration-line: underline;
             text-decoration-style: var(--hover-decoration);
@@ -125,12 +143,20 @@ a {
 
 }
 
+code:not(pre > code) {
+    background: var(--color-secondary-background);
+    border-radius: 0.25rem;
+    padding-inline: 0.2rem;
+}
+
 nav#navbar {
+    min-block-size: fit-content;
+    view-transition-name: nav;
     background-image: url(/assets/img/noise.webp);
     border-bottom: var(--border-width) var(--border-style);
     padding: calc(var(--spacing)*4);
     background-color: var(--color-secondary-background);
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-1);
 
     @media (prefers-color-scheme: dark) {
         background-color: var(--color-secondary-background);
@@ -138,39 +164,133 @@ nav#navbar {
 }
 
 nav#navbar ul{
-
     margin-inline-start: 0;
+    align-items: center;
 }
+
+#mylogo {
+    view-transition-name: mylogo;
+    width: 2em;
+    height: auto;
+    transition-duration: 0.2s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+}
+#mylogo > img {
+    border-radius: calc(infinity * 1px);
+
+}
+
 
 .textured-background {
     background-image: url(/assets/img/noise.webp);
     background-repeat: repeat;
 }
 
-.grid {
-    display: grid;
-}
+
 
 .flex {
     display: flex;
 }
 
-.icon {
-    width: 1em;
-    height: 1em;
-    display: inline-block;
-    vertical-align: center;
-    box-sizing: content-box;
-
-}
-
-h2 .icon {
-    width: 0.75em;
-    height: 0.75em;
-    padding-inline-end: calc(var(--spacing) *2);
-}
-
 .responsive-table {
     overflow-x: auto;
-    margin-block: calc(var(--spacing)*5);
+}
+
+
+
+
+::view-transition-old(footer) {
+    animation: slide 0.3s reverse ;
+
+}
+::view-transition-new(footer) {
+    animation: slide 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) ;
+}
+
+
+
+
+@keyframes slide {
+    from {
+        transform: translateY(35rem);
+        z-index: 2;
+    }
+
+    to {
+        transform: translateY(0);
+        z-index: 2;
+    }
+}
+
+
+::view-transition-group(nav) {
+    animation-duration: 0.3s;
+}
+
+html::view-transition-old(nav),
+html::view-transition-new(nav) {
+    height: 100%;
+}
+
+html::view-transition-old(thumbnail),
+html::view-transition-new(thumbnail) {
+    height: 100%;
+}
+
+ul.grid {
+    margin-inline-start: 0;
+    list-style: none;
+}
+
+ul.grid > li {
+    display: block;
+}
+
+.webring {
+    justify-content: space-between;
+    --w-side-wrap: 60%;
+    --sidebar-size: 5ch;
+}
+
+.webring .sidebar {
+    font-size: var(--font-size-3);
+    justify-content: center;
+    align-items: center;
+}
+
+.webring .sidebar a {
+    display: block;
+    transition-duration: 0.2s;
+    &:hover {
+        transform: scale(1.2);
+        transition-duration: 0.2s;
+    }
+}
+
+.webring .title {
+    font-size: var(--font-size-1);
+}
+
+.steps {
+
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: normal;
+}
+
+ul.webs {
+    margin-inline-start: 0;
+}
+
+.nomargin {
+    margin: 0;
+}
+
+.important {
+    color-scheme: light;
+    background-color: var(--color-primary);
+    color: var(--color-text);
 }

@@ -37,7 +37,6 @@
 </head>
 
 <body>
-    <div style="position: relative; min-height: 100vh;">
 
         {% if navbar %}
             {% renderTemplate "webc" %}
@@ -45,10 +44,7 @@
             {% endrenderTemplate %}
         {% endif %}
 
-
-
-
-        <main class="stack-large" style="padding-bottom: 16rem;">
+        <main class="stack:large">
 
             {{ content }}
 
@@ -56,14 +52,11 @@
 
         {% render "partials/footer.liquid" %}
 
-
-    </div>
 <div style="display: none">
     {% getBundle "fontawesome" %}
     {% getBundle "customicons" %}
 </div>
 </body>
-
 </html>
 
 

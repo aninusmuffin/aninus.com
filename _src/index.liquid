@@ -12,28 +12,27 @@ style: index
 <header class="hero textured-background">
     <div class="hero-content">
         <div class="hero-grid">
-            <div style="display: flex; justify-content: center;">
+            <div style="display: flex; justify-content: center; padding-inline: 2rem;">
                 <picture><img
                   src="/assets/img/aninus.svg"
                   alt="Profile icon"
                   id="index-page-hero-logo"
                   onclick="spin()"
-                  sizes="320px"
-                  eleventy:widths="320"
+                  sizes="400px"
+                  eleventy:widths="400"
                   eleventy:optional="placeholder"
                   fetchpriority=high
                 /></picture>
             </div>
-            <div class="stack-small" style="align-self:end;">
+            <div class="stack:small" style="align-self:center;">
                 <h1>Hi! I'm <b>Aninus</b>.</h1>
                 <p>
                   My name is Aninus Partikler, but you might also know me as aninusmuffin or aninuscsalas.
-                  I self describe as a "hobbyist developer and designer" and "Worst Developer alive",
-                  currently trying to learn Android (Kotlin and Jetpack Compose) and GNOME (GTK4) app development.
+                  I self describe as a "hobbyist developer and designer" and "Worst Developer alive".
                 </p>
             </div>
 
-            <div class="grid social">
+            <ul class="grid socials">
                 {% renderTemplate "webc" %}
                 <socials-button title="Mastodon"
                                 @fontawesome icon="fa-brands fa-mastodon"
@@ -55,40 +54,47 @@ style: index
                                 @href="https://modrinth.com/user/aninus">
                 </socials-button>
 
-                <socials-button @title="Codeberg"
-                                @icon="#custom-simpleicons-codeberg"
-                                @href="https://codeberg.org/aninus">
+                <socials-button title="Codeberg"
+                                icon="#custom-simpleicons-codeberg"
+                                href="https://codeberg.org/aninus">
                 </socials-button>
 
                 {% endrenderTemplate %}
-            </div>
+            </ul>
 
-            <a class="button"  href="/about/">More about me</a>
+            <a class="button"  href="/about/"> {% icon "fas:user" %} More about me</a>
         </div>
     </div>
 </header>
 
 
-<div class="index-page-content">
-
-<div class="grid">
+<div class="icontent grid">
 
 <div class="box separated">
 
-    <div class="stack-small">
-        <h2 id="projects">{% icon "fas:folder-open" %}Projects</h2>
+    <div class="stack:small box-header">
+        <h2 class="" id="projects">{% icon "fas:folder-open" %}Projects</h2>
         <p>Some of the things I have done online</p>
     </div>
 
-  <div class="stack-small">
+  <div class="stack:small">
     <h3>Minecraft:</h3>
-    <dl class="stack-small">
+    <dl class="stack:small">
     {% for Minecraft in projects.Minecraft %}
         <div>
             <dt>
                 <a href="{{Minecraft.link}}">
-                <img src="{{Minecraft.icon}}" loading="lazy" sizes="50px" eleventy:widths="50" eleventy:optional="placeholder" alt="{{ Minecraft.name }}'s icon" class=" icon">
-                {{Minecraft.name}}</a>
+                    <picture class="icon" >
+                        <img src="{{Minecraft.icon}}"
+                             loading="lazy"
+                             sizes="50px"
+                             eleventy:widths="50"
+                             eleventy:optional="placeholder"
+                             alt="{{ Minecraft.name }}'s icon"
+                        >
+                    </picture>
+                        {{Minecraft.name}}
+                </a>
             </dt>
               <dd>{{Minecraft.description}}</dd>
         </div>
@@ -96,7 +102,7 @@ style: index
     </dl>
   </div>
 
-  <div class="stack-small">
+  <div class="stack:small">
     <h3>Random:</h3>
     <dl>
     {% for Random in projects.Random %}
@@ -121,44 +127,131 @@ style: index
 
 
 <div class="box separated">
-    <div class="stack-small">
-      <h2 id="blog"><a href="/blog">{% icon "fas:book" %}Blog</a></h2>
-      <p>Who knows, one day I might post something really interesting here...</p>
+    <div class="stack:small box-header">
+        <h2 id="blog"><a href="/blog">{% icon "fas:book" %}Blog</a></h2>
+        <p>Who knows, one day I might post something mind-blowing here...</p>
     </div>
     {% assign lastPosts = collections.posts | lastPosts | reverse  %}
     {% for post in lastPosts %}
-    <div>
-      <div class="switcher blogpost">
-      <img src="{{post.data.image}}" alt="{{ post.data.imgalt}}" sizes="(width < 70rem) 300px , 200px" eleventy:widths="300, 200" eleventy:optional="placeholder" >
-      <div class="stack-small">
-        <p><a class="title" href="{{post.url}}">{{post.data.title}}</a></p>
-          <p><time datetime="{{post.date | date: "%Y-%m-%dT%H:%M:%S"}}">{{post.date | postDate}}</time> •
-          {% for tags in post.data.tags %}
-          <a  style="display: inline;" href="/blog/{{ tags }}">#{{ tags }}</a>
-          {% endfor %}
-        </p> 
-        <p>{{post.data.description}}</p>
-      </div>         
-      </div>    
-    </div>
+        {% render "components/blogpostcard.liquid",
+                title: post.data.title,
+                url: post.url,
+                date: post.date,
+                datatags: post.data.tags,
+                image: post.data.image,
+                imgalt: post.data.imgalt,
+                description: post.data.description
+        %}
     {% endfor %}
 </div>
 
 
 <div class="box separated">
-    <h2 id="contact-me">{% icon "fas:user" %}Contact me</h2>
+<div class="stack:small box-header">
+    <h2 class="" id="contact-me">{% icon "fas:paper-plane" %}Contact me</h2>
+    <p>Various ways of reaching me</p>
+</div>
+
     <div>
       <ul class="stack">
         <li> 
           You can email me at
-          <a  href="mailto:muffin@aninus.com">{% icon "fas:envelope" %} muffin@aninus.com</a>, with optional encryption using
-          <a  href="https://keys.openpgp.org/search?q=muffin%40aninus.com">{% icon "fas:key" %} my PGP key.</a>
+          <a href="mailto:muffin@aninus.com">{% icon "fas:envelope" %}muffin@aninus.com</a>, with optional encryption using
+          <a href="https://keys.openpgp.org/search?q=muffin%40aninus.com">{% icon "fas:key" %}my PGP key.</a>
         </li>
+
     </ul>
     </div>
+    <div class="stack">
+        <h3>Socials</h3>
+        <ul class="grid socials">
+            {% renderTemplate "webc" %}
+            <socials-button title="Mastodon"
+                            @fontawesome icon="fa-brands fa-mastodon"
+                            href="https://mastodon.social/@aninus">
+            </socials-button>
+
+            <socials-button @title="Bluesky"
+                            @fontawesome @icon="fa-brands fa-bluesky"
+                            @href="https://bsky.app/profile/aninus.com" >
+
+            </socials-button>
+            <socials-button @title="Github"
+                            @fontawesome @icon="fa-brands fa-github"
+                            @href="https://github.com/aninusmuffin">
+            </socials-button>
+
+            <socials-button @title="Modrinth"
+                            @icon="#custom-simpleicons-modrith"
+                            @href="https://modrinth.com/user/aninus">
+            </socials-button>
+
+            <socials-button @title="Codeberg"
+                            @icon="#custom-simpleicons-codeberg"
+                            @href="https://codeberg.org/aninus">
+            </socials-button>
+
+
+            <socials-button @title="Steam"
+                            @fontawesome @icon="fa-brands fa-steam"
+                            @href="https://steamcommunity.com/id/aninus/">
+            </socials-button>
+
+            <socials-button @title="GitLab"
+                            @fontawesome @icon="fa-brands fa-gitlab"
+                            @href="https://gitlab.com/aninusmuffin">
+            </socials-button>
+
+            <socials-button @title="Backloggd"
+                            @fontawesome @icon="fa-solid fa-gamepad"
+                            @href="https://backloggd.com/u/aninus/">
+            </socials-button>
+
+            {% endrenderTemplate %}
+        </ul>
+    </div>
   </div>
+
+
+    <div class="box separated">
+        <div class="stack:small box-header">
+            <h2 class="" id="fun">{% icon "fas:cubes" %}Fun Stuff</h2>
+            <p>More things that I wanted to include on the index page</p>
+        </div>
+
+        <div class="stack">
+            <h3>Webrings</h3>
+            <ul class="stack webs">
+
+            <!--  render fails if page:page is missing   -->
+                <p>Soon, maybe? :D</p>
+            {% comment %}
+            {% render "components/webring.liquid",
+                    title: "The CSS Webring",
+                    href: "https://cs.sjoy.lol/",
+                    description: "For those of us who take joy in messing around with CSS :)",
+                    prev: "https://webri.ng/webring/cssjoy/previous?via=https://aninus.com/",
+                    rand: "https://webri.ng/webring/cssjoy/random?via=https://aninus.com/",
+                    next: "https://webri.ng/webring/cssjoy/next?via=https://aninus.com/",
+                    page: page
+            %}
+            {% endcomment %}
+
+            </ul>
+        </div>
+
+        <div class="stack">
+            <h3>11ty Leaderboard</h3>
+            {% render "components/speedify.liquid" %}
+        </div>
+
+    </div>
+
+
 </div>
-</div>
+
+
+
 
 
 {% customicons %}
@@ -184,6 +277,5 @@ style: index
                 }, 1500)
         }
     }
-
 
 </script>

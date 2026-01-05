@@ -2,18 +2,16 @@
 line-numbers {
     font-family: monospace;
     line-height: var(--line-height-regular);
-    display: flex;
     --uln-padding-v: 1em;
     --uln-padding-h: 0.5em;
-    width: 100%;
 }
 
 
-article pre {
+.content pre {
+    color-scheme: dark;
     white-space: pre;
     overflow: auto;
-    width: 100%;
-    max-width: 50rem;
+    inline-size: 100%;
     line-height: var(--line-height-regular);
     border-radius: var(--radius-box);
     color: var(--color-code);
@@ -22,25 +20,14 @@ article pre {
 
 
 
-article pre > code {
+.content pre > code {
     scrollbar-color: var(--color-code) var(--color-code-background);
     overflow: auto;
     display: block;
     padding-inline: calc(var(--spacing) * 6);
     padding-block: 1em;
-
- /*   max-height: 500px; */
-
-
-
-
 }
 
-pre > code::selection, pre > code *::selection{
-    background-color: var(--color-code-selection-background);
-    color: var(--color-code-selection);
-
-}
 
 
 

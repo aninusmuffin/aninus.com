@@ -5,25 +5,34 @@ style: layouts/blog
 blogpost: True
 
 ---
-
+    <div class="stack:small">
         <img class="thumbnail" src="{{ image }}" alt="{{ imgalt }}">
 
         <h1 id="title"> {{ title }} </h1>
-        <p id="subtitle"> {{description}} </p>
-        <p style="text-align: center;">
-            {% icon "fas:calendar" %} <time datetime="{{ date | date: "%Y-%m-%dT%H:%M:%S" }}">{{ date | postDate}}</time> •
+        <p class="center" id="subtitle"> {{description}} </p>
+        <span class="center cluster">
+            <p>{% icon "fas:calendar" %} <time datetime="{{ date | date: "%Y-%m-%dT%H:%M:%S" }}">{{ date | postDate}}</time></p>
+            •
+
+            {% if modified %}
+            <strong class="important">Updated on: <time datetime="{{ modified | date: "%Y-%m-%dT%H:%M:%S" }}">{{ modified | postDate}}</time></strong>
+                •
+            {% endif %}
+
             {% for tag in tags | getKeys | filterTagList | sortAlphabetically %}
             <a  style="display: inline;" href="/blog/{{ tag }}">
             #{{ tag }}</a>
              {% endfor %}
-          </p>
-    <div class="switcher">
-        <details id="table-of-contents" class="textured-background box" open>
-            <summary> Table of Contents </summary>
+          </span>
+    </div>
+    <div class="with-sidebar" style="container-type: inline-size;">
+        <details id="table-of-contents" class="sidebar textured-background box separated" open>
+            <summary class="box-header"> Table of Contents </summary>
             {{ content | toc }}
         </details>
 
-        <div id="post" class="stack">
+
+        <div id="post" class="not-sidebar stack">
             {{ content }}
         </div>
     </div>

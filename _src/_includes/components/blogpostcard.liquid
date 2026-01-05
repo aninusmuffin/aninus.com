@@ -1,0 +1,14 @@
+<div>
+    <div class="switcher blogpost">
+        <img src="{{image}}" alt="{{imgalt}}" sizes="(width < 70rem) 300px , 200px" eleventy:widths="300, 200" eleventy:optional="placeholder" >
+        <div class="stack:small">
+            <p><a class="title" href="{{url}}">{{title}}</a></p>
+            <p><time datetime="{{date | date: "%Y-%m-%dT%H:%M:%S"}}">{{date | postDate}}</time> •
+                {% for tags in datatags %}
+                    <a  style="display: inline;" href="/blog/{{ tags }}">#{{ tags }}</a>
+                {% endfor %}
+            </p>
+            <p>{{description}}</p>
+        </div>
+    </div>
+</div>

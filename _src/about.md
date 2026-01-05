@@ -8,24 +8,14 @@ description: "A very borring page with all of the things about me"
 
 ---
 
-# About
+# {% icon "fas:user" %} About
 
 As you might have already guessed my name is Aninus Partikler, I'm a so called hobbist programmer and failure.
 I like making stuff, but my programming knowledge is not really the best.
 
-## My current setup
+## [{% icon "fas:box-open" %} Uses](/uses)
 
-Here's a cool table:
 
-::: responsive-table
-
-| Device    | Name | Operating System | Version |
-|-----------|------|------------------|---------|
-| Laptop    |      |                  |         |   
-| Phone     |      |                  |         | 
-| Earphones |      |                  |         |   
-
-:::
 ---
 
 ## About this site
@@ -43,7 +33,7 @@ a lot since its first inception, and I hope that I can make it better and improv
 - [WebC](https://github.com/11ty/webc)
 
 
-Previously used:
+No longer made with:
 
 - ~~TailwindCSS~~
 - ~~DasyUI~~

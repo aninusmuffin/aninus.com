@@ -17,6 +17,9 @@ import pluginFilters from "./_config/filters.js";
 import pluginSyntaxHighlight from "./_config/syntaxHighlightPlugin.js";
 
 
+
+
+
 function resolveModule(name) {
     return fileURLToPath(import.meta.resolve(name));
 }
@@ -38,7 +41,11 @@ export default async function (eleventyConfig) {
         defaultAttributes: {class:"icon"}
     });
     // eleventyConfig.addPlugin(syntaxHighlight);
-    eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+    eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+        formats: ["avif", "webp", "svg", "jpeg"],
+        svgShortCiruit: "size",
+
+    });
     eleventyConfig.addPlugin(pluginRss);
     eleventyConfig.addPlugin(pluginTOC);
     eleventyConfig.addPlugin(PostCSSPlugin);
@@ -63,13 +70,27 @@ export default async function (eleventyConfig) {
 
     eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(MarkdownItAnchor, {tabIndex: false}));
     eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(MarkdownItContainer, "responsive-table"));
+    eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(MarkdownItContainer, "link-with-logo"));
     eleventyConfig.addPairedShortcode('responsive-table', (content) => {
         return `<div class="responsive-table">${content}</div>`
     })
 
+    eleventyConfig.addPairedShortcode('responsive-table', (content) => {
+        return `<div class="responsive-table">${content}</div>`
+    })
+
+    eleventyConfig.addPairedShortcode('highlighter', (content) => {
+        return `<strong class="important"> ${content}</strong>`
+    })
+
+    eleventyConfig.addPairedShortcode('span', (content, type) => {
+        return `<span class="${type}"> ${content}</span>`
+    })
+
+
     eleventyConfig.addPairedShortcode('link-with-logo', (content, href) => {
         const encoded = encodeURIComponent(href);
-        return `<a href="${href}"><img class="webfavicon" sizes="1em" src="https://v1.indieweb-avatar.11ty.dev/${encoded}/" alt="${content}">${content}</a>`
+        return `<a href="${href}"><picture class="icon webfavicon"><img  sizes="1em" src="https://v1.indieweb-avatar.11ty.dev/${encoded}/" alt="${content}"></picture>${content}</a>`
     })
 
   //Filters

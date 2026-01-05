@@ -1,39 +1,28 @@
 ---
 
 layout: article
-favicon: "https://avatars.githubusercontent.com/u/68734661?v=4"
+favicon: "/assets/img/favicon.webp"
 title: "Blog"
 navbar: True
 
 ---
 
-
-
-        <h1>Blog</h1>
-        <p>Who knows, one day I might post something really interesting here...</p>
-        <div class="stack bloglist">
+<h1 class="with-icon">{% icon "fas:book" %}Blog</h1>
+<p>Who knows, one day I might post something really interesting here...</p>
+    <div class="stack bloglist">
         {% assign lastPosts = collections.posts | reverse %}
         {% for post in lastPosts %}
-
-        <div>
-
-            <div class="blogpost switcher" >
-
-                <img src="{{post.data.image}}" alt="{{ post.data.imgalt}}" loading="lazy" eleventy:widths="178,300" eleventy:optional="placeholder" >
-                <div class="stack-small">
-                    <p class="title"><a  href="{{post.url}}">{{post.data.title}}</a></p>
-                    <p><time datetime="{{post.date}}">{{post.date | postDate}}</time> •
-                        {% for tags in post.data.tags %}
-                        <a  style="display: inline;" href="/blog/{{ tags }}">#{{ tags }}</a>
-                        {% endfor %}
-                    </p>
-                    <p>{{post.data.description}}</p>
-                </div>
-
-            </div>
-        </div>
+            {% render "components/blogpostcard.liquid",
+            title: post.data.title,
+            url: post.url,
+            date: post.date,
+            datatags: post.data.tags,
+            image: post.data.image,
+            imgalt: post.data.imgalt,
+            description: post.data.description
+            %}
 
         {% endfor %}
-        </div>
+    </div>
 
 

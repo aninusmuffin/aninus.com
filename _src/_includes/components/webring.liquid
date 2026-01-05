@@ -1,0 +1,11 @@
+<li class="with-sidebar webring">
+    <div class="not-sidebar stack:small">
+        <p class="title with-icon"><a href="{{ href }}">{% icon 'fab:css' %}{{ title }}</a></p>
+        <p>{{ description }}</p>
+    </div>
+    <div class="sidebar cluster">
+        <a title="Previous" class="" href="{{ prev }}">{% icon "fas:arrow-left" %}</a>
+        <a title="Random" class="" href="{{ rand }}">{% icon "fas:dice" %}</a>
+        <a title="Next" class="" href="{{ next }}">{% icon "fas:arrow-right" %}</a>
+    </div>
+</li>
