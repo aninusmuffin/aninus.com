@@ -8,11 +8,7 @@
 }
 
 .blogpost > picture > img {
-    aspect-ratio: 16/9;
     align-self: center;
-    max-inline-size: 100%;
-    block-size: 100%;
-    object-fit: contain;
     border-radius: var(--radius-box);
     -webkit-user-select: none;
     user-select: none;
@@ -37,12 +33,12 @@
 }
 
 .blogpost > div > p {
-    font-size: var(--font-size-small);
+    font-size: var(--font-size--1);
 }
 
 .blogpost .title {
     text-align: left;
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-1);
     line-height: var(--line-height-title);
     font-weight: bold;
 }

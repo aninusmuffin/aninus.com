@@ -37,35 +37,39 @@
 </head>
 
 <body>
-    <div style="position: relative; min-height: 100vh;">
 
         
             <nav id="navbar">
     <ul class="cluster">
-        <li><a href="/">aninus.com</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/about">About</a></li>
+        <li><a href="/" style="display: block">
+
+            <picture id="mylogo" class="icon"><source type="image/avif" srcset="/img/wEWf7Pllxg-1080.avif 1080w"><source type="image/webp" srcset="/img/wEWf7Pllxg-1080.webp 1080w"><img src="/img/wEWf7Pllxg-1080.svg" alt="Profile icon" width="1080" height="1080"></picture>
+        </a></li>
+        <li><a href="/blog"><svg class="icon"><use href="#fas-fa-book" xlink:href="#fas-fa-book"></use></svg>Blog</a></li>
+        <li><a href="/about"><svg class="icon"><use href="#fas-fa-user" xlink:href="#fas-fa-user"></use></svg>About</a></li>
+        <li><a href="/uses"><svg class="icon"><use href="#fas-fa-box-open" xlink:href="#fas-fa-box-open"></use></svg>Uses</a></li>
     </ul>
 </nav>
 
             
         
 
-
-
-
-        <main class="stack-large" style="padding-bottom: 16rem;">
+        <main class="stack:large">
 
             
-<div class="content">
-    <article class="stack">
-        
-        <picture><source type="image/webp" srcset="/img/_fxmAhkpKd-1920.webp 1920w"><img class="thumbnail" src="/img/_fxmAhkpKd-1920.jpeg" alt="test" width="1920" height="1080"></picture>
+<div class="content stack">
+
+            <div class="stack:small">
+        <picture><source type="image/avif" srcset="/img/_fxmAhkpKd-1920.avif 1920w"><img class="thumbnail" src="/img/_fxmAhkpKd-1920.webp" alt="test" width="1920" height="1080"></picture>
 
         <h1 id="title"> Test blog page </h1>
-        <p id="subtitle"> aaaaaaa aaaaaaaaa aaaaaaa aaaaa aaaaaaaa aaaaaaaaaaaaaaa </p>
-        <p style="text-align: center;">
-            <svg class="icon"><use href="#fas-fa-calendar" xlink:href="#fas-fa-calendar"></use></svg> <time datetime="2025-11-11T00:00:00">11 Nov 2025</time> •
+        <p class="center" id="subtitle"> aaaaaaa aaaaaaaaa aaaaaaa aaaaa aaaaaaaa aaaaaaaaaaaaaaa </p>
+        <span class="center cluster">
+            <p><svg class="icon"><use href="#fas-fa-calendar" xlink:href="#fas-fa-calendar"></use></svg> <time datetime="2025-11-11T00:00:00">11 Nov 2025</time></p>
+            •
+
+            
+
             
             <a style="display: inline;" href="/blog/posts">
             #posts</a>
@@ -73,14 +77,16 @@
             <a style="display: inline;" href="/blog/post">
             #post</a>
              
-          </p>
-    <div class="switcher">
-        <details id="table-of-contents" class="textured-background box" open="">
-            <summary> Table of Contents </summary>
+          </span>
+    </div>
+    <div class="with-sidebar" style="container-type: inline-size;">
+        <details id="table-of-contents" class="sidebar textured-background box separated" open="">
+            <summary class="box-header"> Table of Contents </summary>
             
         </details>
 
-        <div id="post" class="stack">
+
+        <div id="post" class="not-sidebar stack">
             <p>Lorem ipsum dolor sit amet, ex dolor nisi lorem amet in incididunt occaecat. Amet sit lorem aliqua velit sed officia. Qui est enim laborum consectetur, fugiat consequat anim officia et. Magna aliquip anim occaecat. Veniam in lorem anim adipiscing amet.
 Nostrud lorem et deserunt ea, nostrud consectetur sed <em>quis</em> irure deserunt in. Lorem aliqua id enim, do eiusmod officia in duis id ea. Cupidatat cillum occaecat mollit. Anim in ut eu adipiscing. Eu veniam nostrud lorem. Sint pariatur magna pariatur occaecat qui nisi sed. Aliquip deserunt adipiscing quis qui. Veniam cupidatat culpa sint.</p>
 
@@ -118,33 +124,33 @@ Commodo pariatur id aute pariatur do quis amet. Sed non nulla sint elit. Ea lore
         LineNumbers.upgrade(el)
     });
 </script>
-    </article>
+
 </div>
 
 
         </main>
 
-        <footer class="textured-background">
+        <footer class="textured-background dark">
     <div class="stack">
-        
+
         <ul class="cluster" style="justify-content: center; margin-inline-start: 0;">
             <li><a href="/about#about-this-site">About this site</a></li>
-            <li><a href="https://github.com/aninusmuffin/aninus.com/blob/main/LICENSE">License</a></li>
-            <li><a href="https://github.com/aninusmuffin/aninus.com/blob/main/">Edit this page</a></li>
+            <li><a href="https://codeberg.org/aninus/website/src/branch/main/LICENSE">License</a></li>
+            <li><a href="https://codeberg.org/aninus/website/src/branch/main/">Edit this page</a></li>
         </ul>
-        <p>Built on: <time datetime="2025-11-20 10:05" class="build-date">2025-11-20 10:05</time></p>
+        <p>Built on: <time datetime="2026-01-20 20:54" class="build-date">2026-01-20 20:54</time></p>
 
     </div>
 </footer>
 
-
-    </div>
 <div style="display: none">
     <svg style="display: none;"><symbol data-prefix="fas" data-icon="calendar" class="svg-inline--fa fa-calendar" role="img" viewBox="0 0 448 512" aria-hidden="true" id="fas-fa-calendar"><path fill="currentColor" d="M128 0C110.3 0 96 14.3 96 32l0 32-32 0C28.7 64 0 92.7 0 128l0 48 448 0 0-48c0-35.3-28.7-64-64-64l-32 0 0-32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 32-128 0 0-32c0-17.7-14.3-32-32-32zM0 224L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-192-448 0z"></path></symbol></svg>
+<svg style="display: none;"><symbol data-prefix="fas" data-icon="book" class="svg-inline--fa fa-book" role="img" viewBox="0 0 448 512" aria-hidden="true" id="fas-fa-book"><path fill="currentColor" d="M384 512L96 512c-53 0-96-43-96-96L0 96C0 43 43 0 96 0L400 0c26.5 0 48 21.5 48 48l0 288c0 20.9-13.4 38.7-32 45.3l0 66.7c17.7 0 32 14.3 32 32s-14.3 32-32 32l-32 0zM96 384c-17.7 0-32 14.3-32 32s14.3 32 32 32l256 0 0-64-256 0zm32-232c0 13.3 10.7 24 24 24l176 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-176 0c-13.3 0-24 10.7-24 24zm24 72c-13.3 0-24 10.7-24 24s10.7 24 24 24l176 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-176 0z"></path></symbol></svg>
+<svg style="display: none;"><symbol data-prefix="fas" data-icon="user" class="svg-inline--fa fa-user" role="img" viewBox="0 0 448 512" aria-hidden="true" id="fas-fa-user"><path fill="currentColor" d="M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240zm-29.7 56C95.8 304 16 383.8 16 482.3 16 498.7 29.3 512 45.7 512l356.6 0c16.4 0 29.7-13.3 29.7-29.7 0-98.5-79.8-178.3-178.3-178.3l-59.4 0z"></path></symbol></svg>
+<svg style="display: none;"><symbol data-prefix="fas" data-icon="box-open" class="svg-inline--fa fa-box-open" role="img" viewBox="0 0 640 512" aria-hidden="true" id="fas-fa-box-open"><path fill="currentColor" d="M560.3 237.2c10.4 11.8 28.3 14.4 41.8 5.5 14.7-9.8 18.7-29.7 8.9-44.4l-48-72c-2.8-4.2-6.6-7.7-11.1-10.2L351.4 4.7c-19.3-10.7-42.8-10.7-62.2 0L88.8 116c-5.4 3-9.7 7.4-12.6 12.8L27.7 218.7c-12.6 23.4-3.8 52.5 19.6 65.1l33 17.7 0 53.3c0 23 12.4 44.3 32.4 55.7l176 99.7c19.6 11.1 43.5 11.1 63.1 0l176-99.7c20.1-11.4 32.4-32.6 32.4-55.7l0-117.5zm-240-9.8L170.2 144 320.3 60.6 470.4 144 320.3 227.4zm-41.5 50.2l-21.3 46.2-165.8-88.8 25.4-47.2 161.7 89.8z"></path></symbol></svg>
     
 </div>
 </body>
-
 </html>
 
 
