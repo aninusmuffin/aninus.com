@@ -1,0 +1,23 @@
+.headline {
+    --wrapper-max-width: var(--measure2xl);
+    --region-space: var(--space-2xl);
+}
+
+.headline > .content {
+    --flow-space: var(--space-sm);
+    border-bottom: var(--dividing-line);
+    padding-block-end: var(--space-md);
+}
+
+.headline > .content > .flow {
+    align-content: center;
+}
+
+.headline :has(.sidebar) {
+    --align: normal;
+    --sidebar-size: 15ch;
+}
+
+.headline .sidebar :is(picture, img) {
+    max-inline-size: 20ch;
+}

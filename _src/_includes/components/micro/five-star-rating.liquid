@@ -1,0 +1,22 @@
+<div class="[ cluster ] [ rating ]">
+    <div style="align-items: center;" title="{{- rating -}} star rating{%- if favorite %} and a heart {% endif %}">
+        
+        {%- for i in (1..5) -%}
+            {%- assign left = i | minus: rating -%}
+            {%- if rating >= i -%}
+                <i class="fa-solid fa-star"></i>
+            {%- elsif left == 0.5 -%}
+                <i class="fa-solid fa-star-half-stroke"></i>
+            {%- else -%}
+                <i class="fa-regular fa-star"></i>
+            {%- endif -%}
+        {%- endfor -%}
+
+        {{- rating -}}
+
+        {% if favorite -%}
+            <div></div>
+            <i class="fa-solid fa-heart" style="color: var(--color-primary)"></i>
+        {%- endif %}
+    </div>
+</div>

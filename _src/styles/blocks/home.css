@@ -1,0 +1,12 @@
+.home.flow > * {
+    --flow-space: var(--space-2xl);
+}
+
+.home.flow {
+    margin-block-start: var(--space-2xl);
+}
+
+:where(.home.flow > * > *) {
+    --flow-space: var(--space-md);
+}
+

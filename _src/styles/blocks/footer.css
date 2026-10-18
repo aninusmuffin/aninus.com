@@ -1,0 +1,27 @@
+/* 
+FOOTER
+*/
+
+body > footer {
+    view-transition-name: footer;
+}
+
+.footer {
+    --sidebar-size: 20ch;
+    --wrapper-max-width: var(--measure2xl);
+    background-color: var(--color-primary);
+    border-block-start: var(--stroke);
+    margin-block-start: var(--space-2xl);
+}
+
+.footer > div {
+    padding: var(--space-lg);
+}
+
+.footer .category {
+    font-weight: var(--font-weight-bold);
+}
+
+.footer .grid > div li {
+    --flow-space: var(--space-2xs);
+}

@@ -1,0 +1,27 @@
+{% assign title = webring.first %}
+{% assign data = webring.last %}
+<div class="repel webring" style="--repel-direction: column; --repel-vertical-alignment: start;">
+
+    <div class="flow">
+        <p class="title"><a href="{{ data.href }}">
+        {% if data.custom %}
+            {{ data.custom }}
+        {% else %}
+            <i class="{{ data.icon }}"></i>{{ title }}
+        {% endif %}
+        </a></p>
+        <p>{{ data.description }}</p>
+    </div>
+    <ul class="cluster">
+        {% if data.previous -%}
+        <li><a title="Previous" aria-label="Previous" href="{{ data.previous }}">{% icon "fas:arrow-left" %} Previous</a></li>
+        {%- endif %}
+        {% if data.random -%}
+        <li><a title="Random" aria-label="Random" href="{{ data.random }}">{% icon "fas:dice" %} Random</a></li>
+        {% endif %}
+        {% if data.next -%}
+        <li><a title="Next" aria-label="Next" href="{{ data.next }}">{% icon "fas:arrow-right" %} Next</a></li>
+        {% endif %}
+    </ul>
+
+</div>

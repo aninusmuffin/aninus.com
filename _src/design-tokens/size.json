@@ -1,0 +1,20 @@
+{
+  "size": {
+    "step": {
+      "$type": "dimension",
+      "$extensions": {
+        "sh.sugarcube": {
+          "scale": {
+            "mode": "exponential",
+            "base": {
+              "min": { "value": 20, "unit": "px" },
+              "max": { "value": 23, "unit": "px" }
+            },
+            "ratio": { "min": 1.125, "max": 1.2 },
+            "steps": { "negative": 2, "positive": 11 }
+          }
+        }
+      }
+    }
+  }
+}

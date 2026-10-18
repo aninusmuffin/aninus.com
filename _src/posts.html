@@ -1,0 +1,24 @@
+---
+layout: base
+title: Posts
+description: I'm not really a blog person so I will just call these 'posts'
+---
+
+{% render 'blocks/navbar.liquid' page:page %}
+<main>
+
+{%- render 'blocks/headline.liquid' 
+title:title 
+description:description 
+img:"/assets/doodles/posts.webp"
+-%}
+
+
+<div class="wrapper wrapper-measure2xl">
+    <div class="bloglist boxed-list">
+        {%- for post in collections.posts reversed -%}
+            {%- render "blocks/postcard.liquid", post: post -%}
+        {%- endfor -%}
+    </div>
+</div>
+</main>

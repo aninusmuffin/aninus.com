@@ -1,0 +1,16 @@
+{
+  "The CSS Webring": {
+    "href": "https://cs.sjoy.lol/",
+    "icon": "fa-brands fa-css",
+    "description": "For those of us who take joy in messing around with CSS :)",
+    "previous": "https://webri.ng/webring/cssjoy/previous?via=https://aninus.com/",
+    "random": "https://webri.ng/webring/cssjoy/random?via=https://aninus.com/",
+    "next": "https://webri.ng/webring/cssjoy/next?via=https://aninus.com/"
+  },
+  "PERSONALSIT.ES": {
+    "custom": "<span style='font-family: var(--font-sans);'><b>PERSONAL</b></span><span style='font-family: var(--font-serif)'>SIT.ES</span>",
+    "href": "https://personalsit.es/",
+    "description": "This site was built to share and revel in each others’ personal sites, and is currently home to more than 1000 of them. Witness these in wonderment and awe.",
+    "random": "https://personalsit.es/random"
+  }
+}

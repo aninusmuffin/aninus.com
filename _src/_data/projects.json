@@ -4,37 +4,25 @@
 			"name": "ServerSleep",
 			"icon": "https://cdn-raw.modrinth.com/data/Cw8IlnGM/88fa52c1ebede5f48ab9c2a5ff5bea8e12da7259.png",
             "link": "https://modrinth.com/datapack/serversleep",
-			"description":"is the simplest multiplayer sleep mod/datapack. Only changes a single gamerule: gamerule playersSleepingPercentage 50"
+			"description":"The simplest multiplayer sleep mod/datapack. - Changes playersSleepingPercentage to 50%"
         },
         {
 			"name": "Blue Lotus: Beyond",
 			"icon": "https://cdn.modrinth.com/data/ElPWwjX0/05d7d6107ab3e89e6cce2c2a829ac59968e1a3c9_96.webp",
             "link": "https://tazta2ra.github.io/modpacks/beyond/",
-			"description":"is a massive vanilla+ modpack focused on exploration and adventure while enhancing vanilla gamplay with lots of Quality of Life improvements."
+			"description":"A massive vanilla+ modpack focused on exploration and adventure while enhancing vanilla gamplay with lots of Quality of Life improvements."
         },
         {
 			"name": "Blue Lotus: Classic",
 			"icon": "https://cdn.modrinth.com/data/CVfnTLOu/bb99d94fa45cbf94442bde2321b25b4595c6858f.png",
             "link": "https://modrinth.com/modpack/bluelotus",
-			"description": "is a modpack focused on exploration while keeping Minecraft's classic style."
+			"description": "A modpack focused on exploration while keeping Minecraft's classic style."
         },
 		{
 			"name": "Wynncraft 101",
 			"icon": "https://cdn.modrinth.com/data/yvC0d6Q6/c6f3d3ca5063d149d1c5c16588aa85bdaf780fa9_96.webp",
             "link": "https://modrinth.com/modpack/wynncraft",
-			"description": "is a simple modpack for Wynncraft."
+			"description": "A simple modpack for Wynncraft."
         }
-
-	],
-
-    "Random": [
-        {
-			"name": "Securemuffin",
-			"faicon": "inline-block fa-brands fa-fedora",
-            "link": "https://github.com/aninusmuffin/securemuffin",
-			"description": "is an atomic Silverblue image based on Secureblue with vscode and Dinosaurs from Bluefin (But pls dont use bc it is mostly for personal use and testing)"
-        }
-    ]
-
-    
+	]
 }

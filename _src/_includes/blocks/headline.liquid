@@ -1,0 +1,13 @@
+<header class="headline wrapper region">
+    <div class="content">
+        <div class="flow">
+            <h1>{{ title }}</h1>
+            <p>{{ description }}</p>
+        </div>
+        {% if img %}
+        <div class="sidebar center-items">
+            <img fetchpriority="high" class="themed-img pixel-perfect" src="{{ img }}" alt="" />
+        </div>
+        {% endif %}
+    </div>
+</header>

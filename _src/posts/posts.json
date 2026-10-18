@@ -1,0 +1,12 @@
+{
+    "author": "Aninus Partikler",
+    "layout": "layouts/post.liquid",
+    "tags": "posts",
+    "permalink": "posts/{{ title | slugify }}/",
+    "eleventyComputed": {
+        "eleventyNavigation": {
+            "parent": "Blog",
+            "key": "{{title}}"
+            }
+        }
+}

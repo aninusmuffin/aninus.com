@@ -36,8 +36,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Running Eleventy
-        run: npm run build:eleventy
+      - name: Running Build Awesome
+        run: npm run build
           
       - name: Deploy to Cloudflare
         uses: https://github.com/cloudflare/wrangler-action@v3

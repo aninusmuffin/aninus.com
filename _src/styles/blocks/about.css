@@ -1,0 +1,44 @@
+.about .shelf > .content {
+    --wrapper-max-width: var(--measure2xl);
+    flex-direction: row-reverse;
+}
+
+#my-big-logo-container {
+    padding-inline: var(--space-2xl);
+}
+
+#my-big-logo {
+    max-width: 15em;
+    max-height: 15em;
+    transition: transform linear var(--transition-fast),
+    box-shadow linear var(--transition-fast);
+}
+
+#my-big-logo img {
+    border: var(--stroke);
+}
+
+#my-big-logo:hover:not(.spinny) {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#my-big-logo:active:not(.spinny) {
+    transform: scale(0.9);
+}
+
+#my-big-logo.spinny {
+    animation: spin 1.5s normal;
+    &:hover {
+        cursor: default;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) scale(1);
+    }
+}

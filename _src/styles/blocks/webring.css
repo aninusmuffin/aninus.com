@@ -1,0 +1,17 @@
+/* 
+WEBRING
+
+
+*/
+
+.webring {
+    padding: var(--space-md);
+    background-color: var(--color-primary);
+    border: var(--stroke);
+    block-size: 100%;
+}
+
+.webring .title {
+    font-family: var(--font-sans);
+    font-size: var(--text-xl);
+}

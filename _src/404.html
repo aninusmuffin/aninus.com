@@ -1,0 +1,27 @@
+---
+layout: base
+title: 404
+description: Page not found
+permalink: 404.html
+eleventyExcludeFromCollections: true
+---
+
+{% render 'blocks/navbar.liquid' page:page %}
+
+<main class="flow">
+<header class="wrapper region">
+    <div class="flow">
+        <div class="center-items">
+        <img class="themed-img pixel-perfect" style="max-width: 20ch;" src="/assets/doodles/404.webp" alt="" />
+        </div>
+        <h1>404 page not found</h1>
+        <p>Maybe there never was a page here or maybe it was just deleted...</p>
+        <a href="/" class="button">Return to the index page</a>
+        <p style="font-size: var(--text-sm)">
+            (If there was something here before then you might want to <a href="/links">message me</a>,
+            because <a href="https://www.w3.org/Provider/Style/URI">Cool <abbr title="Uniform Resource Identifier
+" >URI</abbr>s <del>don't</del> <ins>[shouldn't]</ins> change</a>)
+        </p>
+    </div>
+</header>
+</main>

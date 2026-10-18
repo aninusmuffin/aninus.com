@@ -1,0 +1,255 @@
+---
+layout: base
+title: Uses
+description: "Even though the state of tech is kind of depressing, I still love my gadgets and silly little apps."
+---
+
+{% render 'blocks/navbar.liquid' page:page %}
+
+<main class="flow uses">
+    
+{%- render 'blocks/headline.liquid' 
+title:title 
+description:description 
+img:"/assets/doodles/uses.webp"
+-%}
+
+<div>
+<div class="shelf region">
+    <div class="wrapper switcher wrapper-measure2xl" style="--switcher-inline-at: 70ch; --switcher-vertical-alignment: normal;">
+    <div class="flow">
+    <h2>Desktop</h2>
+    <p>A so-called <em class="colored">GAMING</em> laptop that I managed to snatch with a discount. Compared to my previous desktops, I never had much trouble running the games I wanted to play, however the battery life is atrocious (Can't even last 2 hours) and becomes completely unusable and sluggish when disconnected from the wall.</p>
+    <ul>
+        <li>Model: ASUS TUF Gaming F15 FX506HF</li>
+        <li>CPU: Intel Core i5-11400H</li>
+        <li>Memory: 16GB</li>
+        <li>Storage: 2TB</li>
+        <li>GPU: NVIDIA GeForce RTX 2050 (+ Integrated Intel UHD Graphics)</li>
+        <li>Operating System: {% link-with-logo "https://secureblue.dev" %}secureblue {% endlink-with-logo %} (Fedora 44)</li>
+    </ul>
+    </div>
+    <div class="center-items">
+    <img eleventy:widths="1000, 600, 200, auto" loading="lazy" class="rounded-2xl dented" src="/assets/uses/desktop.png" alt="A screenshot of a close to default Gnome desktop enviroment with the Blendpills background. The settings application is open on the System page, showing the logo of Secureblue and system information.">
+    </div>
+</div>
+</div>
+
+<div class="region">
+    <div class="wrapper switcher wrapper-measure2xl" style="flex-direction: row-reverse; --switcher-inline-at: 70ch;">
+    <div class="flow">
+    <h2>Mobile</h2>
+    <p>Bought specifically for use with GrapheneOS. It serves its purpose, but in the summer it frequently overheats, and the battery life is not anything to write home about either. </p>
+    <ul>
+        <li>Model: <a href="https://www.gsmarena.com/google_pixel_8-12546.php">Google Pixel 8</a></li>
+        <li>Chipset: Google Tensor G3</li>
+        <li>Memory: 8GB</li>
+        <li>Storage: 128GB</li>
+        <li>Operating System: {% link-with-logo "https://grapheneos.org" %}GrapheneOS {% endlink-with-logo %} (Android 17)</li>
+    </ul>
+    </div>
+        <div class="center-items">
+            <div  style="max-width: fit-content;">
+            <img eleventy:widths="1000, 600, 200, auto" loading="lazy" style="max-height: 30rem; --dent-value: -2deg;" class="rounded-2xl dented" src="/assets/uses/mobile.webp" alt="">
+            </div>
+        </div>  
+    </div>
+</div>
+</div>
+
+<div class="wrapper flow prose wrapper-measure2xl"   style=" --switcher-inline-at: 70ch;">
+
+<h2><span>{% icon "fas:computer" %}Hardware</span></h2>
+
+<div class="responsive-table">
+<table>
+<thead>
+    <th>Device</th>
+    <th>Name</th>
+    <th>Operating System</th>
+    <th>Version</th>
+    <th>Since</th>
+</thead>
+<tbody>
+<tr>
+    <td><span>{% icon "fas:laptop" %} Laptop</span></td>
+    <td>ASUS TUF Gaming F15 (2021)</td>
+    <td>{% link-with-logo "https://secureblue.dev" %}secureblue {% endlink-with-logo %}</td>
+    <td>Fedora 44</td>
+    <td>2023</td>
+</tr>
+<tr>
+    <td><span>{% icon "fas:mobile" %} Phone</span></td>
+    <td>Google Pixel 8</td>
+    <td>{% link-with-logo "https://grapheneos.org" %}GrapheneOS {% endlink-with-logo %}</td>
+    <td>Android 17</td>
+    <td>2024</td>
+</tr>
+<tr>
+    <td><span>{% icon "fas:tablet" %} Tablet</span></td>
+    <td>Samsung Tab 10 FE</td>
+    <td>OneUI</td>
+    <td>Android 16</td>
+    <td>2025</td>
+</tr>
+</tbody>
+</table>  
+</div>
+
+<details>
+<summary>Other</summary>
+<div class="responsive-table">
+<table>
+<thead>
+    <th>Device</th>
+    <th>Name</th>
+    <th>Time</th>
+</thead>
+<tbody>
+<tr>
+    <td><span>{% icon "fas:headphones" %} Earphones</span></td>
+    <td>Redmi Buds 6 Pro</td>
+    <td>2025-</td>
+</tr>
+<tr>
+    <td><span>{% icon "fas:headphones" %} Headphones</span></td>
+    <td>Sony MDR-ZX310AP</td>
+    <td>2022-</td>
+</tr>
+<tr>
+    <td><span>{% icon "fas:keyboard" %} Keyboard</span></td>
+    <td>Ajazz AK820 MAX</td>
+    <td>2024-</td>
+</tr>
+<tr>
+    <td><span>{% icon "fas:gamepad" %} Controller</span></td>
+    <td>Dualshock 4 Controller (Used)</td>
+    <td>2023-</td>
+</tr>
+<tr>
+    <td><span>{% icon "fas:headphones" %} Earphones</span></td>
+    <td>Redmi Buds 4 Lite</td>
+    <td>2021-2025</td>
+</tr>
+<tr>
+    <td><span>{% icon "fas:laptop" %} Laptop</span></td>
+    <td>Lenovo V15 ADA</td>
+    <td>2021-2023</td>
+</tr>
+</tbody>
+</table>  
+</div>
+</details>
+</div>
+
+<div class="wrapper flow wrapper-measure2xl">
+    <h2><span>{% icon "fas:code" %}Software</span></h2>
+
+    <p>Obviously I can't possibly list every single piece of software I use (nor do I want to ;P), but here
+    are some of the more interesting ones.</p>
+
+    <div class="grid" style="--grid-placement: auto-fit; --grid-align-items: normal;">
+    <div class="flow">
+
+    <h3>Desktop</h3>
+
+
+    <div class="responsive-table">
+    <table>
+    <thead>
+        <th>Software</th>
+        <th>Name</th>
+    </thead>
+    <tbody>
+    <tr>
+        <td><span>{% icon "fab:linux" %} Operating System</span></td>
+        <td><a href="https://secureblue.dev/">secureblue</a></td>
+    </tr>
+    <tr>
+        <td><span>{% icon "fas:globe" %} Browser </span></td>
+        <td><a href="https://github.com/secureblue/Trivalent">Trivalent</a></td>
+    </tr>
+    <tr>
+        <td><span>{% icon "fas:envelope" %} E-mail Client</span></td>
+        <td><a href="https://thunderbird.net/">Thunderbird</a></td>
+    </tr>
+    <tr>
+        <td><span>{% icon "fas:clipboard-list" %} Notes</span></td>
+        <td><a href="https://obsidian.md/">Obsidian</a></td>
+    </tr>
+    <tr>
+        <td><span>{% icon "fas:file-excel" %} Office Suite </span></td>
+        <td><a href="https://www.libreoffice.org/">LibreOffice</a></td>
+    </tr>
+    <tr>
+        <td><span>{% icon "fas:list-check" %} Tasks </span></td>
+        <td><a href="https://github.com/mrvladus/Errands/">Errands</a></td>
+    </tr>
+    <tr>
+        <td><span>{% icon "fas:code" %} Code Editor </span></td>
+        <td><a href="https://code.visualstudio.com/">Visual Studio Code</a></td>
+    </tr>
+    </tbody>
+    </table>  
+    </div>
+    </div>
+
+
+    <div class="flow">
+
+    <h3>Mobile</h3>
+
+    <div class="responsive-table">
+    <table>
+    <thead>
+        <th>Software</th>
+        <th>Name</th>
+    </thead>
+    <tbody>
+    <tr>
+        <td><span>{% icon "fab:linux" %} Operating System</span></td>
+        <td><a href="https://grapheneos.org/">GrapheneOS</a></td>
+    </tr>
+    <tr>
+        <td><span>{% icon "fas:globe" %} Browser </span></td>
+        <td><a href="https://github.com/GrapheneOS/Vanadium">Vanadium</a></td>
+    </tr>
+    <tr>
+        <td><span>{% icon "fas:envelope" %} E-mail Client</span></td>
+        <td><a href="https://thunderbird.net/">Thunderbird</a></td>
+    </tr>
+    <tr>
+        <td><span>{% icon "fas:clipboard-list" %} Notes</span></td>
+        <td><a href="https://obsidian.md/">Obsidian</a></td>
+    </tr>
+    <tr>
+        <td><span>{% icon "fas:comments" %} Messages </span></td>
+        <td><a href="https://signal.org/">Signal</a></td>
+    </tr>
+    <tr>
+        <td><span>{% icon "fas:list-check" %} Tasks </span></td>
+        <td><a href="https://tasks.org/">Tasks.org</a></td>
+    </tr>
+    </tbody>
+    </table>  
+    </div>
+    </div>
+
+    </div>
+</div>
+<div class="wrapper flow wrapper-measure" >
+    <h3>Linux Distro Timeline™</h3>
+    <p>Thought it would be funny to make a note of my distro hopping journey ☺️.</p> 
+    <p>Most of it happened in my first few weeks of using Linux. After that I settled with Fedora and continued using it ever since in one form or another.</p>
+
+    <ol>
+    <li><a href="https://zorin.com/os/">Zorin OS</a> (2021)</li>
+    <li><a href="https://www.linuxmint.com/">Linux Mint</a> (2021)</li>
+    <li><a href="https://neon.kde.org/">KDE Neon</a> (2021)</li>
+    <li><a href="https://fedoraproject.org/workstation/">Fedora Workstation</a> (2021-2024)</li>
+    <li><a href="https://projectbluefin.io/">Bluefin</a>, based on <a href="https://fedoraproject.org/atomic-desktops/silverblue/">Fedora Silverblue</a> (2024-2025) </li>
+    <li><a href="https://secureblue.dev/">secureblue</a>, still Fedora Silverblue :P (2025-) </li>
+    </ol>
+    </div>
+
+</main>

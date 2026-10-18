@@ -1,0 +1,39 @@
+/*
+WITH ICON
+Related Every Layout: https://every-layout.dev/layouts/icon/
+
+CUSTOM PROPERTIES AND CONFIGURATION
+--size-icon: Controls the size of the icon
+
+*/
+.icon {
+    width: 0.75em;
+    height: 0.75em;
+    width: var(--size-icon, 1cap);
+    height: var(--size-icon, 1cap);
+}
+
+:has(> .icon) {
+    display: inline-flex;
+    align-items: baseline;
+    column-gap: 0.5ch;
+    flex-wrap: wrap;
+}
+
+.icon[data-icon-size="logo"] {
+    --size-icon: 2cap;
+    align-self: center;
+    height: 100%;
+}
+
+.large-icon {
+    max-inline-size: var(--size-icon, 2ch);
+    max-block-size: var(--size-icon, 2ch);
+}
+
+:has(> .large-icon) {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.5ch;
+    flex-wrap: wrap;
+}

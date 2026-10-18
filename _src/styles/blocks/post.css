@@ -1,0 +1,28 @@
+.post .headline :has(.sidebar) {
+    flex-direction: row-reverse;
+    --sidebar-size: unset;
+}
+
+.post #table-of-contents {
+    position: static;
+    background-color: var(--color-canvas);
+    --sidebar-size: 25ch;
+}
+
+@container (inline-size > 67ch) {
+    .post #table-of-contents {
+        position: sticky;
+        top: calc(var(--space-lg)); 
+    }
+}
+
+.post > .content:has(#table-of-contents) {
+    --wrapper-max-width: var(--measurexl);
+    --sidebar-wrap-at: 60%;
+    flex-direction: row-reverse;
+    container-type: inline-size;
+}
+
+.post > .content {
+    --wrapper-max-width: var(--measure);
+}

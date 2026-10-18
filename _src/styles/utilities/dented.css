@@ -1,0 +1,9 @@
+.dented {
+    --dent-value: 2deg;
+    transform: rotate(var(--dent-value));
+    transition: transform var(--transition-normal) var(--ease-out-overshoot);
+}
+
+.dented:hover {
+    transform: rotate(0);
+}

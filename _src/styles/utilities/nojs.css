@@ -1,0 +1,9 @@
+/* 
+noscript detection
+
+Snatched from: https://aartaka.me/new-menu.html
+*/
+
+:root:has(#noscript) .hide-if-nojs {
+    display: none;
+}

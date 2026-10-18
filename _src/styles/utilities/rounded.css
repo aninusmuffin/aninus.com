@@ -1,0 +1,11 @@
+.rounded-2xl {
+    border-radius: var(--radius-2xl);
+}
+
+.rounded-xl {
+    border-radius: var(--radius-xl);
+}
+
+.rounded-full {
+    border-radius: var(--radius-full);
+}

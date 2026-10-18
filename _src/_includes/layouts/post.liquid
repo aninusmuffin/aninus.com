@@ -1,0 +1,57 @@
+---
+layout: base
+---
+
+{% render 'blocks/navbar.liquid' page:page %}
+
+<article class="post">
+<div class="headline wrapper region">
+  <div class="content">
+    <div class="sidebar center-items">
+      <img class="thumbnail {{ image-class }}" 
+        alt="{{ imgalt }}" 
+        src="{{ image }}"
+        style="view-transition-name: post-{{ title | slugify }}-img;"
+      >
+    </div>
+
+    <div class="flow"
+    style="view-transition-name: post-{{ title | slugify }};"
+    >
+      <h1>{{ title }}</h1>
+      <p>{{ description }}</p>
+      <div class="flow">
+        <div class="cluster">
+        <p>{{ date | date:"%d %B %Y"}}</p>
+
+        {% if modified %}
+            <strong class="important">
+              Updated on: 
+              <time datetime="{{ modified | date: "%Y-%m-%dT%H:%M:%S" }}">{{ modified | date:"%d %B %Y" }}</time>
+            </strong>
+        {% endif %}
+        </div>
+        <ul class="cluster">
+          {% render "components/micro/taglist.liquid", tags:tags %}
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="wrapper content">
+  {% if notoc != true %}
+  <div class="sidebar" id="table-of-contents">
+    <details open>
+      <summary>Table of Contents</summary>
+      {{ content | toc }}
+    </details>
+  </div>
+  {% endif %}
+
+  <div class="prose flow">
+      {{ content }}
+  </div>
+</div>
+</article>

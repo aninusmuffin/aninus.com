@@ -1,0 +1,28 @@
+---
+title: Callout
+---
+
+<div class="example flow">
+{% render 'blocks/callout.liquid' %}
+
+{% capture wasd -%}
+We'll be using popovers to mark up the toggletips, as that's the semantic way to do so these days, but before we begin it’s worth mentioning that they’re implicitly anchored. However, since you might want to use anchored container queries without popovers, I’ll show you how to set up anchor associations anyway.
+
+
+{%- endcapture %}
+{% render 'blocks/callout.liquid', data-callout:"info", icon:"", content:wasd %}
+
+
+{% render 'blocks/callout.liquid', data-callout:"warning", title:"Warning" %}
+
+
+{% capture imgtest -%}
+<img src="https://www.11ty.dev/img/built/i65COKQqjG-222.avif" alt="possum">
+
+{%- endcapture %}
+{% render 'blocks/callout.liquid', data-callout:"danger" title:"Danger" content:"test" %}
+
+
+{% render 'blocks/callout.liquid', data-callout:"success" title:"Success" content:imgtest %}
+
+</div>

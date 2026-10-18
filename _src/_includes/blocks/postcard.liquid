@@ -1,0 +1,20 @@
+    <div class="post" 
+    style="view-transition-name: post-{{ post.data.title | slugify }};">
+        <div class="sidebar center-items">
+            <img src="{{post.data.image}}" 
+            alt="{{post.data.imgalt}}"
+            class="thumbnail" 
+            sizes="300px, 200px" 
+            eleventy:widths="300, 200" 
+            eleventy:optional="placeholder"
+            style="view-transition-name: post-{{ post.data.title | slugify }}-img;" 
+            >
+        </div>
+        <div class="flow"
+        >
+            <h2><a href="{{post.url}}">{{post.data.title}}</a></h2>
+            <p>{{post.data.description}}</p>
+            <p><time datetime="{{post.date | date: "%Y-%m-%dT%H:%M:%S"}}">{{post.date | date: "%d %B %Y"}}</time></p>
+            <ul class="cluster">{% render "components/micro/taglist.liquid", tags:post.data.tags %}</ul>
+        </div>
+    </div>

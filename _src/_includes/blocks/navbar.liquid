@@ -1,0 +1,79 @@
+<header class="navbar">
+<nav class="flow">
+
+    <ol class="cluster ">
+    <li>
+    <a href="/" class="site-logo">
+        <svg viewBox="0 0 708 601" aria-label="Home" class="icon" data-icon-size="logo">
+            <use href="/assets/cat.svg#g63" >
+        </svg>
+    </a>
+    </li>
+    <li><a {% if page.url contains "/projects" %} aria-current="page" {% endif %}  href="/projects/">
+        <img loading="eager" class="themed-img large-icon"
+         src="/assets/doodles/projects.webp" alt=""
+        />
+        Projects
+    </a></li>
+    <li><a {% if page.url contains "/posts" %} aria-current="page" {% endif %} href="/posts">
+        <img loading="eager" class="themed-img large-icon"
+         src="/assets/doodles/posts.webp" alt="" 
+        />
+        Posts
+    </a></li>
+    <li><a {% if page.url contains "/about" %} aria-current="page" {% endif %} href="/about">
+        <img loading="eager" class="themed-img large-icon" src="/assets/doodles/about.webp" alt="" />
+        About
+    </a></li>
+    <li><a {% if page.url contains "/uses" %} aria-current="page" {% endif %} href="/uses">
+        <img loading="eager" class="themed-img large-icon" src="/assets/doodles/uses.webp" alt="" />
+        Uses
+    </a></li>
+    <li><a {% if page.url contains "/library" %} aria-current="page" {% endif %} href="/library">
+        <img loading="eager" class="themed-img large-icon" src="/assets/doodles/library.webp" alt="" />
+        Library
+    </a></li>
+    <li><a {% if page.url contains "/links" %} aria-current="page" {% endif %} href="/links">
+        <img loading="eager" class="themed-img large-icon" src="/assets/doodles/links.webp" alt="" />
+        Links
+    </a></li>
+
+    </ol>
+    <div class="hide-if-nojs">
+      <button style="width: 100%" class="button" id=menu-button commandfor=menu-dialog command=show-modal>Menu</button>
+    </div>
+</nav>
+</header>
+
+<dialog id=menu-dialog closedby=any>
+<ul class="button-list">
+    <li>
+        <button commandfor="menu-dialog" command="close"> <i class="fa-solid fa-xmark"></i>Close menu</button>
+    </li>
+    <li><a {% if page.url contains "/projects" %} aria-current="page" {% endif %}  href="/projects/">
+        <img class="themed-img large-icon" src="/assets/doodles/projects.webp" alt="" />
+        Projects
+    </a></li>
+    <li><a {% if page.url contains "/posts" %} aria-current="page" {% endif %} href="/posts">
+        <img class="themed-img large-icon" src="/assets/doodles/posts.webp" alt="" />
+        Posts
+    </a></li>
+    <li><a {% if page.url contains "/about" %} aria-current="page" {% endif %} href="/about">
+        <img class="themed-img large-icon" src="/assets/doodles/about.webp" alt="" />
+        About
+    </a></li>
+    <li><a {% if page.url contains "/uses" %} aria-current="page" {% endif %} href="/uses">
+        <img class="themed-img large-icon" src="/assets/doodles/uses.webp" alt="" />
+        Uses
+    </a></li>
+    <li><a {% if page.url contains "/library" %} aria-current="page" {% endif %} href="/library">
+        <img class="themed-img large-icon" src="/assets/doodles/library.webp" alt="" />
+        Library
+    </a></li>
+    <li><a {% if page.url contains "/links" %} aria-current="page" {% endif %} href="/links">
+        <img class="themed-img large-icon" src="/assets/doodles/links.webp" alt="" />
+        Links
+    </a></li>
+</ul>
+</dialog>
+

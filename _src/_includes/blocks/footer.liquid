@@ -1,0 +1,52 @@
+<footer class="footer">
+    <div class="wrapper">
+        <div class="flow">
+        <div class="grid">
+        <div class="flow">
+            <p class="category">Quick Links</p>
+            <ul class="flow">
+                <li><a href="/links/">Links</a></li>
+                <li><a rel="me" href="https://mastodon.social/@aninus">Mastodon</a></li>
+                <li><a rel="me" href="https://bsky.app/profile/aninus.com">Bluesky</a></li>
+            </ul>
+        </div>
+        <div class="flow">
+            <p class="category">Main pages</p>
+            <ul class="flow">
+                <li><a href="/posts/">Posts</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/projects/">Projects</a></li>
+            </ul>
+        </div>
+       
+        </div>
+        <div style="font-size: var(--text-sm);">
+            <p >
+            This page was built on
+            <time class="font-mono" datetime="{{ "today" | date: "%Y-%m-%d %H:%M" }}" class="build-date">
+                {{ "today" | date: "%Y-%m-%d %H:%M" -}}
+            </time>, 
+            using <a href="https://build.awesome.me">Build Awesome (11ty) {{ eleventy.version }}</a>.
+            </p>
+            <a href="https://codeberg.org/aninus/website/src/branch/main/{{ page.inputPath | uri_escape }}">Edit page</a>        </div>
+
+
+        </div>
+        <div class="sidebar flow">
+            <a href="#top">↑ Back to top</a>
+            <a class="badge" href="/">
+            <img alt="aninus.com badge" src="/assets/badge.webp">
+            </a>
+
+
+        <div class="hide-if-nojs">
+        <label for="theme">Theme:</label>
+        <select id="theme">
+            <option value="system">System</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+        </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,40 @@
+---
+layout: base
+title: Projects
+description: Some of the things I have done online
+---
+
+{% render 'blocks/navbar.liquid' page:page %}
+
+
+<main class="projects">
+
+{%- render 'blocks/headline.liquid' 
+title:title 
+description:description
+img:"/assets/doodles/projects.webp"
+-%}
+
+<div class="wrapper content flow">
+    <p>Yeah, so I'm kinda lazy so I haven't actually done many things worth sharing here :P</p>
+    <div class="flow">
+    <h2>Minecraft</h2>
+    <p>A few years ago I got really interested in Minecraft modpacks and made some of my own...</p>
+        <div class="minecraft-showcase boxed-list">
+        {% for project in projects.Minecraft %}
+            <div class="item">
+                <div class="sidebar center-items">
+                <img class="rounded-xl" src="{{project.icon}}" alt="{{ project.name }}'s icon">
+                </div>
+                <div class="content">
+                    <h3><a href="{{project.link}}">{{project.name}}</a></h3>
+                    <p>{{project.description}}</p>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+
+</div>
+
+</main>

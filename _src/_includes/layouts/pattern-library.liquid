@@ -1,0 +1,25 @@
+---
+layout: base
+title: Pattern Library
+description: ""
+---
+
+
+{% render 'blocks/navbar.liquid' page:page %}
+<main class="pattern-library">
+
+<div class="headline region wrapper">
+    <div class="content flow">
+        <h1>{{title}}</h1>
+        <p>{{description}}</p>
+        <a href="/pattern-library">Return to Pattern Library</a>
+
+    </div>
+</div>
+
+<div class="wrapper" style="--wrapper-max-width: var(--measurexl);">
+  {{ content }}
+
+</div>
+
+</main>

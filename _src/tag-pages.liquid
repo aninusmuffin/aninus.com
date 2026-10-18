@@ -1,0 +1,38 @@
+---
+layout: base
+pagination:
+    data: collections
+    size: 1
+    alias: tag
+    filter: ["all", "posts"]
+permalink: /tags/{{ tag }}/
+eleventyExcludeFromCollections: true
+eleventyComputed:
+    title: "{{ tag }}"
+
+---
+
+{% render 'blocks/navbar.liquid' %}
+<main>
+{%  capture hititle  %}
+Tagged "{{title}}"
+ {% endcapture %}
+{%- render 'blocks/headline.liquid' 
+title:hititle
+description:description 
+-%}
+
+<div class="wrapper flow wrapper-measure2xl">
+{% assign taglist = collections[tag] %}
+
+<h2>Posts</h2>
+<ol class="bloglist boxed-list">
+
+    {% for post in taglist reversed %}
+    {% if post.data.tags contains "posts" %}
+        {%- render "blocks/postcard.liquid", post:post -%}
+    {% endif %}
+    {% endfor %}
+</ol>
+</div>
+</main>

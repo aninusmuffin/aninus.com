@@ -1,0 +1,36 @@
+/*
+THEMED IMAGE
+*/
+
+.links a:hover .themed-img, .other-pages summary:hover .themed-img {
+    filter: contrast(175%) invert(100%); 
+}
+
+.button-list a:hover .themed-img{
+    filter: contrast(175%) invert(100%); 
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:has(#theme [value='system']:checked) {
+        .themed-img {
+            filter: contrast(175%) invert(100%);
+        }
+        .button-list a:hover .themed-img {
+            filter: none;
+        }
+    }
+}
+
+:root:has(#theme [value='dark']:checked) {
+    .themed-img {
+        filter: contrast(175%) invert(100%);
+    }
+    .button-list a:hover .themed-img {
+        filter: none;
+    }
+}
+
+
+.themed-img {
+    transition: filter var(--transition-normal) linear;  
+}

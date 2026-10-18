@@ -1,0 +1,21 @@
+---
+layout: base
+
+---
+
+
+{% render 'blocks/navbar.liquid' page:page %}
+<main>
+
+{%- render 'blocks/headline.liquid' 
+title:title 
+description:description 
+img:headlineimg
+-%}
+
+    <div class="wrapper flow">
+
+        {{ content }}
+
+    </div>
+</main>

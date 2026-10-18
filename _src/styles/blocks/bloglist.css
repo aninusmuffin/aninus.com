@@ -1,0 +1,19 @@
+.bloglist {
+    --color-box-list-background: var(--color-primary);
+}
+
+.bloglist .post {
+    --align: normal;
+    --sidebar-wrap-at: 55%;
+    --flow-space: var(--space-xs);
+    height: 100%;
+}
+
+.bloglist .post:has(.sidebar) {
+    flex-direction: row-reverse;
+}
+
+.bloglist .post .sidebar :is(picture, img) {
+    max-block-size: 14rem;
+    inline-size: auto;
+}

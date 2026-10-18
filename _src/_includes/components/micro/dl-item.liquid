@@ -1,0 +1,23 @@
+<div class="stack:small">
+    <dt>
+        <a href="{{project.link}}">
+            {%- if project.icon -%}
+                {%- if project.fontawesome == true -%}
+                    <i class=" icon {{project.icon}}"></i>
+                {%- else -%}
+                    <picture class="icon" >
+                        <img src="{{project.icon}}"
+                            loading="lazy"
+                            sizes="1em"
+                            eleventy:widths="50"
+                            eleventy:optional="placeholder"
+                            alt="{{ project.name }}'s icon"
+                        >
+                    </picture>
+                {%- endif -%}
+            {%- endif -%}
+            {{project.name}}
+        </a>
+    </dt>
+    <dd>{{project.description}}</dd>
+</div>

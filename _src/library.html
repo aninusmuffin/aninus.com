@@ -1,0 +1,65 @@
+---
+layout: base
+title: Library
+description: A small collection of media, that I have watched, read, played or simply have thoughts about.
+---
+
+{% render 'blocks/navbar.liquid' page:page %}
+<main class="flow">
+
+{%- render 'blocks/headline.liquid' 
+title:title 
+description:description 
+img:"/assets/doodles/library.webp"
+-%}
+
+
+<div class="region shelf">
+<div class="wrapper wrapper-measure2xl flow games">
+    <h2>Favorite Games</h2>
+    <p>It is actually really hard to pick my favorites, if you want a full list of my favorite games you should check out <a href="https://backloggd.com/u/aninus/games/">my backlog</a>.</p>
+    <ul class="library-shelf grid" >
+        <li class="card">
+            <a href="https://backloggd.com/games/hollow-knight-silksong/">
+                <img class="themed-img pixel-perfect" alt="Silksong cover art" src="/assets/doodles/library/silk.webp">
+                <p>Hollow Knight: Silksong</p>
+            </a>
+        </li>
+        <li class="card">
+            <a href="https://backloggd.com/games/outer-wilds/">
+                <img class="themed-img pixel-perfect" alt="Outer Wilds cover art" src="/assets/doodles/library/wilds.webp">
+                <p>Outer Wilds</p>
+            </a>
+        </li>
+        <li class="card">
+            <a href="https://backloggd.com/games/minecraft-java-edition/">
+                <img class="themed-img pixel-perfect" alt="Minecraft: Java Edition cover art" src="/assets/doodles/library/mine.webp">
+                <p>Minecraft: Java Edition</p>
+            </a>
+        </li>
+        <li class="card">
+            <a href="https://backloggd.com/games/the-binding-of-isaac-rebirth/">
+                <img class="themed-img pixel-perfect" alt="The Binding of Isaac: Rebirth cover art" src="/assets/doodles/library/isaac.webp">
+                <p>The Binding of Isaac: Rebirth</p>
+            </a>
+        </li>
+        <li class="card">
+            <a href="https://backloggd.com/games/celeste/">
+                <img class="themed-img pixel-perfect" alt="Celeste cover art" src="/assets/doodles/library/celeste.webp">
+                <p>Celeste</p>
+            </a>
+        </li>
+
+    </ul>
+</div>
+</div>
+
+<div class="region shelf">
+    <div class="wrapper flow center-items">
+        <h2>Work in Progress</h2>
+    </div>
+</div>
+
+
+</main>
+
