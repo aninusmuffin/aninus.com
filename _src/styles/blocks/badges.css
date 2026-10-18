@@ -1,0 +1,33 @@
+.badgelist {
+    --grid-placement: auto-fill;
+    --grid-item-min: var(--badge-width);
+    --grid-gap: var(--space-sm);
+    
+}
+
+.badgelist li {
+    display: flex;
+    justify-content: center;
+}
+
+.badge {
+    display: block;
+    width: 100%;
+    max-width: var(--badge-width);
+    max-height: var(--badge-height);
+    transition: transform var(--transition-normal) var(--ease-out-overshoot);
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+
+}
+
+.badge::after {
+    display: none;
+    content: none;
+}
+
+.badge:is(:hover, :focus-visible) {
+    transform: scale(1.2);
+    outline: 0.2rem solid var(--focus-color, currentColor);
+}

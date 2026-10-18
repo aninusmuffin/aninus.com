@@ -1,0 +1,28 @@
+:root {
+    --stroke: var(--border-style) var(--border-width-normal) var(--color-border);
+    --dividing-line: var(--border-style) var(--space-xs) var(--color-accent);
+    --form-control-border: var(--form-control-border-style) var(--form-control-border-width) var(--form-control-border-color);
+
+    --measure: 60ch;
+    --measurexl: 90ch;
+    --measure2xl: 120ch;
+
+    --ease-out-overshoot: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --badge-multip: 2;
+    --badge-width: calc(88px * var(--badge-multip));
+    --badge-height: calc(31px * var(--badge-multip))p;
+
+}
+
+@property --button-list-index {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+}
+
+@property --dent-value {
+    syntax: '<angle>';
+    inherits: true;
+    initial-value: -10deg;
+}

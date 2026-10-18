@@ -1,0 +1,21 @@
+.minecraft-showcase {
+    --color-box-list-background: var(--color-primary);
+    --sidebar-size: fit-content;
+}
+
+.minecraft-showcase .item {
+    --align: stretch;
+    --sidebar-wrap-at: 70%;
+}
+
+.minecraft-showcase .item .content {
+    font-size: var(--text-sm);
+}
+
+.minecraft-showcase .item .content h3 {
+    font-size: var(--text-lg);
+}
+
+.minecraft-showcase .item img {
+    max-width: var(--space-2xl);
+}

@@ -1,0 +1,56 @@
+.button-list {
+    --button-font-size: var(--size-step-3);
+    --button-padding: var(--space-md);
+    font-size: var(--button-font-size);
+    
+}
+
+.button-list :is(a, button) {
+    padding: var(--button-padding);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-decoration: none;
+    transition-property: background-color, color;
+    transition-duration: var(--transition-normal);
+    transition-timing-function: linear;
+    background-color: transparent;
+    border: unset;
+    background-color: var(--color-button-bg );
+    color: var(--color-button-text, var(--color-text-normal));
+
+}
+
+
+.button-list :is(a:hover, button:hover) {
+    --color-button-bg: var(--color-selection-background);
+    --color-button-text: var(--color-selection-text);
+    cursor: pointer;
+}
+
+.button-list button[command="close"] {
+    --color-button-bg: var(--color-error-fill-normal);
+    --color-button-text: var(--color-error-on-normal);
+    border-block-end: var(--stroke);
+}
+
+.button-list button[command="close"]:hover {
+    --color-button-bg: var(--color-error-fill-loud);
+    --color-button-text: var(--color-error-on-loud);    
+}
+
+.button-list :is(a, button) .large-icon {
+    --size-icon: 3cap;
+    transition-duration: var(--transition-normal);
+    transition-property: transform;
+    transition-timing-function: var(--ease-out-overshoot);
+
+}
+
+.button-list li {
+    --button-list-index: sibling-index();
+}
+
+.button-list :is(a, button):hover img {
+    transform: scale(1.1) rotate(calc(var(--dent-value) * pow(-1, var(--button-list-index))));
+}

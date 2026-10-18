@@ -1,0 +1,85 @@
+.button {
+    --focus-color: var(--color-text-normal);
+    --button-shadow-size: .375rem;
+    --button-shadow-color: var(--color-text-normal);
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    padding: var(--button-padding, var(--space-md));
+    background-color: var(--color-button-bg, var(--color-primary));
+    color: var(--color-button-text, var(--color-text-normal));
+    border: var(--border-button, var(--stroke));
+    border-radius: var(--radius-button);
+    justify-content: center;
+    transition: transform var(--transition-fast) linear,
+    box-shadow var(--transition-fast) linear,
+    background-color var(--transition-normal) linear,
+    font-weight var(--transition-normal) linear,
+    color var(--transition-normal) linear;
+
+    box-shadow: 0 var(--button-shadow-size) 0 var(--button-shadow-color);
+
+}
+
+.button:hover, .button:focus, .button:focus-visible {
+    transform: translateY(calc(var(--button-shadow-size) * -0.5));
+    box-shadow: 0 calc(var(--button-shadow-size) * 1.5) 0 var(--button-shadow-color);
+}
+
+:where(.button:hover, .button:focus, .button:focus-visible) {
+    --color-button-text: var(--color-selection-text);
+    --color-button-bg: var(--color-selection-background);
+}
+
+.button:active {
+    transform: translateY(var(--button-shadow-size));
+    box-shadow: none;
+}
+
+.button-grid .button {
+    inline-size: 100%;
+}
+
+.lg-buttons .button {
+    font-size: var(--text-lg);
+}
+
+.xl-buttons .button {
+    font-size: var(--text-xl);
+}
+
+.codeberg-button {
+    --color-button-bg: var(--color-cyan-600);
+    --color-button-text: var(--color-neutral-100);
+}
+
+.github-button {
+    --color-button-bg: var(--color-neutral-900);
+    --color-button-text: var(--color-neutral-100);    
+}
+
+.gitlab-button {
+    --color-button-bg: var(--color-orange-600);
+    --color-button-text: var(--color-neutral-100);    
+}
+
+.mastodon-button {
+    --color-button-bg: var(--color-purple-600);
+    --color-button-text: var(--color-neutral-100);    
+}
+
+.bluesky-button {
+    --color-button-bg: var(--color-blue-600);
+    --color-button-text: var(--color-neutral-100);    
+}
+
+.steam-button {
+    --color-button-bg: var(--color-indigo-950);
+    --color-button-text: var(--color-neutral-100);    
+}
+
+.modrinth-button {
+    --color-button-bg: var(--color-green-300);
+    --color-button-text: var(--color-neutral-900);    
+}

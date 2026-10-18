@@ -1,0 +1,4 @@
+{%- assign taglist = tags | filterTagList -%}
+{%- for tag in taglist -%}
+    <li><a style="display: inline;" href="/tags/{{- tag -}}">#{{- tag -}}</a></li>
+{%- endfor -%}

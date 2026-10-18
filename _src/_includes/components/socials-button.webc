@@ -1,8 +1,0 @@
-<li><a
-    :title="title"
-    rel="me"
-    class="social"
-    :href="href">
-        <i webc:if="fontawesome === '' " :class="icon"></i>
-        <svg webc:else><use :href="icon"></use></svg>
-</a></li>

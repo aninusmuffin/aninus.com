@@ -1,0 +1,23 @@
+{
+  "border": {
+    "width": {
+      "$type": "dimension",
+      "hairline": {
+        "$value": { "value": 0.75, "unit": "px" }
+      },
+      "thin": {
+        "$value": { "value": 1, "unit": "px" }
+      },
+      "normal": {
+        "$value": { "value": 0.20, "unit": "rem" }
+      },
+      "thick": {
+        "$value": { "value": 0.25, "unit": "rem" }
+      }
+    },
+    "style": {
+      "$type": "strokeStyle",
+      "$value": "solid"
+    }
+  }
+}

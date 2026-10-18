@@ -1,0 +1,68 @@
+{% if not page_title %}
+{%- assign page_title = title | append: ' - aninus' -%}
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="title" property="og:title" content="{{ page_title }}">
+    <meta name="description" property="og:description" content="{{ description }}">
+    <meta property="og:image" content="{{ image }}"/>
+    <meta name="keywords" content="Programming, art, aninus, aninuscsalas, aninusmuffin">
+    <meta name="generator" content="Build Awesome">
+    {%- if blogpost -%}<meta property="og:type" content="article">{%- endif -%}
+
+    <title>{{ page_title }}</title>
+
+
+    <link rel="icon" type="image/x-icon" href="{%- if favicon -%}{{ favicon }}{%- else -%}/assets/favicon.ico{%- endif -%}">
+
+    <link rel="preload" as="font" href="/fonts/AdwaitaSans-Regular.subset.woff2" crossorigin="">
+    <link rel="preload" as="font" href="/fonts/adwaita-sans-custom.woff2" crossorigin="">
+
+
+    <link rel="stylesheet" href="/styles/global.css">
+    {%- if otherCSS -%}
+    <link rel="stylesheet" type="text/css" href="/styles/{{ otherCSS }}.css">
+    {%- endif -%}
+
+</head>
+
+<body>
+
+    <span id="top"></span>
+    {{ content }}
+
+{% render 'blocks/footer.liquid', page:page %}
+{% getBundle "fontawesome" %}
+<noscript><span id=noscript></span></noscript>
+
+<script>
+const colorThemeSwitcher = document.getElementById("theme");
+
+const storeTheme = function (theme) {
+  localStorage.setItem("theme", theme);
+};
+
+
+colorThemeSwitcher.addEventListener("change", () => {
+    storeTheme(colorThemeSwitcher.selectedOptions[0].value);
+})
+
+const setTheme = function () {
+    if (localStorage.getItem("theme")) {
+        colorThemeSwitcher.value = localStorage.getItem("theme");
+    } 
+};
+
+document.onload = setTheme();
+
+</script>
+
+</body>
+</html>
+
+

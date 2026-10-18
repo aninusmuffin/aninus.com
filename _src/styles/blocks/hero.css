@@ -1,0 +1,31 @@
+/* 
+HERO
+
+
+*/
+
+.hero {
+    --wrapper-max-width: var(--measurexl);
+    --wrapper-padding-inline: 0;
+    --grid-align-items: center;
+    --grid-placement: auto-fit;
+
+    padding: var(--space-md);
+    background-color: var(--color-primary);
+    border-bottom: var(--stroke);
+}
+
+.hero .index-logo {
+    max-inline-size: 25rem;
+    justify-self: center;
+    padding: var(--space-sm);
+}
+
+.hero:has(.index-logo) {
+    view-transition-name: collapseable-hero-nav;
+}
+
+::view-transition-old(collapseable-hero-nav),
+::view-transition-new(collapseable-hero-nav) {
+    height: 100%;
+}

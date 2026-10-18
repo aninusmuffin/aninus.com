@@ -1,0 +1,4 @@
+.projects {
+    --grid-placement: auto-fit;
+    --grid-item-min: 30ch;
+}

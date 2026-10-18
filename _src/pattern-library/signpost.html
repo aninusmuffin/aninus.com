@@ -1,0 +1,70 @@
+--- 
+title: Signpost
+---
+<div class="example">
+
+<div class="signpost">
+    <div class="grid">
+    <ul class="featured-links">
+        <li><a href="/projects/" class="jumbo">
+        <span>Projects</span><span class="sidebar">↗</span>
+        </a></li>
+        <li><a class="jumbo" href="/about/">
+         <span>About</span><span class="sidebar">↖</span>
+        </a></li>
+        <li><a class="jumbo" href="/uses/">
+        <span>Uses</span><span class="sidebar">↓</span>
+        </a></li>
+    </ul>
+    <div class="posts">
+        <a class="link jumbo" href="/posts/">Posts</a>
+        <ul class="list">
+        {% for post in collections.posts limit: 3 %}
+                <li>
+                <div class="flow" style="--flow-space: var(--space-2xs);">
+                    <a href="{{post.url}}">{{post.data.title}}</a>
+                    <p><time datetime='{{ post.date | date: "%Y-%m-%dT%H:%M:%S" }}'>{{ post.date | date: "%d %B %Y" }}</time></p>
+
+                </div>
+                </li>
+        {% endfor %}
+                {% for post in collections.posts %}
+                <li>
+                <div class="flow" style="--flow-space: var(--space-2xs);">
+                    <a href="{{post.url}}">{{post.data.title}}</a>
+                    <p><time datetime='{{ post.date | date: "%Y-%m-%dT%H:%M:%S" }}'>{{ post.date | date:"%d %B %Y" }}</time></p>
+
+                </div>
+                </li>
+        {% endfor %}
+        {% for post in collections.posts %}
+                <li>
+                <div class="flow" style="--flow-space: var(--space-2xs);">
+                    <a href="{{post.url}}">{{post.data.title}}</a>
+                    <p><time datetime='{{ post.date | date: "%Y-%m-%dT%H:%M:%S" }}'>{{ post.date | date: "%d %B %Y" }}</time></p>
+
+                </div>
+                </li>
+        {% endfor %}        
+    
+    </ul>
+    </div>
+    </div>
+    <details>
+        <summary class="jumbo">Other Pages</summary>
+        <ul class="cluster">
+            <li><a href="/">afasf</a></li>
+            <li><a href="/">afasf</a></li>
+            <li><a href="/">afasf</a></li>
+            <li><a href="/">afasf</a></li>
+            <li><a href="/">afasf</a></li>
+            <li><a href="/">afasf</a></li>
+            <li><a href="/">afasf</a></li>
+            <li><a href="/">afasf</a></li>
+            <li><a href="/">afasf</a></li>
+
+        </ul>
+    </details>
+</div>
+
+</div>

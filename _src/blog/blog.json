@@ -1,6 +1,0 @@
-{
-	"author": "Aninus Partikler",
-    "layout": "layouts/blog.liquid",
-	"tags": "posts",
-	"permalink": "blog/{{ title | slugify }}/"
-}

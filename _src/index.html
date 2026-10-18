@@ -1,0 +1,96 @@
+---
+layout: base
+page_title: aninus
+description: Personal site of aninus
+---
+{% render 'blocks/hero.liquid' page:page %}
+
+<main class="[ flow ] [ home ]">
+    <div class="[ wrapper ] [ wrapper-measure2xl ]">
+
+<div class="signpost">
+    <div class="grid">
+        <ul class="featured button-list">
+            <li><a href="/projects/" class="jumbo">
+            <span class="cluster">
+                <img loading="eager" class="themed-img large-icon" src="/assets/doodles/projects.webp" alt="" />
+                Projects</span><span class="sidebar">↗</span>
+            </a></li>
+            <li><a href="/about/" class="jumbo">
+            <span class="cluster">
+                <img loading="eager" class="themed-img large-icon" src="/assets/doodles/about.webp" alt="" />
+                About</span><span class="sidebar">↖</span>
+            </a></li>
+            <li><a href="/links/" class="jumbo">
+            <span class="cluster">
+                <img loading="eager"  class="themed-img large-icon" src="/assets/doodles/links.webp" alt="" />
+                Contact</span><span class="sidebar">↓</span>
+            </a></li>
+        </ul>
+        <div class="posts">
+            <a class="link jumbo" href="/posts/">Posts</a>
+            <ul class="bloglist">
+            {% for post in collections.posts limit: 3 reversed %}
+                <li>
+                <div class="flow" style="--flow-space: var(--space-2xs);">
+                    <a href="{{post.url}}">{{post.data.title}}</a>
+                    <p><time datetime='{{ post.date | date: "%Y-%m-%dT%H:%M:%S" }}'>{{ post.date | date: "%d %B %Y" }}</time></p>
+                </div>
+                </li>
+            {% endfor %}     
+            </ul>
+        </div>
+    </div>
+    <details class="other-pages">
+        <summary class="jumbo repel" style="color-scheme: dark">
+            <span class="cluster">
+            <img loading="eager" class="themed-img large-icon" src="/assets/doodles/mess.webp" alt="" />
+            Other Pages
+            </span>
+        </summary>
+        <ul class="grid button-list" >
+            <li><a href="/uses">
+                <img class="themed-img large-icon" src="/assets/doodles/uses.webp" alt="" />
+                <span>Uses</span>
+            </a></li>
+            <li><a href="/404">
+                <img class="themed-img large-icon" src="/assets/doodles/404.webp" alt="" />
+                <span>404 page</span>
+            </a></li>
+            <li><a href="/library">
+                <img class="themed-img large-icon" src="/assets/doodles/library.webp" alt="" />
+                <span>Library</span>
+            </a></li>
+        </ul>
+    </details>
+</div>
+</div>
+
+<div class="[ region ] [ shelf ]">
+    <div class="wrapper">
+        <div class="flow" style="align-self: center;">
+        <h2>Work in progress!</h2>
+        <p>This website is still under heavy development, it might look a bit messy now,
+            but I will probably fix it later.</p>
+        </div>
+        <div class="sidebar center-items">
+            <picture>
+            <img loading="lazy" class="themed-img pixel-perfect" src="/assets/doodles/wip.webp" alt="" />
+
+            </picture>
+        </div>
+    </div>
+</div>
+
+<div class="[ wrapper flow ] [ wrapper-measure2xl ]">
+    <h2>Around the web</h2>
+    <p>Some of the places on the internet where this site can be found.</p>
+    <ul class="grid" style="--grid-item-min: 25rem; --grid-placement: auto-fit;">
+        {% for webring in webrings %}
+        <li>{% render "blocks/webring.liquid", webring: webring, page: page %}</li>
+        {% endfor %}
+    </ul>
+    </div>
+</div>
+
+</main>

@@ -1,0 +1,126 @@
+.signpost {
+    background-color: var(--color-canvas);
+    border: var(--stroke);
+}
+
+.signpost > .grid {
+    --grid-placement: auto-fit;
+    --grid-item-min: 20rem;
+    gap: var(--border-width-normal);
+    rule: var(--stroke);
+    rule-visibility-items: between;
+}
+
+.signpost .button-list.featured {
+    font-weight: var(--font-weight-semibold);
+}
+
+.signpost .posts .link.jumbo {
+    display: flex;
+    padding: var(--space-md);
+}
+
+.signpost .posts li:nth-child(even){
+    background-color: var(--color-primary);
+}
+
+.signpost .posts .bloglist > li {
+    padding-block: var(--space-xs);
+    padding-inline: var(--space-md);
+}
+
+@supports not (rule: 2px solid black) {
+    .signpost > .grid {
+        gap: 0;
+    }
+
+    @media (min-width: 45em) {
+        .signpost > .grid > * + * {
+            border-inline-start: var(--stroke);
+        }
+    }
+
+    @media (max-width: 45em) {
+        .signpost > .grid > * + * {
+            border-block-start: var(--stroke);
+        }
+    }
+}
+
+
+.signpost > .other-pages {
+    border:0;
+    border-block-start: var(--stroke);
+}
+
+.signpost > .other-pages summary {
+    padding: var(--space-md);
+    transition: background-color var(--transition-normal) linear,
+    color var(--transition-normal) linear;
+}
+
+.signpost > .other-pages summary:hover {
+    color: var(--color-selection-text);
+    background-color: var(--color-selection-background);
+}
+
+.signpost .other-pages summary .large-icon {
+    transition-duration: var(--transition-normal);
+    transition-property: transform;
+    transition-timing-function: var(--ease-out-overshoot);
+}
+
+.signpost .other-pages summary:hover .large-icon {
+    transform: scale(1.1) rotate(calc(var(--dent-value) * pow(-1, var(--button-list-index))));
+}
+
+.signpost > .other-pages summary::before{
+    display: none;
+}
+
+.signpost > .other-pages summary::after{
+    font-weight: var(--font-weight-semibold);
+    content: "→";
+}
+
+.signpost .other-pages > ul {
+    padding: 0;
+}
+
+.signpost .other-pages .button-list a {
+    justify-content: center;
+    height: 100%;
+    font-size: var(--text-xl);
+}
+
+.signpost .featured > li {
+    background-color: var(--color-primary);
+}
+
+.signpost .featured > li:nth-child(even){
+    background-color: var(--color-canvas);
+}
+
+.signpost .featured a {
+    --sidebar-wrap-at: 75%;
+    font-size: var(--text-5xl);
+    row-gap: var(--space-2xs);
+}
+
+.signpost .featured .sidebar {
+    --sidebar-size: 1.4ch;
+    font-weight: var(--font-weight-semibold);
+}
+
+.signpost .other-pages .grid {
+    --grid-item-min: 20rem;
+    gap: 0;
+}
+
+.signpost :is(.featured, summary) .large-icon {
+    --size-icon: 2ch;
+}
+
+.signpost .other-pages .grid .large-icon {
+    --size-icon: 5ch;
+}

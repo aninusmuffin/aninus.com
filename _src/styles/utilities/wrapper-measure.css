@@ -1,0 +1,7 @@
+.wrapper-measurexl {
+    --wrapper-max-width: var(--measurexl);
+}
+
+.wrapper-measure2xl {
+    --wrapper-max-width: var(--measure2xl);
+}

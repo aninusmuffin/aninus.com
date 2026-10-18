@@ -1,0 +1,11 @@
+---
+title: Webring
+---
+
+<main>
+<div class="example flow">
+{% for webring in webrings %}
+    {% render "blocks/webring.liquid", webring: webring, page: page %} 
+{% endfor %}
+</div>
+</main>

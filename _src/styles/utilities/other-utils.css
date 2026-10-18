@@ -1,0 +1,40 @@
+.pattern-library .example {
+    padding: var(--space-md);
+    background-color: var(--color-warning-fill-normal);
+    border: var(--stroke);
+}
+
+.jumbo {
+    font-size: var(--text-5xl);
+}
+
+.thumbnail {
+    border: var(--stroke);
+    border-radius: var(--radius-xl);
+}
+
+.region.shelf {
+    background-color: var(--color-primary);
+    border-block: var(--stroke);
+    --region-space: var(--space-xl);
+}
+
+.flow.uses {
+    --flow-space: var(--space-2xl);
+}
+
+.flow.uses > * > * {
+    --flow-space: var(--space-sm);
+}
+
+.pixel-perfect {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.multi-col-list {
+    padding-inline-start: 0;
+    column-width: 15ch;
+    column-gap: var(--space-md);
+}

@@ -1,0 +1,18 @@
+.library-shelf {
+    --grid-placement: auto-fit;
+}
+
+.library-shelf > .card > a {
+    display: block;
+    transition: outline var(--transition-fast) linear;
+    padding: var(--space-3xs);
+}
+
+.library-shelf > .card p {
+    text-align: center;
+    text-decoration: none;
+}
+
+.library-shelf > .card > a:hover {
+    outline: .2em solid var(--focus-color, currentColor);
+}

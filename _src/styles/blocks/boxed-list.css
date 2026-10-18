@@ -1,0 +1,12 @@
+.boxed-list {
+    border: var(--stroke);
+    background-color: var(--color-box-list-background, transparent);
+}
+
+.boxed-list > * + * {
+    border-block-start: var(--stroke);
+}
+
+.boxed-list > * {
+    padding: var(--space-md);
+}

@@ -1,0 +1,113 @@
+/*
+INDEX PAGE ANIMATABLE LOGO
+A grid based layout recreating my logo on the index page.
+It is made up of 5 inline svg images with aspect ratios 
+matching the elments size for correct scaling.
+
+The eyes are separate elements so they can be animated.
+
+The layout of the logo:
+"ear1 . ear2"
+"eye1 . eye2"
+"nose nose nose";
+
+*/
+.index-logo {
+    aspect-ratio: 693 / 591;
+    max-width: fit-content;
+    transition: transform var(--transition-normal) var(--ease-out-overshoot);
+}
+
+.hero .index-logo {
+    view-transition-name: index-logo;
+}
+
+.index-logo-grid {
+    display: grid;
+    grid-template-areas:
+    "ear1 . ear2"
+    "eye1 . eye2"
+    "nose nose nose";
+    grid-template-columns: auto 15% auto;
+}
+
+.index-logo-grid > div:not(.nose) {
+    aspect-ratio: 292 / 183;
+    display: grid;
+}
+
+.index-logo-grid-grid > div:is(.ear1, .ear2) {
+    padding-bottom: 2%;
+}
+
+.index-logo-grid > div.ear1 { grid-area: ear1;}
+.ear1 > svg{
+  align-self: bottom;
+  justify-self: end;
+}
+
+.index-logo-grid > div.ear2 { grid-area: ear2; }
+.ear2 > svg{
+  align-self: bottom;
+  justify-self: start;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes spinopp {
+    to {
+        transform: rotate(-720deg);
+    }
+}
+
+:is(.eye1, .eye2) > svg {  
+    aspect-ratio: 0.9 / 1;
+    animation: spin 500ms ease-in-out ;
+    color: var(--color-accent);
+}
+
+.index-logo-grid > div.eye1 { grid-area: eye1 }
+.eye1 > svg{
+    transition: transform ease-out 500ms;
+    align-self: center;
+    justify-self: end;
+}
+
+
+.index-logo-grid > div.eye2 { grid-area: eye2; }
+.eye2 > svg{
+    animation-name: spinopp;
+    align-self: center;
+    justify-self: start;
+}
+
+
+.index-logo-grid > div.nose {
+  display: grid;
+  aspect-ratio: 692.859 / 190;
+  grid-area: nose;
+  color: var(--color-accent);
+
+}
+
+.nose > svg{
+  align-self: top;
+  justify-self: center;
+}
+
+.index-logo-grid svg {
+    display: block;
+    height: 100%;
+    width: 100%;
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+
+.index-logo:hover {
+    transform: scale(1.1);
+}
