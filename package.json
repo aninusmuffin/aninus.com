@@ -23,6 +23,7 @@
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-img": "^7.0.0",
+    "@11ty/eleventy-plugin-rss": "^3.1.0",
     "@11ty/font-awesome": "^1.0.1",
     "@awesome.me/buildawesome": "^4.0.0-alpha.10",
     "@sugarcube-sh/cli": "^0.1.13",

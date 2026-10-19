@@ -7,6 +7,7 @@ import fontAwesomePlugin from "@11ty/font-awesome";
 import pluginTOC from 'eleventy-plugin-nesting-toc';
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import path from "node:path";
+import { rssPlugin } from "@11ty/eleventy-plugin-rss";
 
 
 import pluginFilters from "./_config/filters.js";
@@ -46,6 +47,8 @@ export default async function(eleventyConfig) {
         shortcode: "icon",
         defaultAttributes: {class:"icon"}
     });
+    eleventyConfig.addPlugin(rssPlugin);
+
     // Markdown
     eleventyConfig.amendLibrary("md",MarkdownItObsidianCallouts);
     eleventyConfig.amendLibrary("md",MarkdownItAnchor);
