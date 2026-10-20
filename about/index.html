@@ -1,157 +1,328 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="title" property="og:title" content="About">
-    <meta name="description" property="og:description" content="A very borring page with all of the things about me">
+    <meta name="title" property="og:title" content="About - aninus">
+    <meta name="description" property="og:description" content="About me, about the site, about a lot of stuff...">
     <meta property="og:image" content="">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
     <meta name="keywords" content="Programming, art, aninus, aninuscsalas, aninusmuffin">
+    <meta name="generator" content="Build Awesome"><title>About - aninus</title>
 
-    <title>About</title>
-    <link rel="stylesheet" type="text/css" href="/assets/styles/base.css">
-    <link rel="preload" as="font" href="/assets/fonts/AdwaitaSans-Regular.subset.woff2" crossorigin="">
-    <link rel="preload" as="font" href="/assets/fonts/Bagnard.woff2" crossorigin="">
-    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.webp">
-    <meta name="generator" content="Eleventy">
 
-    
-    
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 
-    <style>
-     svg {
-         width: 1em;
-         height: 1em;
-     }
-    </style>
+    <link rel="preload" as="font" href="/fonts/AdwaitaSans-Regular.subset.woff2" crossorigin="">
+    <link rel="preload" as="font" href="/fonts/adwaita-sans-custom.woff2" crossorigin="">
 
-    
 
-</head>
+    <link rel="stylesheet" href="/styles/global.css"></head>
 
 <body>
-    <div style="position: relative; min-height: 100vh;">
 
-        
-            <nav id="navbar">
-    <ul class="cluster">
-        <li><a href="/">aninus.com</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/about">About</a></li>
-    </ul>
+    <span id="top"></span>
+    
+<header class="navbar">
+<nav class="flow">
+
+    <ol class="cluster ">
+    <li>
+    <a href="/" class="site-logo">
+        <svg viewBox="0 0 708 601" aria-label="Home" class="icon" data-icon-size="logo">
+            <use href="/assets/cat.svg#g63">
+        </use></svg>
+    </a>
+    </li>
+    <li><a href="/projects/">
+        <img loading="eager" class="themed-img large-icon" src="/img/projects-XH7HqLtWP2-128w.webp" alt="" decoding="async" width="128" height="128">
+        Projects
+    </a></li>
+    <li><a href="/posts">
+        <img loading="eager" class="themed-img large-icon" src="/img/posts-jaxDIe-7fF-128w.webp" alt="" decoding="async" width="128" height="128">
+        Posts
+    </a></li>
+    <li><a aria-current="page" href="/about">
+        <img loading="eager" class="themed-img large-icon" src="/img/about-Upnc4ULtwg-128w.webp" alt="" decoding="async" width="128" height="128">
+        About
+    </a></li>
+    <li><a href="/uses">
+        <img loading="eager" class="themed-img large-icon" src="/img/uses-qYgWI8PXIa-128w.webp" alt="" decoding="async" width="128" height="128">
+        Uses
+    </a></li>
+    <li><a href="/library">
+        <img loading="eager" class="themed-img large-icon" src="/img/library-ErkaFTaLtk-128w.webp" alt="" decoding="async" width="128" height="128">
+        Library
+    </a></li>
+    <li><a href="/links">
+        <img loading="eager" class="themed-img large-icon" src="/img/links-hCkQ8IdjcW-128w.webp" alt="" decoding="async" width="128" height="128">
+        Links
+    </a></li>
+
+    </ol>
+    <div class="hide-if-nojs">
+      <button style="width: 100%" class="button" id="menu-button" commandfor="menu-dialog" command="show-modal">Menu</button>
+    </div>
 </nav>
+</header>
 
-            
+<dialog id="menu-dialog" closedby="any">
+<ul class="button-list">
+    <li>
+        <button commandfor="menu-dialog" command="close"> <svg class="icon"><use href="#fas-fa-xmark" xlink:href="#fas-fa-xmark"></use></svg>Close menu</button>
+    </li>
+    <li><a href="/projects/">
+        <img class="themed-img large-icon" src="/img/projects-XH7HqLtWP2-128w.webp" alt="" loading="lazy" decoding="async" width="128" height="128">
+        Projects
+    </a></li>
+    <li><a href="/posts">
+        <img class="themed-img large-icon" src="/img/posts-jaxDIe-7fF-128w.webp" alt="" loading="lazy" decoding="async" width="128" height="128">
+        Posts
+    </a></li>
+    <li><a aria-current="page" href="/about">
+        <img class="themed-img large-icon" src="/img/about-Upnc4ULtwg-128w.webp" alt="" loading="lazy" decoding="async" width="128" height="128">
+        About
+    </a></li>
+    <li><a href="/uses">
+        <img class="themed-img large-icon" src="/img/uses-qYgWI8PXIa-128w.webp" alt="" loading="lazy" decoding="async" width="128" height="128">
+        Uses
+    </a></li>
+    <li><a href="/library">
+        <img class="themed-img large-icon" src="/img/library-ErkaFTaLtk-128w.webp" alt="" loading="lazy" decoding="async" width="128" height="128">
+        Library
+    </a></li>
+    <li><a href="/links">
+        <img class="themed-img large-icon" src="/img/links-hCkQ8IdjcW-128w.webp" alt="" loading="lazy" decoding="async" width="128" height="128">
+        Links
+    </a></li>
+</ul>
+</dialog>
+
+
+<main class="about flow"><header class="headline wrapper region">
+    <div class="content">
+        <div class="flow">
+            <h1>About</h1>
+            <p>About me, about the site, about a lot of stuff...</p>
+        </div>
         
-
-
-
-
-        <main class="stack-large" style="padding-bottom: 16rem;">
-
-            
-<div class="content">
-    <article class="stack">
-        <h1 id="about">About</h1>
-<p>As you might have already guessed my name is Aninus Partikler, I'm a so called hobbist programmer and failure.
-I like making stuff, but my programming knowledge is not really the best.</p>
-<h2 id="my-current-setup">My current setup</h2>
-<p>Here's a cool table:</p>
-<div class="responsive-table">
-<table>
-<thead>
-<tr>
-<th>Device</th>
-<th>Name</th>
-<th>Operating System</th>
-<th>Version</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Laptop</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Phone</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Earphones</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h2 id="about-this-site">About this site</h2>
-<p>I made this site to learn web development and to try the latest and greatest HTML and CSS features. The site has changed
-a lot since its first inception, and I hope that I can make it better and improve my skills.</p>
-<h3 id="made-using">Made using</h3>
-<ul>
-<li>HTML and CSS <em>(shocking)</em></li>
-<li><a href="https://11ty.dev"><picture><source type="image/webp" srcset="/about/bqCviR6h2R-60.webp 60w" sizes="1em"><img class="webfavicon" src="/about/bqCviR6h2R-60.jpeg" alt=" 11ty " width="60" height="60"></picture> 11ty </a></li>
-<li><a href="https://liquidjs.com"><picture><source type="image/webp" srcset="/about/Jqcf76mIIC-60.webp 60w" sizes="1em"><img class="webfavicon" src="/about/Jqcf76mIIC-60.jpeg" alt=" Liquid " width="60" height="60"></picture> Liquid </a></li>
-<li><a href="https://postcss.org"><picture><source type="image/webp" srcset="/about/aymdB00XOR-48.webp 48w" sizes="1em"><img class="webfavicon" src="/about/aymdB00XOR-48.jpeg" alt=" PostCSS " width="48" height="48"></picture> PostCSS </a></li>
-<li><a href="https://fontawesome.com"><picture><source type="image/webp" srcset="/about/hPuCRtLjAW-60.webp 60w" sizes="1em"><img class="webfavicon" src="/about/hPuCRtLjAW-60.jpeg" alt=" Fontawsome " width="60" height="60"></picture> Fontawsome </a></li>
-<li><a href="https://github.com/11ty/webc">WebC</a></li>
-</ul>
-<p>Previously used:</p>
-<ul>
-<li><s>TailwindCSS</s></li>
-<li><s>DasyUI</s></li>
-</ul>
-<h3 id="great-resources-i-found">Great resources I found</h3>
-<ul>
-<li><a href="https://every-layout.dev/">Every Layout</a></li>
-<li><a href="https://esif.dev/">esif.dev</a></li>
-</ul>
-<h3 id="inspiration">Inspiration</h3>
-<ul>
-<li><a href="https://jacobgeller.com/">Jacob Geller's Website</a></li>
-<li><a href="https://exa.y2k.diy/">Exa's Corner</a></li>
-<li><a href="https://www.zachleat.com/">Zach Leatherman</a></li>
-<li><a href="https://beeps.website/">beeps</a></li>
-<li><a href="https://geopjr.dev/">GeopJr</a></li>
-<li><a href="https://tobiasbernard.com/">Tobias Bernard</a></li>
-</ul>
-
-    </article>
+        <div class="sidebar center-items">
+            <img fetchpriority="high" class="themed-img pixel-perfect" src="/img/about-Upnc4ULtwg-128w.webp" alt="" loading="lazy" decoding="async" width="128" height="128">
+        </div>
+        
+    </div>
+</header><div class="region shelf">
+    <div class="wrapper content switcher">
+    <div class="flow">
+        <div id="my-big-logo-container" class="center-items">
+            <picture id="my-big-logo" onclick="spin()"><source type="image/webp" srcset="/img/logo-XcW1cJAmNB-1024w.webp"><img loading="lazy" decoding="async" src="/img/logo-XcW1cJAmNB-1024w.svg" alt="My profile picture" class="rounded-full" width="1024" height="1024"></picture>
+        </div>
+        <div class="wrapper" style="--wrapper-max-width: 40ch; --wrapper-padding-inline: 0">
+            <ul class="grid" style="--grid-placement: auto-fit;">
+            <a class="button" href="/links">Contact me</a>
+            <a class="button" href="/uses">Uses</a>
+            </ul>
+        </div>
+    </div>
+    <div class="flow prose">
+        <h2>About <span class="colored">me</span></h2>
+        <p>My name is <strong class="colored">Aninus Partikler</strong>, but I also go by my online aliases such as <em class="colored">aninus</em>, aninusmuffin or aninuscsalas.</p>
+        <p>Currently studying programming, but I'm not that great at it. I'm interested in designing, Free and Open Source Software and I value my privacy.</p>
+        <p>I also deeply dislike "<abbr>AI</abbr>" and <abbr>LLM</abbr>s as they are the most idiotic, destructive and inefficent technologies in recent history. </p>
+    </div>
+    </div>
 </div>
 
+<div class="wrapper flow prose">
+    <h2>About <span class="colored">this site</span></h2>
+    <p>
+        I made this site to learn web development and to try the latest and greatest HTML and CSS features. The site has changed a lot since its first inception, and I hope that I can make it better and improve my skills.
+    </p>
 
-        </main>
+    <h3>Speedlify Score:</h3>
+    <script type="module" src="/assets/speedlify2-score.js"></script>
+    <speedlify2-score speedlify-url="https://www.speedlify.dev/" url="https://aninus.com/"></speedlify2-score>
 
-        <footer class="textured-background">
-    <div class="stack">
-        
-        <ul class="cluster" style="justify-content: center; margin-inline-start: 0;">
-            <li><a href="/about#about-this-site">About this site</a></li>
-            <li><a href="https://github.com/aninusmuffin/aninus.com/blob/main/LICENSE">License</a></li>
-            <li><a href="https://github.com/aninusmuffin/aninus.com/blob/main/">Edit this page</a></li>
-        </ul>
-        <p>Built on: <time datetime="2025-11-20 10:05" class="build-date">2025-11-20 10:05</time></p>
 
+    <h3>Made using</h3>
+    <ul>
+        <li><abbr>HTML</abbr> and <abbr>CSS</abbr> <em>(shocking)</em></li>
+        <li><a href="https://11ty.dev"><img class="icon webfavicon" src="/about/11ty-Rp_XKbD8-w-60w.webp" alt=" 11ty " loading="lazy" decoding="async" width="60" height="60"> 11ty </a></li>
+        <li><a href="https://liquidjs.com"><img class="icon webfavicon" src="/about/liquidjs-hzjCo_J1pq-60w.webp" alt=" Liquid " loading="lazy" decoding="async" width="60" height="60"> Liquid </a></li>
+        <li><a href="https://postcss.org"><img class="icon webfavicon" src="/about/postcss--UGbZ64tX4-48w.webp" alt=" PostCSS " loading="lazy" decoding="async" width="48" height="48"> PostCSS </a></li>
+        <li><a href="https://fontawesome.com"><img class="icon webfavicon" src="/about/fontawesome-IagjuMrMDS-60w.webp" alt=" Fontawsome " loading="lazy" decoding="async" width="60" height="60"> Fontawsome </a></li>
+        <li><a href="https://cube.fyi/"><img class="icon webfavicon" src="/about/cube-mz72d-GRRO-60w.webp" alt=" Cube CSS " loading="lazy" decoding="async" width="60" height="60"> Cube CSS </a></li>
+        <li><a href="https://sugarcube.sh/"><img class="icon webfavicon" src="/about/sugarcube-m7xlBaKMb_-60w.webp" alt=" sugarcube " loading="lazy" decoding="async" width="60" height="60"> sugarcube </a></li>
+    </ul>
+
+    <aside class="callout">
+        <h3 class="callout-title">This website now has a badge!</h3>
+        <div class="flow">
+            <p>This isn't exactly the most creative badge out there but I still wanted to have one while thinking of something better</p>
+            <div class="center-items">
+                <figure class="not-prose">
+                    <a class="badge" title="aninus" href="/">
+                    <img alt="aninus" src="/img/badge-Xumu_fmuN4-88w.webp" loading="lazy" decoding="async" width="88" height="31">
+                    </a>
+                    <figcaption>88x31px badge</figcaption>
+                </figure>
+            </div>
+        </div>
+    </aside>
+
+    <h3>Inspiration</h3>
+    <p>Here are some of the sites on the web that I think are cool or took inspiration from.</p>
+
+    <ul class="grid badgelist not-prose">
+        <li>
+            <a class="badge" title="David Bushell" href="https://dbushell.com/">
+            <img alt="David Bushell" src="/about/webbtn-dbushell-ssU5xb3Hp8-88w.webp" loading="lazy" decoding="async" width="88" height="31">
+            </a>
+        </li>
+        <li>
+            <a class="badge" title="beeps" href="https://beeps.website/">
+            <img alt="beeps" src="/about/88x31-d-VlUqMu6T---88w.webp" loading="lazy" decoding="async" width="88" height="31">
+            </a>
+        </li>
+        <li>
+            <a class="badge" title="ReduxFlakes" href="https://reduxflakes.nekoweb.org">
+            <img alt="ReduxFlakes" src="/about/hcl6TIROJn-88-pdVCg0kO3K-88w.webp" loading="lazy" decoding="async" width="88" height="31">
+            </a>
+        </li>
+        <li>
+            <a class="badge" title="stupied" href="https://stupied.net">
+            <img alt="stupied" src="/about/button-OyL53ApDrY-88w.webp" loading="lazy" decoding="async" width="88" height="31">
+            </a>
+        </li>
+        <li>
+            <a class="badge" title="Frills" href="https://frills.dev/">
+            <img alt="Frills" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAAAV1BMVEUVGi//V5D/yQ4yITv/FJPfTIQiKk0kHTXsVIrDR3htMVNQKUcA/3+mQGyKOF+YO2VBJUHRS35eLU1tMFNQKEd8NVmKOV//1QC1RHK1QnJ7NVoA/2YAADMg8pD5AAACcUlEQVRIx4WWgXaDIAxFUURQq0Wsnd32/9850DwhcDjLtspCvLzEgBV9L4I9/I+3rgu/qbWiYl34q0R1ntrT+AFfFtlyP2I5uM3IHbDMh0gMqpI7iGjxkcyJioGLYcVKxQ82kSqXUt/xbXqRTzVsFIMIDCL3l5FRar0PpmkaczhRKJaq8bb40WQadRK//cAiDmRejV5QIOxZJDlfE/JaQWm/VEODSh07kd4KW/Ikh8u/ifG87ojfbokFmHFhBkFI6HP5JxoMQpg7t/7EAPRFZPp/abhJ/hBIqBJipYX1FfdBISPXy0GNqWCFYhgyMhZCG22v64p53knJbdze3qe3l0jMLbv2F2T0apADs7z3VUpVx+Rd1msbXrPyn1sM1AC7CJbLGrTPDp1Uhpu3vX1r1iSLGmysmRzpjrRNDw3NsBfN2HItdEMAKV2Am3MCNlfASp4GF5O8Xl1bglXlmZeUq6iOeTZhTn4JZv10VMAsdYgY1nMb0HbIwUqjwlr6tsmPbZuDN4APnZZ8vsEaYLGjl74lmJEsc7AEGMESDweldfcGeTdAO1EY5YPsN+zhAQGag1WoHgLkrMqu4k07xa6wHCwAViRU4qywh9dB5L14NT2Lo0dnYENn2UB+jZM7MKF4Kd68Ez2SNAmAH3HT75CwYAXHNpLLwJCs0qNpIYn0HvucpYIESfOKFoD8EqzD/DsFaxW24q3YGrrxjUCfkpmCgwqhQoX7WOMvVGOcstPJjWlppJtoMNJgwrydxtHJ5L18ckGufP2oWSUEXCiG499vP1FAW10DPKSQx/2wsPoXQZ7yD+EiuSKA4jiYF4+X7iE89Q86FRR/k6Xv2QAAAABJRU5ErkJggg==">
+            </a>
+        </li>
+        <li>
+            <a class="badge" title="GeopJr" href="https://geopjr.dev/">
+            <img alt="GeopJr" src="/about/geopjr-7qpiYZh-H--88w.webp" loading="lazy" decoding="async" width="88" height="31">
+            </a>
+        </li>
+        <li>
+            <a class="badge" title="Vale" href="https://vale.rocks/">
+            <img alt="Vale" src="/about/valerocks_button-nPKJRip7YQ-88w.webp" loading="lazy" decoding="async" width="88" height="31">
+            </a>
+        </li> 
+        <li>
+            <a class="badge" title="Mambuco" href="https://mambuco.dev/">
+            <img alt="Mambuco" src="/about/mambuco-M7zdcnfs4z-88w.webp" loading="lazy" decoding="async" width="88" height="31">
+            </a>
+        </li>
+    </ul>
+
+    <ul class="multi-col-list not-prose">
+        <li><a href="https://exa.y2k.diy/">Exa's Corner</a></li>
+        <li><a href="https://www.zachleat.com/">Zach Leatherman</a></li>
+        <li><a href="https://piccalil.li/">Piccalilli</a></li>
+        <li><a href="https://bell.bz">Andy Bell's Website</a></li>
+    </ul>
+
+</div>
+</main>
+
+
+<script>
+    let pressed = 0;
+    let element = document.getElementById("my-big-logo");
+    function spin() {
+        pressed += 1;
+        setTimeout(function timer() {pressed = 0; }, 700);
+        if (pressed === 2) {
+            element.classList.add("spinny");
+            setTimeout(
+                function stopSpin() {
+                    element.classList.remove("spinny");
+                    pressed = 0;
+                }, 1500)
+        }
+    }
+</script>
+
+<footer class="footer">
+    <div class="wrapper">
+        <div class="flow">
+        <div class="grid">
+        <div class="flow">
+            <p class="category">Quick Links</p>
+            <ul class="flow">
+                <li><a href="/links/">Links</a></li>
+                <li><a rel="me" href="https://mastodon.social/@aninus">Mastodon</a></li>
+                <li><a rel="me" href="https://bsky.app/profile/aninus.com">Bluesky</a></li>
+            </ul>
+        </div>
+        <div class="flow">
+            <p class="category">Main pages</p>
+            <ul class="flow">
+                <li><a href="/posts/">Posts</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/projects/">Projects</a></li>
+            </ul>
+        </div>
+       
+        </div>
+        <div style="font-size: var(--text-sm);">
+            <p>
+            This page was built on
+            <time class="font-mono" datetime="2026-10-20 18:25">
+                2026-10-20 18:25</time>, 
+            using <a href="https://build.awesome.me">Build Awesome (11ty) 4.0.0</a>.
+            </p>
+            <a href="https://codeberg.org/aninus/website/src/branch/main/./_src/about.html">Edit page</a>        </div>
+
+
+        </div>
+        <div class="sidebar flow">
+            <a href="#top">↑ Back to top</a>
+            <a class="badge" href="/">
+            <img alt="aninus.com badge" src="/img/badge-Xumu_fmuN4-88w.webp" loading="lazy" decoding="async" width="88" height="31">
+            </a>
+
+
+        <div class="hide-if-nojs">
+        <label for="theme">Theme:</label>
+        <select id="theme">
+            <option value="system">System</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+        </div>
+        </div>
     </div>
 </footer>
+<svg style="display: none;"><symbol data-prefix="fas" data-icon="xmark" class="svg-inline--fa fa-xmark" role="img" viewBox="0 0 384 512" aria-hidden="true" id="fas-fa-xmark"><path fill="currentColor" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"></path></symbol></svg>
+<noscript><span id="noscript"></span></noscript>
+
+<script>
+const colorThemeSwitcher = document.getElementById("theme");
+
+const storeTheme = function (theme) {
+  localStorage.setItem("theme", theme);
+};
 
 
-    </div>
-<div style="display: none">
-    
-    
-</div>
+colorThemeSwitcher.addEventListener("change", () => {
+    storeTheme(colorThemeSwitcher.selectedOptions[0].value);
+})
+
+const setTheme = function () {
+    if (localStorage.getItem("theme")) {
+        colorThemeSwitcher.value = localStorage.getItem("theme");
+    } 
+};
+
+document.onload = setTheme();
+
+</script>
+
 </body>
-
 </html>
 
 
