@@ -42,6 +42,7 @@ The layout of the logo:
 
 .index-logo-grid > div.ear1 { grid-area: ear1;}
 .ear1 > svg{
+  transform: scaleX(-1);
   align-self: bottom;
   justify-self: end;
 }
