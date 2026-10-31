@@ -53,6 +53,7 @@ export default async function(eleventyConfig) {
     eleventyConfig.amendLibrary("md",MarkdownItObsidianCallouts);
     eleventyConfig.amendLibrary("md",MarkdownItAnchor);
     eleventyConfig.addPassthroughCopy("_src/assets/**/*.svg");
+    eleventyConfig.addPassthroughCopy("_src/_redirects");
     eleventyConfig.addPassthroughCopy("_src/assets/favicon.ico");
     eleventyConfig.addPassthroughCopy("_src/fonts/*");
     eleventyConfig.addPassthroughCopy("_src/**/*.js");
