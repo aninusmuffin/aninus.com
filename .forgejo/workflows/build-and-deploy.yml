@@ -6,25 +6,8 @@ on:
 
 jobs:
 
-  mirror:
-    runs-on: codeberg-tiny
-
-    steps:
-      - name: 'Checkout'
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: 'Mirror to Github'
-        uses: https://github.com/cssnr/mirror-repository-action@v1
-        with:
-          url: https://github.com/aninusmuffin/aninus.com
-          create: true
-          username: aninusmuffin
-          password: ${{ secrets.MIRROR_TOKEN }}
-
   publish:
-    runs-on: codeberg-tiny
+    runs-on: codeberg-small
 
     steps:
       - uses: actions/setup-node@v6
@@ -49,7 +32,7 @@ jobs:
           comment: ${{ forgejo.sha }}
 
   deploy-cloudflare:
-    runs-on: codeberg-tiny
+    runs-on: codeberg-small
 
     steps:
       - uses: actions/setup-node@v6
@@ -70,3 +53,20 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy _site --project-name=aninus
+
+  mirror:
+    runs-on: codeberg-tiny-lazy
+
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 'Mirror to Github'
+        uses: https://github.com/cssnr/mirror-repository-action@v1
+        with:
+          url: https://github.com/aninusmuffin/aninus.com
+          create: true
+          username: aninusmuffin
+          password: ${{ secrets.MIRROR_TOKEN }}
