@@ -23,7 +23,32 @@ jobs:
           username: aninusmuffin
           password: ${{ secrets.MIRROR_TOKEN }}
 
-  build:
+  publish:
+    runs-on: codeberg-tiny
+
+    steps:
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - uses: actions/checkout@v7
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Running Build Awesome
+        run: npm run build
+      
+      - uses: actions/git-pages@v2
+        with:
+          site: https://aninus.com/
+          server: codeberg.page
+          token: ${{ forgejo.token }}
+          source: _site/
+          pretty-urls: true
+          comment: ${{ forgejo.sha }}
+
+  deploy-cloudflare:
     runs-on: codeberg-tiny
 
     steps:
