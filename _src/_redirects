@@ -2,8 +2,8 @@
 /blog/*  /posts/:splat  301
 
 # Socials
-/@/ /links/:splat 302!
-/contact/ /links/:splat 302!
+/@/* /links/:splat 302!
+/contact/* /links/:splat 302!
 /links/mastodon https://mastodon.social/@aninus 302!
 /links/bluesky https://bsky.app/profile/aninus.com 302!
 /links/signal https://signal.me/#eu/wratRfQaup2AVEDMJ5q3WFClMC2dtTWifCquaQsiG9iL66uRXstEjY9cZBTy4VFU 302!
