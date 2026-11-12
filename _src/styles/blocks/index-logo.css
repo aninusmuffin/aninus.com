@@ -32,7 +32,6 @@ The layout of the logo:
 }
 
 .index-logo-grid > div:not(.nose) {
-    aspect-ratio: 292 / 183;
     display: grid;
 }
 
@@ -71,6 +70,10 @@ The layout of the logo:
     color: var(--color-accent);
 }
 
+.index-logo-grid > div:is(.eye1, .eye2) > svg {
+    width: 55%;
+}
+
 .index-logo-grid > div.eye1 { grid-area: eye1 }
 .eye1 > svg{
     transition: transform ease-out 500ms;
@@ -89,7 +92,6 @@ The layout of the logo:
 
 .index-logo-grid > div.nose {
   display: grid;
-  aspect-ratio: 692.859 / 190;
   grid-area: nose;
   color: var(--color-accent);
 
@@ -102,10 +104,9 @@ The layout of the logo:
 
 .index-logo-grid svg {
     display: block;
-    height: 100%;
+    height: auto;
     width: 100%;
-    max-width: fit-content;
-    max-height: fit-content;
+
 }
 
 
