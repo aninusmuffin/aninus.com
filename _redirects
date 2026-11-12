@@ -1,0 +1,17 @@
+//www.aninus.com/* https://aninus.com/:splat 302!
+/blog/*  /posts/:splat  301
+
+# Socials
+/@/* /links/:splat 302!
+/contact/* /links/:splat 302!
+/links/mastodon https://mastodon.social/@aninus 302!
+/links/bluesky https://bsky.app/profile/aninus.com 302!
+/links/signal https://signal.me/#eu/wratRfQaup2AVEDMJ5q3WFClMC2dtTWifCquaQsiG9iL66uRXstEjY9cZBTy4VFU 302!
+/links/mail mailto:muffin@aninus.com 302!
+/links/github https://github.com/aninusmuffin 302!
+/links/codeberg https://codeberg.org/aninus 302!
+/links/gitlab https://gitlab.com/aninusmuffin 302!
+/links/steam https://steamcommunity.com/id/aninus/ 302!
+/links/backloggd https://backloggd.com/u/aninus/ 302!
+/links/modrinth https://modrinth.com/user/aninus 302!
+/links/codepen https://codepen.io/aninus 302!
